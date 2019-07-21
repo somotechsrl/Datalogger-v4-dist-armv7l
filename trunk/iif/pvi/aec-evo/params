@@ -1,0 +1,6 @@
+FIRM="Aurora"
+MODEL="PVI-AEC-EVO"
+PROTO="WEBAPI"
+DESCR=""
+TARGET="pvi-aec-evo"
+MODULE="pvi-aec-evo"

@@ -1,0 +1,6 @@
+FIRM="Siel"
+MODEL="Soleil"
+PROTO="Modbus"
+DESCR=""
+TARGET="siel-dsp-soleil"
+MODULE="siel-dsp-soleil"

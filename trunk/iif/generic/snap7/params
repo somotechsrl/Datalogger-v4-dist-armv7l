@@ -1,0 +1,6 @@
+FIRM="Siemens"
+MODEL="PLC"
+PROTO="Snap7"
+DESCR=""
+TARGET="snap7"
+MODULE="snap7"

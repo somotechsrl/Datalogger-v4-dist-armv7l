@@ -1,0 +1,6 @@
+FIRM="Siemens"
+MODEL="OZW672"
+PROTO="WEBAPI"
+DESCR=""
+TARGET="siemens-OZW672"
+MODULE="siemens-OZW672"
