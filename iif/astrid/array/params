@@ -1,0 +1,6 @@
+FIRM="Astrid"
+MODEL="Array Monitor"
+PROTO="Modbus"
+DESCR=""
+TARGET="astrid-array"
+MODULE="astrid-array"

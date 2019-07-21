@@ -1,0 +1,6 @@
+FIRM="Fimer"
+MODEL="Fimer"
+PROTO="HTTP"
+DESCR=""
+TARGET="fimerhttp"
+MODULE="fimerhttp"

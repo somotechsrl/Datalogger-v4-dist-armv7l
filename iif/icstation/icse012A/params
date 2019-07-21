@@ -1,0 +1,6 @@
+FIRM="ICStation"
+MODEL="ICSE012A"
+PROTO="CSV"
+DESCR="Modulo di comando a 4 Relay"
+TARGET="icstation-icse012A"
+MODULE="icstation-icse012A"

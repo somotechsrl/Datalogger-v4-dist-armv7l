@@ -1,0 +1,6 @@
+FIRM="ArgusVision"
+MODEL="855IF"
+PROTO="Modbus"
+DESCR="855IF per caldaie di varie marche (Cosmogas,...)"
+TARGET="argusvision-855if"
+MODULE="argusvision-855if"

@@ -1,0 +1,6 @@
+FIRM="Sunguard"
+MODEL="Stringbox"
+PROTO="Modbus"
+DESCR=""
+TARGET="sunguard-stringbox"
+MODULE="sunguard-stringbox"

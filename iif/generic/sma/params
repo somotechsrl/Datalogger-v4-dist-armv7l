@@ -1,0 +1,6 @@
+FIRM="SMA"
+MODEL="SMA"
+PROTO="SMA"
+DESCR=""
+TARGET="sma"
+MODULE="sma"

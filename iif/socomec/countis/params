@@ -1,0 +1,6 @@
+FIRM="Socomec"
+MODEL="Countis"
+PROTO="Modbus"
+DESCR=""
+TARGET="socomec-countis"
+MODULE="socomec-countis"
