@@ -1,0 +1,6 @@
+FIRM='Kernel'
+MODEL='ST1'
+PROTO='Modbus'
+DESCR=''
+TARGET='kernel-st1'
+MODULE='kernel-st1

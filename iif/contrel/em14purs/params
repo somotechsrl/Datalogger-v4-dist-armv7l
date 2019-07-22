@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EM14PURS'
+PROTO='Modbus'
+DESCR='Single Phase Energy Meter'
+TARGET='contrel-em14purs'
+MODULE='contrel-em14purs

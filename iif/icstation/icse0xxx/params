@@ -1,0 +1,6 @@
+FIRM=''
+MODEL=''
+PROTO=''
+DESCR=''
+TARGET='icstation-icse0xxx'
+MODULE='icstation-icse0xxx
