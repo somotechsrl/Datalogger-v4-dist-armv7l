@@ -1,6 +1,0 @@
-FIRM='Aurora'
-MODEL='StringComb'
-PROTO='Aurora'
-DESCR=''
-TARGET='aurora-stringcomb'
-MODULE='aurora-stringcomb

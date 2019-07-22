@@ -1,6 +1,0 @@
-FIRM='Fronius'
-MODEL='Fronius'
-PROTO='Fronius'
-DESCR=''
-TARGET='fronius'
-MODULE='fronius-generic
