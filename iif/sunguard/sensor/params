@@ -1,0 +1,6 @@
+FIRM='Sunguard'
+MODEL='Sensor'
+PROTO='Modbus'
+DESCR=''
+TARGET='sunguard-sensor'
+MODULE='sunguard-sensor

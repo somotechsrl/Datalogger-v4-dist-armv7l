@@ -1,0 +1,6 @@
+FIRM='Generico'
+MODEL='Gateway'
+PROTO='ModbusTCP'
+DESCR='Gateway Modbus rtu => TCP'
+TARGET='ModbusTCP'
+MODULE='ModbusTCP-generic

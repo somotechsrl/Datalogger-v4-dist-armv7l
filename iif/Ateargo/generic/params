@@ -1,0 +1,6 @@
+FIRM='Ateargo'
+MODEL='Allarmi'
+PROTO='MySQL'
+DESCR=''
+TARGET='Ateargo'
+MODULE='Ateargo-generic

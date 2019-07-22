@@ -1,0 +1,6 @@
+FIRM='ABB'
+MODEL='ABB Pro'
+PROTO='ABB'
+DESCR=''
+TARGET='abb-pro33'
+MODULE='abb-pro33

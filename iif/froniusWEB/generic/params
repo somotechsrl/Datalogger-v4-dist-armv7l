@@ -1,0 +1,6 @@
+FIRM='Fronius'
+MODEL='HTTP'
+PROTO='JSON'
+DESCR=''
+TARGET='froniusWEB'
+MODULE='froniusWEB-generic

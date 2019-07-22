@@ -1,0 +1,6 @@
+FIRM='Aurora'
+MODEL='Aurora'
+PROTO='Aurora'
+DESCR=''
+TARGET='aurora'
+MODULE='aurora-generic
