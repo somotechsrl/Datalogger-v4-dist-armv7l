@@ -1,85 +1,85 @@
 col|module|path|firm|type|model|proto|context|descr
-rec|abb-pro33|/opt/datalogger-v4-src/iif/abb/pro33|ABB|Inverter|ABB Pro|ABB|PV|
-rec|arduino|/opt/datalogger-v4-src/iif/generic/arduino|Arduino|Gateway|Sensorbox|CSV|MS|Modulo di comando
-rec|argusvision-855if|/opt/datalogger-v4-src/iif/argusvision/855if|ArgusVision|Gateway|855IF|Modbus|TE|855IF per caldaie di varie marche (Cosmogas,...)
-rec|aros|/opt/datalogger-v4-src/iif/generic/aros|AROS|Inverter|Inverters|Modbus|PV|
-rec|astrid-array|/opt/datalogger-v4-src/iif/astrid/array|Astrid|StringBox|Array Monitor|Modbus|PV|
-rec|astrid-copernico|/opt/datalogger-v4-src/iif/astrid/copernico|Astrid|Inverter|Copernico|Modbus|PV|
-rec|Ateargo|/opt/datalogger-v4-src/iif/generic/Ateargo|Ateargo|Datalogger|Allarmi|MySQL|AL|
-rec|atersa-datasol|/opt/datalogger-v4-src/iif/atersa/datasol|Atersa|Solarimetro|Datasol|Atersa|PV|
-rec|aurora-inverter|/opt/datalogger-v4-src/iif/aurora/inverter|Aurora-Raw-Inverter|Inverter|Aurora|Aurora|PV|Aurora Raw-Inverter Driver 
-rec|aurora|/opt/datalogger-v4-src/iif/generic/aurora|Aurora|Inverter|Aurora|Aurora|PV|
-rec|aurora-stringbox|/opt/datalogger-v4-src/iif/aurora/stringbox|Aurora-Raw-StringBox|StringBox|Aurora|Aurora|PV|Aurora Raw-StringBox Driver 
-rec|aurora-stringcomb|/opt/datalogger-v4-src/iif/aurora/stringcomb|Aurora|StringBox|StringComb|Aurora|PV|
-rec|brahma-ot2|/opt/datalogger-v4-src/iif/brahma/ot2|BRAHMA|Cronotermostato|OT2|SMS|TE|Emulatore Modem GSM + Gestione Cronotermostato
-rec|cgate|/opt/datalogger-v4-src/iif/generic/cgate|Generico|Datalogger|Cgate|C-BUS|TE|
-rec|contrel-compalarm|/opt/datalogger-v4-src/iif/contrel/compalarm|Contrel|Alarm|Compalarm|Modbus|AL|Compalarm-D2
-rec|contrel-ctt4|/opt/datalogger-v4-src/iif/contrel/ctt4|Contrel|Gateway|CTT4|Modbus|MS|TEMPERATURE MONITOR DEVICE
-rec|contrel-ctt8|/opt/datalogger-v4-src/iif/contrel/ctt8|Contrel|Gateway|CTT8|Modbus|MS|TEMPERATURE MONITOR DEVICE
-rec|contrel-em14purs|/opt/datalogger-v4-src/iif/contrel/em14purs|Contrel|Gateway|EM14PURS|Modbus|MS|Single Phase Energy Meter
-rec|contrel-ema-90N|/opt/datalogger-v4-src/iif/contrel/ema-90N|Contrel|Gateway|EMA-90N|Modbus|EL|ELECTRICAL MEASUREMENT SUPERVISOR
-rec|contrel-ema|/opt/datalogger-v4-src/iif/contrel/ema|Contrel|Gateway|EMA|Modbus|MS|ELECTRICAL MULTIFUNCTION ANALYZER RECORDER
-rec|contrel-emm-4l|/opt/datalogger-v4-src/iif/contrel/emm-4l|Contrel|Gateway|EMM-4L|Modbus|MS|ELECTRICAL MULTIFUNCTION METER v 4L
-rec|contrel-emm|/opt/datalogger-v4-src/iif/contrel/emm|Contrel|Gateway|EMM|Modbus|MS|ELECTRICAL MULTIFUNCTION METER
-rec|contrel-ems-96|/opt/datalogger-v4-src/iif/contrel/ems-96|Contrel|Gateway|EMS-96|Modbus|EL|ELECTRICAL MEASUREMENT SUPERVISOR
-rec|contrel-ems|/opt/datalogger-v4-src/iif/contrel/ems|Contrel|Gateway|EMS|Modbus|MS|ELECTRICAL MEASUREMENT SUPERVISOR
-rec|contrel-ems-time|/opt/datalogger-v4-src/iif/contrel/ems-time|Contrel|Timer|EMS|Modbus|SYS|RTC System Time Source
-rec|contrel-isobase-redis|/opt/datalogger-v4-src/iif/contrel/isobase-redis|Contrel|Gateway|ISOBASE|Redis|MS|ISOBASE RTX poller bnas on Redis DB
-rec|contrel-isobase|/opt/datalogger-v4-src/iif/contrel/isobase|Contrel|Gateway|ISOBASE|Modbus|MS|ISOBASE RTX poller 
-rec|contrel-mobi|/opt/datalogger-v4-src/iif/contrel/mobi|Contrel|Gateway|GWXX|TEXT|MS|GSM/GPRS Remote Control
-rec|contrel-rec-cvm|/opt/datalogger-v4-src/iif/contrel/rec-cvm|Contrel|Gateway|REC-CVM|Modbus|MS|ELECTRICAL MULTIFUNCTION METER/CONTROLLER
-rec|coster|/opt/datalogger-v4-src/iif/generic/coster|Coster|Datalogger|ALL|Coster|TE|Centraline Coster DTCXX CSCXX ecc. ecc.
-rec|danfoss|/opt/datalogger-v4-src/iif/generic/danfoss|Danfoss|Inverter|RKLogger|Danfoss|PV|
-rec|dmesg|/opt/datalogger-v4-src/iif/generic/dmesg|Raspberry|Datalogger|Debian|Local|SYS|Autodiagnostica Kernel
-rec|elsist-slimline|/opt/datalogger-v4-src/iif/elsist/slimline|Elsist|Contabilizzatori|SlimLine|Modbus|MS|Contabilizzatori Energia
-rec|energyteam-gsl|/opt/datalogger-v4-src/iif/energyteam/gsl|EnergyTeam|Solarimetro|GSL|Modbus|PV|
-rec|equobox|/opt/datalogger-v4-src/iif/generic/equobox|Sinapsi|Dataloggers|Equobox|WEBAPI|MS|Contabilizzatore ad uso generale
-rec|fimerhttp|/opt/datalogger-v4-src/iif/generic/fimerhttp|Fimer|Inverter|Fimer|HTTP|PV|
-rec|friemhttp|/opt/datalogger-v4-src/iif/generic/friemhttp|Friem|Inverter|HTTP|WEBAPI|PV|Interfaccia via emulatore WEB
-rec|fronius-dm|/opt/datalogger-v4-src/iif/fronius/dm|Fronius|Dataloggers|Datamanager|Modbus|PV|
-rec|fronius|/opt/datalogger-v4-src/iif/generic/fronius|Fronius|Inverters|Fronius|Fronius|PV|
-rec|froniusWEB|/opt/datalogger-v4-src/iif/generic/froniusWEB|Fronius|Inverters|HTTP|JSON|PV|
-rec|gsmconfig|/opt/datalogger-v4-src/iif/generic/gsmconfig|Generico|GSM|GSM+Watchdog|NONE|SYS|GSM con Watchdog su mancanza connessione
-rec|icstation-icse012A|/opt/datalogger-v4-src/iif/icstation/icse012A|ICStation|RelayModule|ICSE012A|CSV|SYS|Modulo di comando a 4 Relay
-rec|icstation-icse013A|/opt/datalogger-v4-src/iif/icstation/icse013A|ICStation|RelayModule|ICSE013A|CSV|SYS|Modulo di comando a 2 Relay
-rec|icstation-icse014A|/opt/datalogger-v4-src/iif/icstation/icse014A|ICStation|RelayModule|ICSE014A|CSV|SYS|Modulo di comando a 8 Relay
-rec|icstation-icse0xxx|/opt/datalogger-v4-src/iif/icstation/icse0xxx|
-rec|ingeteam-sunpower|/opt/datalogger-v4-src/iif/ingeteam/sunpower|Ingeteam|Inverter|Sunpower|Modbus|PV|
-rec|kernel-st1|/opt/datalogger-v4-src/iif/kernel/st1|Kernel|Stringbox|ST1|Modbus|PV|
-rec|mbcustom|/opt/datalogger-v4-src/iif/generic/mbcustom|Generico|Modbus|Generico|Modbus|MS|
-rec|MBus|/opt/datalogger-v4-src/iif/generic/MBus|Generico|M-Bus|M-Bus|M-Bus|TE|Interfaccia via RS232/TTL 
-rec|modbus-cmd|/opt/datalogger-v4-src/iif/modbus/cmd|
-rec|modbus-poll|/opt/datalogger-v4-src/iif/modbus/poll|
-rec|modbus|/opt/datalogger-v4-src/iif/generic/modbus|
-rec|ModbusTCP|/opt/datalogger-v4-src/iif/generic/ModbusTCP|Generico|Gateway|Gateway|ModbusTCP|MS|Gateway Modbus rtu => TCP
-rec|netserial|/opt/datalogger-v4-src/iif/generic/netserial|Generico|Gateway|NetSerial|ANY|SYS|COnnettore TCP per porta seriale
-rec|omron|/opt/datalogger-v4-src/iif/generic/omron|Omron|Inverters|Inverter|Modbus|PV|
-rec|otgateway|/opt/datalogger-v4-src/iif/generic/otgateway|OTMonitor|OpenTherm|OTGateway|TTL|TE|Interfaccia via TTL 
-rec|otmonitor|/opt/datalogger-v4-src/iif/generic/otmonitor|OTMonitor|OpenTherm|OTMonitor|HTTP|TE|Interfaccia via HTTP 
-rec|pvi-aec-evo|/opt/datalogger-v4-src/iif/pvi/aec-evo|Aurora|Datalogger|PVI-AEC-EVO|WEBAPI|PV|
-rec|raspi|/opt/datalogger-v4-src/iif/generic/raspi|Raspberry|Datalogger|Debian|Local|SYS|Autodiagnostica Datalogger
-rec|refusol|/opt/datalogger-v4-src/iif/generic/refusol|Refusol|Inverter|Refusol|Refusol|PV|
-rec|renu-gwy00b|/opt/datalogger-v4-src/iif/renu/gwy00b|RENU|Gateway|gwy00b|Modbus|PV|
-rec|schuco-ipe|/opt/datalogger-v4-src/iif/schuco/ipe|Schuco|Inverter|IPEXX|Modbus|PV|
-rec|seneca-z4ai|/opt/datalogger-v4-src/iif/seneca/z4ai|Seneca|Gateway|Z4AI|Modbus|MS|
-rec|setecna-mbotg|/opt/datalogger-v4-src/iif/setecna/mbotg|Setecna|Gateway|MBOTG|Modbus|TE|Opentherm to Modbus Gateway
-rec|siel-csp-12|/opt/datalogger-v4-src/iif/siel/csp-12|Siel|Stringbox|CSP-12|Modbus|PV|
-rec|siel-dsp-soleil|/opt/datalogger-v4-src/iif/siel/dsp-soleil|Siel|Inverter|Soleil|Modbus|PV|
-rec|siemens-OZW672|/opt/datalogger-v4-src/iif/siemens/OZW672|Siemens|Datalogger|OZW672|WEBAPI|MS|
-rec|sma|/opt/datalogger-v4-src/iif/generic/sma|SMA|Inverters|SMA|SMA|PV|
-rec|snap7|/opt/datalogger-v4-src/iif/generic/snap7|Siemens|Datalogger|PLC|Snap7|MS|
-rec|snmpwalk|/opt/datalogger-v4-src/iif/generic/snmpwalk|Generico|Gateway|SNMPWalk|SNMP|MS|
-rec|socomec-countis|/opt/datalogger-v4-src/iif/socomec/countis|Socomec|Datalogger|Countis|Modbus|MS|
-rec|socomec|/opt/datalogger-v4-src/iif/generic/socomec|Socomec|Inverter|Socomec|Modbus|PV|
-rec|solarmax2|/opt/datalogger-v4-src/iif/generic/solarmax2|Solarmax|Inverter|Solarmax2|Solarmax|PV|
-rec|solarmax|/opt/datalogger-v4-src/iif/generic/solarmax|Solarmax|Inverter|Solarmax1|Solarmax|PV|
-rec|sunaway-tgxx|/opt/datalogger-v4-src/iif/sunaway/tgxx|Sunaway|Inverter|TGXX|Modbus|PV|
-rec|sunguard-sensor|/opt/datalogger-v4-src/iif/sunguard/sensor|Sunguard|Solarimetro|Sensor|Modbus|PV|
-rec|sunguard-stringbox|/opt/datalogger-v4-src/iif/sunguard/stringbox|Sunguard|Stringbox|Stringbox|Modbus|PV|
-rec|sunmeter|/opt/datalogger-v4-src/iif/generic/sunmeter|Sunmeter|Solarimetro|Sunmeter|Modbus|PV|
-rec|tecnint-ems-sau-mbs|/opt/datalogger-v4-src/iif/tecnint/ems-sau-mbs|Tecnint|Solarimetro|EMS-SAU-MBS|Modbus|PV|
-rec|tem-sb-16|/opt/datalogger-v4-src/iif/tem/sb-16|TEM|Stringbox|SB-16|Modbus|PV|
-rec|weidmuller-stringbox-16|/opt/datalogger-v4-src/iif/weidmuller/stringbox-16|Weidmuller|Stringbox-16|Stringbox|Modbus|PV|
-rec|weidmuller-stringbox|/opt/datalogger-v4-src/iif/weidmuller/stringbox|Weidmuller|Stringbox|Stringbox|Modbus|PV|
-rec|xantrex|/opt/datalogger-v4-src/iif/generic/xantrex|Xantrex|Inverter|Xantrex|Modbus|PV|
-rec|zzalarm|/opt/datalogger-v4-src/iif/generic/zzalarm|Generico|Alarms|ZZAlarm|Allarmi|SYS|Generatore allarmi e-mail su condizioni
+rec|abb-pro33|iif/abb/pro33|ABB|Inverter|ABB Pro|ABB|PV|
+rec|arduino|iif/generic/arduino|Arduino|Gateway|Sensorbox|CSV|MS|Modulo di comando
+rec|argusvision-855if|iif/argusvision/855if|ArgusVision|Gateway|855IF|Modbus|TE|855IF per caldaie di varie marche (Cosmogas,...)
+rec|aros|iif/generic/aros|AROS|Inverter|Inverters|Modbus|PV|
+rec|astrid-array|iif/astrid/array|Astrid|StringBox|Array Monitor|Modbus|PV|
+rec|astrid-copernico|iif/astrid/copernico|Astrid|Inverter|Copernico|Modbus|PV|
+rec|Ateargo|iif/generic/Ateargo|Ateargo|Datalogger|Allarmi|MySQL|AL|
+rec|atersa-datasol|iif/atersa/datasol|Atersa|Solarimetro|Datasol|Atersa|PV|
+rec|aurora-inverter|iif/aurora/inverter|Aurora-Raw-Inverter|Inverter|Aurora|Aurora|PV|Aurora Raw-Inverter Driver 
+rec|aurora|iif/generic/aurora|Aurora|Inverter|Aurora|Aurora|PV|
+rec|aurora-stringbox|iif/aurora/stringbox|Aurora-Raw-StringBox|StringBox|Aurora|Aurora|PV|Aurora Raw-StringBox Driver 
+rec|aurora-stringcomb|iif/aurora/stringcomb|Aurora|StringBox|StringComb|Aurora|PV|
+rec|brahma-ot2|iif/brahma/ot2|BRAHMA|Cronotermostato|OT2|SMS|TE|Emulatore Modem GSM + Gestione Cronotermostato
+rec|cgate|iif/generic/cgate|Generico|Datalogger|Cgate|C-BUS|TE|
+rec|contrel-compalarm|iif/contrel/compalarm|Contrel|Alarm|Compalarm|Modbus|AL|Compalarm-D2
+rec|contrel-ctt4|iif/contrel/ctt4|Contrel|Gateway|CTT4|Modbus|MS|TEMPERATURE MONITOR DEVICE
+rec|contrel-ctt8|iif/contrel/ctt8|Contrel|Gateway|CTT8|Modbus|MS|TEMPERATURE MONITOR DEVICE
+rec|contrel-em14purs|iif/contrel/em14purs|Contrel|Gateway|EM14PURS|Modbus|MS|Single Phase Energy Meter
+rec|contrel-ema-90N|iif/contrel/ema-90N|Contrel|Gateway|EMA-90N|Modbus|EL|ELECTRICAL MEASUREMENT SUPERVISOR
+rec|contrel-ema|iif/contrel/ema|Contrel|Gateway|EMA|Modbus|MS|ELECTRICAL MULTIFUNCTION ANALYZER RECORDER
+rec|contrel-emm-4l|iif/contrel/emm-4l|Contrel|Gateway|EMM-4L|Modbus|MS|ELECTRICAL MULTIFUNCTION METER v 4L
+rec|contrel-emm|iif/contrel/emm|Contrel|Gateway|EMM|Modbus|MS|ELECTRICAL MULTIFUNCTION METER
+rec|contrel-ems-96|iif/contrel/ems-96|Contrel|Gateway|EMS-96|Modbus|EL|ELECTRICAL MEASUREMENT SUPERVISOR
+rec|contrel-ems|iif/contrel/ems|Contrel|Gateway|EMS|Modbus|MS|ELECTRICAL MEASUREMENT SUPERVISOR
+rec|contrel-ems-time|iif/contrel/ems-time|Contrel|Timer|EMS|Modbus|SYS|RTC System Time Source
+rec|contrel-isobase-redis|iif/contrel/isobase-redis|Contrel|Gateway|ISOBASE|Redis|MS|ISOBASE RTX poller bnas on Redis DB
+rec|contrel-isobase|iif/contrel/isobase|Contrel|Gateway|ISOBASE|Modbus|MS|ISOBASE RTX poller 
+rec|contrel-mobi|iif/contrel/mobi|Contrel|Gateway|GWXX|TEXT|MS|GSM/GPRS Remote Control
+rec|contrel-rec-cvm|iif/contrel/rec-cvm|Contrel|Gateway|REC-CVM|Modbus|MS|ELECTRICAL MULTIFUNCTION METER/CONTROLLER
+rec|coster|iif/generic/coster|Coster|Datalogger|ALL|Coster|TE|Centraline Coster DTCXX CSCXX ecc. ecc.
+rec|danfoss|iif/generic/danfoss|Danfoss|Inverter|RKLogger|Danfoss|PV|
+rec|dmesg|iif/generic/dmesg|Raspberry|Datalogger|Debian|Local|SYS|Autodiagnostica Kernel
+rec|elsist-slimline|iif/elsist/slimline|Elsist|Contabilizzatori|SlimLine|Modbus|MS|Contabilizzatori Energia
+rec|energyteam-gsl|iif/energyteam/gsl|EnergyTeam|Solarimetro|GSL|Modbus|PV|
+rec|equobox|iif/generic/equobox|Sinapsi|Dataloggers|Equobox|WEBAPI|MS|Contabilizzatore ad uso generale
+rec|fimerhttp|iif/generic/fimerhttp|Fimer|Inverter|Fimer|HTTP|PV|
+rec|friemhttp|iif/generic/friemhttp|Friem|Inverter|HTTP|WEBAPI|PV|Interfaccia via emulatore WEB
+rec|fronius-dm|iif/fronius/dm|Fronius|Dataloggers|Datamanager|Modbus|PV|
+rec|fronius|iif/generic/fronius|Fronius|Inverters|Fronius|Fronius|PV|
+rec|froniusWEB|iif/generic/froniusWEB|Fronius|Inverters|HTTP|JSON|PV|
+rec|gsmconfig|iif/generic/gsmconfig|Generico|GSM|GSM+Watchdog|NONE|SYS|GSM con Watchdog su mancanza connessione
+rec|icstation-icse012A|iif/icstation/icse012A|ICStation|RelayModule|ICSE012A|CSV|SYS|Modulo di comando a 4 Relay
+rec|icstation-icse013A|iif/icstation/icse013A|ICStation|RelayModule|ICSE013A|CSV|SYS|Modulo di comando a 2 Relay
+rec|icstation-icse014A|iif/icstation/icse014A|ICStation|RelayModule|ICSE014A|CSV|SYS|Modulo di comando a 8 Relay
+rec|icstation-icse0xxx|iif/icstation/icse0xxx|
+rec|ingeteam-sunpower|iif/ingeteam/sunpower|Ingeteam|Inverter|Sunpower|Modbus|PV|
+rec|kernel-st1|iif/kernel/st1|Kernel|Stringbox|ST1|Modbus|PV|
+rec|mbcustom|iif/generic/mbcustom|Generico|Modbus|Generico|Modbus|MS|
+rec|MBus|iif/generic/MBus|Generico|M-Bus|M-Bus|M-Bus|TE|Interfaccia via RS232/TTL 
+rec|modbus-cmd|iif/modbus/cmd|
+rec|modbus-poll|iif/modbus/poll|
+rec|modbus|iif/generic/modbus|
+rec|ModbusTCP|iif/generic/ModbusTCP|Generico|Gateway|Gateway|ModbusTCP|MS|Gateway Modbus rtu => TCP
+rec|netserial|iif/generic/netserial|Generico|Gateway|NetSerial|ANY|SYS|COnnettore TCP per porta seriale
+rec|omron|iif/generic/omron|Omron|Inverters|Inverter|Modbus|PV|
+rec|otgateway|iif/generic/otgateway|OTMonitor|OpenTherm|OTGateway|TTL|TE|Interfaccia via TTL 
+rec|otmonitor|iif/generic/otmonitor|OTMonitor|OpenTherm|OTMonitor|HTTP|TE|Interfaccia via HTTP 
+rec|pvi-aec-evo|iif/pvi/aec-evo|Aurora|Datalogger|PVI-AEC-EVO|WEBAPI|PV|
+rec|raspi|iif/generic/raspi|Raspberry|Datalogger|Debian|Local|SYS|Autodiagnostica Datalogger
+rec|refusol|iif/generic/refusol|Refusol|Inverter|Refusol|Refusol|PV|
+rec|renu-gwy00b|iif/renu/gwy00b|RENU|Gateway|gwy00b|Modbus|PV|
+rec|schuco-ipe|iif/schuco/ipe|Schuco|Inverter|IPEXX|Modbus|PV|
+rec|seneca-z4ai|iif/seneca/z4ai|Seneca|Gateway|Z4AI|Modbus|MS|
+rec|setecna-mbotg|iif/setecna/mbotg|Setecna|Gateway|MBOTG|Modbus|TE|Opentherm to Modbus Gateway
+rec|siel-csp-12|iif/siel/csp-12|Siel|Stringbox|CSP-12|Modbus|PV|
+rec|siel-dsp-soleil|iif/siel/dsp-soleil|Siel|Inverter|Soleil|Modbus|PV|
+rec|siemens-OZW672|iif/siemens/OZW672|Siemens|Datalogger|OZW672|WEBAPI|MS|
+rec|sma|iif/generic/sma|SMA|Inverters|SMA|SMA|PV|
+rec|snap7|iif/generic/snap7|Siemens|Datalogger|PLC|Snap7|MS|
+rec|snmpwalk|iif/generic/snmpwalk|Generico|Gateway|SNMPWalk|SNMP|MS|
+rec|socomec-countis|iif/socomec/countis|Socomec|Datalogger|Countis|Modbus|MS|
+rec|socomec|iif/generic/socomec|Socomec|Inverter|Socomec|Modbus|PV|
+rec|solarmax2|iif/generic/solarmax2|Solarmax|Inverter|Solarmax2|Solarmax|PV|
+rec|solarmax|iif/generic/solarmax|Solarmax|Inverter|Solarmax1|Solarmax|PV|
+rec|sunaway-tgxx|iif/sunaway/tgxx|Sunaway|Inverter|TGXX|Modbus|PV|
+rec|sunguard-sensor|iif/sunguard/sensor|Sunguard|Solarimetro|Sensor|Modbus|PV|
+rec|sunguard-stringbox|iif/sunguard/stringbox|Sunguard|Stringbox|Stringbox|Modbus|PV|
+rec|sunmeter|iif/generic/sunmeter|Sunmeter|Solarimetro|Sunmeter|Modbus|PV|
+rec|tecnint-ems-sau-mbs|iif/tecnint/ems-sau-mbs|Tecnint|Solarimetro|EMS-SAU-MBS|Modbus|PV|
+rec|tem-sb-16|iif/tem/sb-16|TEM|Stringbox|SB-16|Modbus|PV|
+rec|weidmuller-stringbox-16|iif/weidmuller/stringbox-16|Weidmuller|Stringbox-16|Stringbox|Modbus|PV|
+rec|weidmuller-stringbox|iif/weidmuller/stringbox|Weidmuller|Stringbox|Stringbox|Modbus|PV|
+rec|xantrex|iif/generic/xantrex|Xantrex|Inverter|Xantrex|Modbus|PV|
+rec|zzalarm|iif/generic/zzalarm|Generico|Alarms|ZZAlarm|Allarmi|SYS|Generatore allarmi e-mail su condizioni
