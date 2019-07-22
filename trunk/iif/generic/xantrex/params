@@ -1,6 +1,0 @@
-FIRM="Xantrex"
-MODEL="Xantrex"
-PROTO="Modbus"
-DESCR=""
-TARGET="xantrex"
-MODULE="xantrex"

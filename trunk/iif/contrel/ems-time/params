@@ -1,6 +1,0 @@
-FIRM="Contrel"
-MODEL="EMS"
-PROTO="Modbus"
-DESCR="RTC System Time Source"
-TARGET="contrel-ems-time"
-MODULE="contrel-ems-time"

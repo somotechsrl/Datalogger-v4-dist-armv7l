@@ -1,7 +1,0 @@
-FIRM="Contrel"
-MODEL="EMS-96"
-PROTO="Modbus"
-DESCR="ELECTRICAL MEASUREMENT SUPERVISOR"
-TARGET="contrel-ems-96"
-MODULE="contrel-ems-96"
-
