@@ -1,6 +1,0 @@
-FIRM="Generico"
-MODEL="SNMPWalk"
-PROTO="SNMP"
-DESCR=""
-TARGET="snmpwalk"
-MODULE="snmpwalk"

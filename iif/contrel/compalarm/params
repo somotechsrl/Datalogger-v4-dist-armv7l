@@ -1,6 +1,0 @@
-FIRM="Contrel"
-MODEL="Compalarm"
-PROTO="Modbus"
-DESCR="Compalarm-D2"
-TARGET="contrel-compalarm"
-MODULE="contrel-compalarm"

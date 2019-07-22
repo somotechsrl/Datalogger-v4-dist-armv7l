@@ -1,6 +1,0 @@
-FIRM="AROS"
-MODEL="Inverters"
-PROTO="Modbus"
-DESCR=""
-TARGET="aros"
-MODULE="aros"
