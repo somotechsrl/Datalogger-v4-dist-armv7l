@@ -1,6 +1,0 @@
-FIRM='Contrel'
-MODEL='CTT4'
-PROTO='Modbus'
-DESCR='TEMPERATURE MONITOR DEVICE'
-TARGET='contrel-ctt4'
-MODULE='contrel-ctt4

@@ -1,6 +1,0 @@
-FIRM='Atersa'
-MODEL='Datasol'
-PROTO='Atersa'
-DESCR=''
-TARGET='atersa-datasol'
-MODULE='atersa-datasol

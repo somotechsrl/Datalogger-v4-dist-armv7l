@@ -1,6 +1,0 @@
-FIRM='Raspberry'
-MODEL='Debian'
-PROTO='Local'
-DESCR='Autodiagnostica Datalogger'
-TARGET='raspi'
-MODULE='raspi-generic
