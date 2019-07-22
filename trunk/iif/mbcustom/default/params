@@ -1,0 +1,6 @@
+FIRM='Generico'
+MODEL='Generico'
+PROTO='Modbus'
+DESCR=''
+TARGET='mbcustom'
+MODULE='mbcustom-default

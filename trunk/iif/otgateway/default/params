@@ -1,0 +1,6 @@
+FIRM='OTMonitor'
+MODEL='OTGateway'
+PROTO='TTL'
+DESCR='Interfaccia via TTL '
+TARGET='otgateway'
+MODULE='otgateway-default
