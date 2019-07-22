@@ -1,0 +1,6 @@
+FIRM='Socomec'
+MODEL='Socomec'
+PROTO='Modbus'
+DESCR=''
+TARGET='socomec'
+MODULE='socomec-generic

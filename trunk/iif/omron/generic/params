@@ -1,0 +1,6 @@
+FIRM='Omron'
+MODEL='Inverter'
+PROTO='Modbus'
+DESCR=''
+TARGET='omron'
+MODULE='omron-generic

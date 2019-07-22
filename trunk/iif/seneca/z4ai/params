@@ -1,0 +1,6 @@
+FIRM='Seneca'
+MODEL='Z4AI'
+PROTO='Modbus'
+DESCR=''
+TARGET='seneca-z4ai'
+MODULE='seneca-z4ai

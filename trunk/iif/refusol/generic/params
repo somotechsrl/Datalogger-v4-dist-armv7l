@@ -1,0 +1,6 @@
+FIRM='Refusol'
+MODEL='Refusol'
+PROTO='Refusol'
+DESCR=''
+TARGET='refusol'
+MODULE='refusol-generic
