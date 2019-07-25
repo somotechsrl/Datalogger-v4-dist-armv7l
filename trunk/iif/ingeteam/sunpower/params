@@ -3,4 +3,4 @@ MODEL='Sunpower'
 PROTO='Modbus'
 DESCR=''
 TARGET='ingeteam-sunpower'
-MODULE='ingeteam-sunpower
+MODULE='ingeteam-sunpower'

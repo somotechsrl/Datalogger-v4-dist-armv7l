@@ -3,4 +3,4 @@ MODEL='SMA'
 PROTO='SMA'
 DESCR=''
 TARGET='sma'
-MODULE='sma-default
+MODULE='sma-default'

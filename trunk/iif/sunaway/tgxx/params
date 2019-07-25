@@ -3,4 +3,4 @@ MODEL='TGXX'
 PROTO='Modbus'
 DESCR=''
 TARGET='sunaway-tgxx'
-MODULE='sunaway-tgxx
+MODULE='sunaway-tgxx'

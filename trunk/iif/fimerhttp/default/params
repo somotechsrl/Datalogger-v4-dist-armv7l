@@ -3,4 +3,4 @@ MODEL='Fimer'
 PROTO='HTTP'
 DESCR=''
 TARGET='fimerhttp'
-MODULE='fimerhttp-default
+MODULE='fimerhttp-default'

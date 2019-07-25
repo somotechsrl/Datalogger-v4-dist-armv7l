@@ -3,4 +3,4 @@ MODEL='Socomec'
 PROTO='Modbus'
 DESCR=''
 TARGET='socomec'
-MODULE='socomec-default
+MODULE='socomec-default'

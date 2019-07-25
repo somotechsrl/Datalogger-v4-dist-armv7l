@@ -3,4 +3,4 @@ MODEL='Sensorbox'
 PROTO='CSV'
 DESCR='Modulo di comando'
 TARGET='arduino'
-MODULE='arduino-default
+MODULE='arduino-default'

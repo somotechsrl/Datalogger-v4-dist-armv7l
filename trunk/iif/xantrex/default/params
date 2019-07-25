@@ -3,4 +3,4 @@ MODEL='Xantrex'
 PROTO='Modbus'
 DESCR=''
 TARGET='xantrex'
-MODULE='xantrex-default
+MODULE='xantrex-default'

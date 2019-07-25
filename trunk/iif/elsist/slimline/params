@@ -3,4 +3,4 @@ MODEL='SlimLine'
 PROTO='Modbus'
 DESCR='Contabilizzatori Energia'
 TARGET='elsist-slimline'
-MODULE='elsist-slimline
+MODULE='elsist-slimline'

@@ -3,4 +3,4 @@ MODEL='HTTP'
 PROTO='JSON'
 DESCR=''
 TARGET='froniusWEB'
-MODULE='froniusWEB-default
+MODULE='froniusWEB-default'

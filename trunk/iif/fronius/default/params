@@ -3,4 +3,4 @@ MODEL='Fronius'
 PROTO='Fronius'
 DESCR=''
 TARGET='fronius'
-MODULE='fronius-default
+MODULE='fronius-default'

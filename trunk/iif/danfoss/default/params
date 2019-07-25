@@ -3,4 +3,4 @@ MODEL='RKLogger'
 PROTO='Danfoss'
 DESCR=''
 TARGET='danfoss'
-MODULE='danfoss-default
+MODULE='danfoss-default'

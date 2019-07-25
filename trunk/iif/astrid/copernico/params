@@ -3,4 +3,4 @@ MODEL='Copernico'
 PROTO='Modbus'
 DESCR=''
 TARGET='astrid-copernico'
-MODULE='astrid-copernico
+MODULE='astrid-copernico'

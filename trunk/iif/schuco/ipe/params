@@ -3,4 +3,4 @@ MODEL='IPEXX'
 PROTO='Modbus'
 DESCR=''
 TARGET='schuco-ipe'
-MODULE='schuco-ipe
+MODULE='schuco-ipe'

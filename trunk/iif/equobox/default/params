@@ -3,4 +3,4 @@ MODEL='Equobox'
 PROTO='WEBAPI'
 DESCR='Contabilizzatore ad uso generale'
 TARGET='equobox'
-MODULE='equobox-default
+MODULE='equobox-default'

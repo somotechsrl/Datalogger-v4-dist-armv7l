@@ -3,4 +3,4 @@ MODEL='Allarmi'
 PROTO='MySQL'
 DESCR=''
 TARGET='Ateargo'
-MODULE='Ateargo-default
+MODULE='Ateargo-default'

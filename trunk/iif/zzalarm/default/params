@@ -3,4 +3,4 @@ MODEL='ZZAlarm'
 PROTO='Allarmi'
 DESCR='Generatore allarmi e-mail su condizioni'
 TARGET='zzalarm'
-MODULE='zzalarm-default
+MODULE='zzalarm-default'

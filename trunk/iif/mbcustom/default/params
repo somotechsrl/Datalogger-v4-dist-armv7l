@@ -3,4 +3,4 @@ MODEL='Generico'
 PROTO='Modbus'
 DESCR=''
 TARGET='mbcustom'
-MODULE='mbcustom-default
+MODULE='mbcustom-default'

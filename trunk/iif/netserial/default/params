@@ -3,4 +3,4 @@ MODEL='NetSerial'
 PROTO='ANY'
 DESCR='COnnettore TCP per porta seriale'
 TARGET='netserial'
-MODULE='netserial-default
+MODULE='netserial-default'

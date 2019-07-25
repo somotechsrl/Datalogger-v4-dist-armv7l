@@ -3,4 +3,4 @@ MODEL='M-Bus'
 PROTO='M-Bus'
 DESCR='Interfaccia via RS232/TTL '
 TARGET='MBus'
-MODULE='MBus-default
+MODULE='MBus-default'
