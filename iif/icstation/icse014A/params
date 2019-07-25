@@ -3,4 +3,4 @@ MODEL='ICSE014A'
 PROTO='CSV'
 DESCR='Modulo di comando a 8 Relay'
 TARGET='icstation-icse014A'
-MODULE='icstation-icse014A
+MODULE='icstation-icse014A'

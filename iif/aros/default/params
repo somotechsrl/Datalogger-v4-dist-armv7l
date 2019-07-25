@@ -3,4 +3,4 @@ MODEL='Inverters'
 PROTO='Modbus'
 DESCR=''
 TARGET='aros'
-MODULE='aros-default
+MODULE='aros-default'

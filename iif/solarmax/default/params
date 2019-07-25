@@ -3,4 +3,4 @@ MODEL='Solarmax1'
 PROTO='Solarmax'
 DESCR=''
 TARGET='solarmax'
-MODULE='solarmax-default
+MODULE='solarmax-default'

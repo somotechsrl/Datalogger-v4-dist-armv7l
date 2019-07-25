@@ -3,4 +3,4 @@ MODEL='Cgate'
 PROTO='C-BUS'
 DESCR=''
 TARGET='cgate'
-MODULE='cgate-default
+MODULE='cgate-default'

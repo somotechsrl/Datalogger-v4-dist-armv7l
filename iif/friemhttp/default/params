@@ -3,4 +3,4 @@ MODEL='HTTP'
 PROTO='WEBAPI'
 DESCR='Interfaccia via emulatore WEB'
 TARGET='friemhttp'
-MODULE='friemhttp-default
+MODULE='friemhttp-default'

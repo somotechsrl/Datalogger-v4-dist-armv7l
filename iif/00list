@@ -16,7 +16,7 @@ rec|cgate|/opt/datalogger-v4-src/iif/cgate/default|Generico|Datalogger|Cgate|C-B
 rec|contrel-compalarm|/opt/datalogger-v4-src/iif/contrel/compalarm|Contrel|Alarm|Compalarm|Modbus|AL|Compalarm-D2
 rec|contrel-ctt4|/opt/datalogger-v4-src/iif/contrel/ctt4|Contrel|Gateway|CTT4|Modbus|MS|TEMPERATURE MONITOR DEVICE
 rec|contrel-ctt8|/opt/datalogger-v4-src/iif/contrel/ctt8|Contrel|Gateway|CTT8|Modbus|MS|TEMPERATURE MONITOR DEVICE
-rec|contrel-em14purs|/opt/datalogger-v4-src/iif/contrel/em14purs|Contrel|Gateway|EM14PURS|Modbus|MS|Single Phase Energy Meter
+rec|contrel-em140purs|/opt/datalogger-v4-src/iif/contrel/em140purs|Contrel|Gateway|EM140PURS|Modbus|MS|Single Phase Energy Meter
 rec|contrel-ema-90N|/opt/datalogger-v4-src/iif/contrel/ema-90N|Contrel|Gateway|EMA-90N|Modbus|EL|ELECTRICAL MEASUREMENT SUPERVISOR
 rec|contrel-ema|/opt/datalogger-v4-src/iif/contrel/ema|Contrel|Gateway|EMA|Modbus|MS|ELECTRICAL MULTIFUNCTION ANALYZER RECORDER
 rec|contrel-emm-4l|/opt/datalogger-v4-src/iif/contrel/emm-4l|Contrel|Gateway|EMM-4L|Modbus|MS|ELECTRICAL MULTIFUNCTION METER v 4L

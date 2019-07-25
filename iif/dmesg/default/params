@@ -3,4 +3,4 @@ MODEL='Debian'
 PROTO='Local'
 DESCR='Autodiagnostica Kernel'
 TARGET='dmesg'
-MODULE='dmesg-default
+MODULE='dmesg-default'

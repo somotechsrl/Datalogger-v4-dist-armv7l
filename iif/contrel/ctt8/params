@@ -3,4 +3,4 @@ MODEL='CTT8'
 PROTO='Modbus'
 DESCR='TEMPERATURE MONITOR DEVICE'
 TARGET='contrel-ctt8'
-MODULE='contrel-ctt8
+MODULE='contrel-ctt8'

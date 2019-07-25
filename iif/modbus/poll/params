@@ -3,4 +3,4 @@ MODEL=''
 PROTO=''
 DESCR=''
 TARGET='modbus-poll'
-MODULE='modbus-poll
+MODULE='modbus-poll'

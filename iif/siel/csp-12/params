@@ -3,4 +3,4 @@ MODEL='CSP-12'
 PROTO='Modbus'
 DESCR=''
 TARGET='siel-csp-12'
-MODULE='siel-csp-12
+MODULE='siel-csp-12'

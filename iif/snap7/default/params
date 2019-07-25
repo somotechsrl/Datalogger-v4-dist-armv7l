@@ -3,4 +3,4 @@ MODEL='PLC'
 PROTO='Snap7'
 DESCR=''
 TARGET='snap7'
-MODULE='snap7-default
+MODULE='snap7-default'

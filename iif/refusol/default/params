@@ -3,4 +3,4 @@ MODEL='Refusol'
 PROTO='Refusol'
 DESCR=''
 TARGET='refusol'
-MODULE='refusol-default
+MODULE='refusol-default'

@@ -3,4 +3,4 @@ MODEL='EMS-SAU-MBS'
 PROTO='Modbus'
 DESCR=''
 TARGET='tecnint-ems-sau-mbs'
-MODULE='tecnint-ems-sau-mbs
+MODULE='tecnint-ems-sau-mbs'

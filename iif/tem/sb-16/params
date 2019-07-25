@@ -3,4 +3,4 @@ MODEL='SB-16'
 PROTO='Modbus'
 DESCR=''
 TARGET='tem-sb-16'
-MODULE='tem-sb-16
+MODULE='tem-sb-16'

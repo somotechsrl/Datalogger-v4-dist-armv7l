@@ -3,4 +3,4 @@ MODEL='GSM+Watchdog'
 PROTO='NONE'
 DESCR='GSM con Watchdog su mancanza connessione'
 TARGET='gsmconfig'
-MODULE='gsmconfig-default
+MODULE='gsmconfig-default'

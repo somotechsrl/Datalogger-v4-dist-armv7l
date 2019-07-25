@@ -3,4 +3,4 @@ MODEL='Aurora'
 PROTO='Aurora'
 DESCR='Aurora Raw-StringBox Driver '
 TARGET='aurora-stringbox'
-MODULE='aurora-stringbox
+MODULE='aurora-stringbox'

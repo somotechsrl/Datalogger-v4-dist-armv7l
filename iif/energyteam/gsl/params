@@ -3,4 +3,4 @@ MODEL='GSL'
 PROTO='Modbus'
 DESCR=''
 TARGET='energyteam-gsl'
-MODULE='energyteam-gsl
+MODULE='energyteam-gsl'

@@ -3,4 +3,4 @@ MODEL=''
 PROTO=''
 DESCR=''
 TARGET='modbus'
-MODULE='modbus-default
+MODULE='modbus-default'
