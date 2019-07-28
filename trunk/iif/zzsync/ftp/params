@@ -1,0 +1,6 @@
+FIRM='Enermanager.it'
+MODEL='FTP'
+PROTO='FTP'
+DESCR="Sync via FTP to any site"
+TARGET='sync-any-ftp'
+MODULE='sync-any-ftp'
