@@ -1,0 +1,6 @@
+FIRM='Enermanager.it'
+MODEL='GET-CMD'
+PROTO='HTTPS'
+DESCR="GET Command from Enermanager"
+TARGET='aasync-enermanager-getcmd'
+MODULE='aasync-enermanager-getcmd'
