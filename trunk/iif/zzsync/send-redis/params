@@ -1,0 +1,6 @@
+FIRM='Enermanager.it'
+MODEL='RedisDB'
+PROTO='Redis'
+DESCR="Sync to local Redis DB"
+TARGET='zzsync-send-redis'
+MODULE='zzsync-send-redis'
