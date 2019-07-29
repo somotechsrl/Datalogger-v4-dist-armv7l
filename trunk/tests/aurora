@@ -1,0 +1,338 @@
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB2 2 1564430700
+20190729-22:05:05: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 315741
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    206.892151 V
+Input 1 Current             =      0.012793 A
+Input 1 Power               =      2.646765 W
+
+Grid Voltage Reading        =    298.074615 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.986294 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB2 3 1564430700
+20190729-22:05:08: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 315746
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    204.579163 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    298.084076 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.998840 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB2 4 1564430700
+20190729-22:05:11: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 122150
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    208.902832 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    297.831573 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     50.001163 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB2 5 1564430700
+20190729-22:05:14: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 315747
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    207.434448 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    297.962616 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.992767 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB1 6 1564430700
+20190729-22:05:18: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 315745
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    207.329483 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    298.224121 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     50.001602 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB1 7 1564430700
+20190729-22:05:21: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 315744
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    207.933380 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    298.536591 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     50.000351 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB1 8 1564430700
+20190729-22:05:24: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 315742
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    205.109375 V
+Input 1 Current             =      0.012793 A
+Input 1 Power               =      2.623958 W
+
+Grid Voltage Reading        =    298.340759 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     50.002548 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB1 9 1564430700
+20190729-22:05:28: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 315748
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    205.921814 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    298.387451 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.995850 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB0 10 1564430700
+20190729-22:05:31: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 321664
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    151.069122 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    298.662537 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.988297 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB0 11 1564430700
+20190729-22:05:34: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 321665
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    200.284332 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    298.914215 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     50.004177 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB0 12 1564430700
+20190729-22:05:38: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 321650
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    209.220993 V
+Input 1 Current             =      0.012793 A
+Input 1 Power               =      2.676558 W
+
+Grid Voltage Reading        =    298.662384 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.979443 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB0 13 1564430700
+20190729-22:05:41: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 321663
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    204.616440 V
+Input 1 Current             =      0.000000 A
+Input 1 Power               =      0.000000 W
+
+Grid Voltage Reading        =    298.121338 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.981495 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
+LOG|Params|CSLAVE|-Y 32 -w 15 -M 10 -P 25000 -A -N 1 -d 0 -p -n -3 -E 1
+BEGIN /dev/ttyUSB0 14 1564430700
+20190729-22:05:44: aurora: ERROR: Received bad return code (-1 59 39)
+
+Part Number: -3M04-
+
+Serial Number: 321653
+
+Alarm 1:               No Alarm
+Alarm 2:               No Alarm
+Alarm 3:               No Alarm
+Alarm 4:               No Alarm
+
+Input 1 Voltage             =    200.619324 V
+Input 1 Current             =      0.025586 A
+Input 1 Power               =      5.133034 W
+
+Grid Voltage Reading        =    298.746338 V
+Grid Current Reading        =      0.000000 A
+Grid Power Reading          =      0.000000 W
+Frequency Reading           =     49.987103 Hz.
+
+DC/AC Conversion Efficiency =           0.0 %
+Inverter Temperature        =      0.000000 C
+Booster Temperature         =      0.000000 C
+END
