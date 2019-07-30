@@ -5,16 +5,6 @@ require 'foobar-lib.pl';
 
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-#print "<select name=test><option value=1>uno</option><option value=2>due</option></select>";
-
-#print "<iframe src='http://localhost'></iframe>";
-#print "<form method='POST'>";
-#print `/opt/datalogger/app/brand`;
-#print `brand=contrel /opt/datalogger/app/driver`;
-#print "</form>";
-#my @test=(1,2,3,4,5);
-#ui_select("prova",1,@test);
-
 # Build table contents
 my @sites = list_foobar_websites();
 my @table = ( );
@@ -41,5 +31,4 @@ print ui_form_columns_table(
 	$text{'index_none'},
 	);
 
-system("ls");
 ui_print_footer('/', $text{'index'});
