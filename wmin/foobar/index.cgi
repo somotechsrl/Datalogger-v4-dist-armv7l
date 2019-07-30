@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 # Show all Foobar webserver websites
 
-use 'foobar-lib';
+require 'foobar-lib.pl';
 
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
