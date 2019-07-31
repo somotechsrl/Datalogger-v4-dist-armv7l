@@ -7,12 +7,14 @@ sub  dllastdata_buttons {
 	my $fn,@fl;
 	$fn=`ls /tmp | grep .last`;
 	$fn =~ s/[.].*//g;
-	@fl = split " " $fn;	
+	@fl = split(/[ \t\n\r]/,$fn);	
 	
-	ui_buttons_start();
+	#print @fl;
+	print ui_buttons_start();
 	foreach my $button_name (@fl) {
-		ui_button('show.cgi',$button_name);
+		#print $button_name;
+		print ui_button($button_name);
 		}
-	ui_buttons_end();
+	print ui_buttons_end();
 	}
 
