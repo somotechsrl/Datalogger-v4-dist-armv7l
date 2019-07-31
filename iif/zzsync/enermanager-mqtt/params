@@ -1,6 +1,6 @@
 FIRM='Enermanager.it'
 MODEL='MQTT'
 PROTO='MQTT'
-DESCR="MQTT Sync via VPN to enermanager.it"
+DESCR="MQTT Sync via VPN"
 TARGET='zzsync-enermanager-mqtt'
 MODULE='zzsync-enermanager-mqtt'
