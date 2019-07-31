@@ -22,6 +22,7 @@ sub  dllastdata_buttons {
 	print ui_form_end();
 	}
 
+# Raw data format - best to specilize
 sub dllastdata_show {
 	ReadParse();
 	my @pressed=keys %in;
