@@ -3,7 +3,7 @@
 use WebminCore;
 init_config();
 
-sub  dllastdata_buttons {
+sub  dlquerydb_buttons {
 	my $fn,@fl,$button_desc;
 	$fn=`ls /tmp | grep .last`;
 	$fn =~ s/[.].*//g;
@@ -22,7 +22,7 @@ sub  dllastdata_buttons {
 	print ui_form_end();
 	}
 
-sub dllastdata_show {
+sub dlquerydb_show {
 	ReadParse();
 	my @pressed=keys %in;
 	my $command='/opt/datalogger/api/iifLast '.@pressed[0];
