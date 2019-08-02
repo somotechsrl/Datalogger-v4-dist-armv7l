@@ -2,3 +2,4 @@ FIRM='Enermanager.it'
 MODEL='GET-CMD'
 PROTO='HTTPS'
 DESCR="COMMANDS Sync via HTTPS"
+MODULE='aasync-enermanager-getcmd'
