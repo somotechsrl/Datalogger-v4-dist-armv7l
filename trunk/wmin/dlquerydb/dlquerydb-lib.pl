@@ -23,7 +23,7 @@ sub  dlquerydb_buttons {
 	}
 
 # Raw data format - best to specilize
-sub dlquerydb_show {
+sub dlquerydb_show_old {
 	ReadParse();
 	my @pressed=keys %in;
 	my $command='/opt/datalogger/api/iifLast '.@pressed[0];
@@ -35,7 +35,7 @@ sub dlquerydb_show {
 	}
 
 # Raw data format - best to specilize
-sub dlquerydb_show_new {
+sub dlquerydb_show {
 
 	# loads submit parameters and connects to api - gets CSV format
 	ReadParse();
@@ -44,14 +44,19 @@ sub dlquerydb_show_new {
 	# DL API queries
 	#my $bdescr=$text{@pressed[0]} ne '' ? $text{@pressed[0]} : @pressed[0];
 	my $bdescr=`/opt/datalogger/api/iifAltDescr @pressed[0]`;
-	my $command='cd /opt/datalogger;api/iifLast '.@pressed[0];
+	my $filedata=`/opt/datalogger/api/iifLast @pressed[0]`;
+	my $filestat=`stat /tmp/@pressed[0].last`;
+
+	print &ui_table_start($text{'dlconfig_drdata'}.": ".$bdescr);
+
+	print "<pre>$filestat</pre>";
+	($filedata =~ /^head[|]/ ||  $filedata =~ /^data/) || print "<pre>$filedata</pre>" && print &ui_table_end() && return;
 
 	# this is a CSV with '|' as separator - first line is 'head'
-	my @result=split /\n/ , `$command`;
 	my @data,@head,@type;	
 
 	# extracts data from textfile
-	foreach my $line (split /\n/,`$command`) {
+	foreach my $line (split /\n/,$filedata) {
 
 		# extracts row head and nr
 		my @row=split /[|]/, $line;
@@ -72,17 +77,15 @@ sub dlquerydb_show_new {
 			}
 		}
 
-
 	# normalized head (language table)
 	my @nhead;
 	foreach $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
 
 	# Show the table with add links
-	print &ui_table_start($text{'dlconfig_drdata'}.": ".$bdescr);
 	print ui_form_columns_table(
 		undef,
-		[ ui_submit('create'),ui_submit('erase'),ui_submit('save') ],
-		1,
+		undef,
+		0,
 		undef,
 		undef,
 		\@nhead,
