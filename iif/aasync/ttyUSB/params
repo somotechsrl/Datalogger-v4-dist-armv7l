@@ -1,0 +1,6 @@
+FIRM='Enermanager.it'
+MODEL='TTYUSB'
+PROTO='LOCAL'
+DESCR="Serial Port Scanner"
+TARGET='aasync-ttyusb'
+MODULE='aasync-ttyusb'
