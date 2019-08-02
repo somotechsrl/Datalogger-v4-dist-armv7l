@@ -2,5 +2,5 @@ FIRM='Contrel'
 MODEL='EMM'
 PROTO='Modbus'
 DESCR='ELECTRICAL MULTIFUNCTION METER'
-TARGET='contrel-emm'
+
 MODULE='contrel-emm'

@@ -2,5 +2,5 @@ FIRM='Contrel'
 MODEL='REC-CVM'
 PROTO='Modbus'
 DESCR='ELECTRICAL MULTIFUNCTION METER/CONTROLLER'
-TARGET='contrel-rec-cvm'
+
 MODULE='contrel-rec-cvm'

@@ -2,5 +2,5 @@ FIRM='Coster'
 MODEL='ALL'
 PROTO='Coster'
 DESCR='Centraline Coster DTCXX CSCXX ecc. ecc.'
-TARGET='coster'
+
 MODULE='coster-default'

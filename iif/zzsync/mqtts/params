@@ -2,5 +2,5 @@ FIRM='Enermanager.it'
 MODEL='MQTTS'
 PROTO='MQTTS'
 DESCR="Sync via secure TLS MQTT"
-TARGET='sync-any-mqtts'
+
 MODULE='sync-any-mqtts'

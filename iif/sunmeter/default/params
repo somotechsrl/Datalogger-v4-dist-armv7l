@@ -2,5 +2,5 @@ FIRM='Sunmeter'
 MODEL='Sunmeter'
 PROTO='Modbus'
 DESCR=''
-TARGET='sunmeter'
+
 MODULE='sunmeter-default'

@@ -2,5 +2,5 @@ FIRM='Contrel'
 MODEL='EM140PURS'
 PROTO='Modbus'
 DESCR='Single Phase Energy Meter'
-TARGET='contrel-em140purs'
+
 MODULE='contrel-em140purs'

@@ -2,5 +2,5 @@ FIRM='Modbus'
 MODEL='CMD'
 PROTO='Modbus'
 DESCR='Modbus Base CMD Wrapper'
-TARGET='modbus-cmd'
+
 MODULE='modbus-cmd'

@@ -2,5 +2,5 @@ FIRM='RENU'
 MODEL='gwy00b'
 PROTO='Modbus'
 DESCR=''
-TARGET='renu-gwy00b'
+
 MODULE='renu-gwy00b'
