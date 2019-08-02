@@ -11,14 +11,15 @@ sub  dllastdata_buttons {
 	
 	#print @fl;
 	print ui_form_start("index.cgi","post");
+	print &ui_table_start($text{'dllastdata_active'});
 	print ui_buttons_start();
 	foreach my $button_name (@fl) {
 		#print $button_name;
 		$button_desc=`/opt/datalogger/api/iifAltDescr $button_name`;
 		print ui_submit($button_desc ne '' ? $button_desc : $button_name,$button_name,0,"value=1 style='max-width: 20em;width: 20em;'");
 		}
-	print ui_buttons_hr();
 	print ui_buttons_end();
+	print &ui_table_end();
 	print ui_form_end();
 	}
 
