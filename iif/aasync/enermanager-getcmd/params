@@ -1,6 +1,4 @@
 FIRM='Enermanager.it'
 MODEL='GET-CMD'
 PROTO='HTTPS'
-DESCR="Command from enermanager.it"
-TARGET='aasync-enermanager-getcmd'
-MODULE='aasync-enermanager-getcmd'
+DESCR="COMMANDS Sync via HTTPS"
