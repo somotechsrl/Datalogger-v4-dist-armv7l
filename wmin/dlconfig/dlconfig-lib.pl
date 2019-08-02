@@ -6,7 +6,7 @@ init_config();
 
 sub  dlconfigdb_buttons {
 	my $fn,@fl,$button_desc;
-	$fn=`ls /tmp | grep .last`;
+	$fn=`ls /opt/datalogger/etc/iif.d`;
 	$fn =~ s/[.].*//g;
 	@fl = split(/[ \t\n\r]/,$fn);	
 	
