@@ -1,4 +1,4 @@
 FIRM='Enermanager.it'
-MODEL='LocalDB'
+MODEL='RedisDB'
 PROTO='Redis'
 DESCR="Sync to local DB"

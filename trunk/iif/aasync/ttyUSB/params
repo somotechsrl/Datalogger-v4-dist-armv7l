@@ -1,4 +1,4 @@
 FIRM='Enermanager.it'
-MODEL='ttyUSB'
-PROTO='Serial'
-DESCR="USB/TTY make links for usage"
+MODEL='TTYUsb'
+PROTO='USB'
+DESCR="USB TY Scanner"
