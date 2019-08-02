@@ -1,6 +1,4 @@
 FIRM='Enermanager.it'
 MODEL='LocalDB'
-PROTO='redis'
+PROTO='Redis'
 DESCR="Sync to local DB"
-TARGET='zzsync-localdb-save'
-MODULE='zzsync-localdb-save'
