@@ -1,4 +1,16 @@
 dlconfig_active=Enabled Drivers
+dlconfig_drdata=Selected Driver
+dlconfig_nodata=No Data for This Driver
 dlconfig_module_list=Driver Current Config
 
+module=Data Module
+
 mbchannel=ModBus Channel
+mbaddress=ModBus Address
+mbdelay=ModBus Delay/Query
+mboffset=Register Offset
+
+podid=ID POD
+lat=Latitude
+lat=Longitude
+format=Data Format

@@ -12,7 +12,6 @@ sub  dlconfigdb_buttons {
 	
 	#print @fl;
 	print &ui_form_start("index.cgi","post");
-
 	print &ui_table_start($text{'dlconfig_active'});
 	foreach my $button_name (@fl) {
 		#print $button_name;
@@ -30,25 +29,59 @@ sub dlconfigdb_show {
 	# loads submit parameters and connects to api - gets CSV format
 	ReadParse();
 	my @pressed=keys %in;
+
+	# DL API queries
 	#my $bdescr=$text{@pressed[0]} ne '' ? $text{@pressed[0]} : @pressed[0];
 	my $bdescr=`/opt/datalogger/api/iifAltDescr @pressed[0]`;
 	my $command='cd /opt/datalogger;api/iifConfig '.@pressed[0].' print';
 
 	# this is a CSV with '|' as separator - first line is 'head'
 	my @result=split /\n/ , `$command`;
-	
-	print &ui_table_start($text{'dlconfig_module_list'}.' ('.$bdescr.')','width="100%"');
-	foreach my $line (split /\n/,`$command`) {
-		my $copen=0;
-		my @row=split /[|]/, $line;
-		my $type=shift @row;
-		switch($type) {
-			case "head"  {$copen++;print &ui_columns_start(@row,100,0,,"prova");}
-			case "data"  {$copen++;print &ui_columns_row(@row);}
-			}
-		$copen && print &ui_columns_end();
-		}
-	print &ui_table_end('');
+	my @data,@head,@type;	
 
+	# extracts data from textfile
+	foreach my $line (split /\n/,`$command`) {
+
+		# extracts row head and nr
+		my @row=split /[|]/, $line;
+		my $typ=shift @row;
+		my $num=shift(@row);
+
+		# creates array(s)
+		if($typ eq "head") {
+			push(@head,@row);
+			}
+		if($typ eq "data") {
+			push(@hidd,["nr",$num]);
+			push(@data,[ @row ]);
+			# check type 'awful...'
+			foreach $f (@row) {
+				push(@type,$f =~ /^[0-9,.E]+$/ ? 'number' : 'string');
+				}
+			}
+		}
+
+
+	# normalized head (language table)
+	my @nhead;
+	foreach $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
+
+	# Show the table with add links
+	print &ui_table_start($text{'dlconfig_drdata'}.": ".$bdescr);
+	print ui_form_columns_table(
+		undef,
+		[ ui_submit('create'),ui_submit('erase'),ui_submit('save') ],
+		1,
+		undef,
+		undef,
+		\@nhead,
+		100,
+		\@data,
+		\@type,
+		0,
+		undef,
+		$text{'dlconfig_nodata'},
+		);
+	print &ui_table_end();
 	}
 
