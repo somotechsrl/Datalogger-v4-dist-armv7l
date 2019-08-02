@@ -1,0 +1,4 @@
+dlconfig_active=Enabled Drivers
+dlconfig_module_list=Driver Current Config
+
+mbchannel=ModBus Channel
