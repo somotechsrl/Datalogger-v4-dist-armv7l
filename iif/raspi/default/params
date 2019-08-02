@@ -1,6 +1,5 @@
 FIRM='Raspberry'
-MODEL='Debian'
+MODEL='Diagnostic'
 PROTO='Local'
-DESCR='Autodiagnostica Datalogger'
-TARGET='raspi'
+DESCR='Datalogger Disagnostics'
 MODULE='raspi'
