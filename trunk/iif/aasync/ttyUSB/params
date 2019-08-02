@@ -1,5 +1,5 @@
 FIRM='Enermanager.it'
-MODEL='TTYUsb'
+MODEL='ttyUSB'
 PROTO='USB'
 DESCR="USB TY Scanner"
 MODULE='aasync-ttyUSB'

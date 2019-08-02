@@ -2,5 +2,5 @@ FIRM='Modbus'
 MODEL='default'
 PROTO='Modbus'
 DESCR='Modbus Base Query Wrapper'
-TARGET='modbus'
+
 MODULE='modbus-default'

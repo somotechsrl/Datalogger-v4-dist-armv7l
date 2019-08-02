@@ -2,5 +2,5 @@ FIRM='Contrel'
 MODEL='EMM-ENEA'
 PROTO='Modbus'
 DESCR='EMM - ENEA'
-TARGET='contrel-emm-enea'
+
 MODULE='contrel-emm-enea'

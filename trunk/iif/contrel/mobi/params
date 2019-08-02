@@ -2,5 +2,5 @@ FIRM='Contrel'
 MODEL='GWXX'
 PROTO='TEXT'
 DESCR='GSM/GPRS Remote Control'
-TARGET='contrel-mobi'
+
 MODULE='contrel-mobi'

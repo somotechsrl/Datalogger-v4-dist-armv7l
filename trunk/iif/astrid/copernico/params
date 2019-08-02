@@ -2,5 +2,5 @@ FIRM='Astrid'
 MODEL='Copernico'
 PROTO='Modbus'
 DESCR=''
-TARGET='astrid-copernico'
+
 MODULE='astrid-copernico'

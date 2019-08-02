@@ -2,5 +2,5 @@ FIRM='Schuco'
 MODEL='IPEXX'
 PROTO='Modbus'
 DESCR=''
-TARGET='schuco-ipe'
+
 MODULE='schuco-ipe'

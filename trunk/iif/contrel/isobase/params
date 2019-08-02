@@ -2,5 +2,5 @@ FIRM='Contrel'
 MODEL='ISOBASE'
 PROTO='Modbus'
 DESCR='ISOBASE RTX poller '
-TARGET='contrel-isobase'
+
 MODULE='contrel-isobase'

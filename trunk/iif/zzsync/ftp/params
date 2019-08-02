@@ -2,5 +2,5 @@ FIRM='Enermanager.it'
 MODEL='FTP'
 PROTO='FTP'
 DESCR="Sync via FTP to any site"
-TARGET='zzsync-ftp-any'
+
 MODULE='zzsync-ftp-any'

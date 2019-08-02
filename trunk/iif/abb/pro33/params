@@ -2,5 +2,5 @@ FIRM='ABB'
 MODEL='ABB Pro'
 PROTO='ABB'
 DESCR='ABB Pro Series Inverter'
-TARGET='abb-pro33'
+
 MODULE='abb-pro33'

@@ -2,5 +2,5 @@ FIRM='Aurora-Raw-Inverter'
 MODEL='Aurora'
 PROTO='Aurora'
 DESCR='Aurora Raw-Inverter Driver '
-TARGET='aurora-inverter'
+
 MODULE='aurora-inverter'
