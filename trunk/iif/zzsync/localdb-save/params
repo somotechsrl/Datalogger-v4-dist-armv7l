@@ -2,3 +2,4 @@ FIRM='Enermanager.it'
 MODEL='RedisDB'
 PROTO='Redis'
 DESCR="Sync to local DB"
+MODULE='zzsync-localdb-save'
