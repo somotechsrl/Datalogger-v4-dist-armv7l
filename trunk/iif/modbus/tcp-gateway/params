@@ -1,5 +1,0 @@
-FIRM='Modbus'
-MODEL='Gateway'
-PROTO='Modbus'
-DESCR='Gateway Modbus rtu => TCP'
-MODULE='modbus-tcp-gateway'

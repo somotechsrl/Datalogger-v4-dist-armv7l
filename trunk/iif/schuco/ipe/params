@@ -1,6 +1,0 @@
-FIRM='Schuco'
-MODEL='IPEXX'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='schuco-ipe'

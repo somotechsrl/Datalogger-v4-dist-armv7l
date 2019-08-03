@@ -1,6 +1,0 @@
-FIRM='Astrid'
-MODEL='Copernico'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='astrid-copernico'

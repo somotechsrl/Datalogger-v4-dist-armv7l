@@ -1,6 +1,0 @@
-FIRM='Siel'
-MODEL='Soleil'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='siel-dsp-soleil'

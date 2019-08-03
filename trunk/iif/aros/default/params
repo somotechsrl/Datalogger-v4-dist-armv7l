@@ -1,6 +1,0 @@
-FIRM='AROS'
-MODEL='Inverters'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='aros-default'

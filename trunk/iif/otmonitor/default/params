@@ -1,6 +1,0 @@
-FIRM='OTMonitor'
-MODEL='OTMonitor'
-PROTO='HTTP'
-DESCR='Interfaccia via HTTP '
-
-MODULE='otmonitor-default'

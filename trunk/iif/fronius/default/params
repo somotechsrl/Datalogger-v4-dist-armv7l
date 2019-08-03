@@ -1,5 +1,0 @@
-FIRM='Fronius'
-MODEL='Fronius'
-PROTO='Fronius'
-DESCR='Direct access via Fronius Proto'
-MODULE='fronius-default'

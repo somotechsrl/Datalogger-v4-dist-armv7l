@@ -1,6 +1,0 @@
-FIRM='Socomec'
-MODEL='Socomec'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='socomec-default'

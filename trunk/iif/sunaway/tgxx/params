@@ -1,6 +1,0 @@
-FIRM='Sunaway'
-MODEL='TGXX'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='sunaway-tgxx'

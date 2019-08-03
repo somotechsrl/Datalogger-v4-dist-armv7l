@@ -1,6 +1,0 @@
-FIRM='Ateargo'
-MODEL='Allarmi'
-PROTO='MySQL'
-DESCR=''
-
-MODULE='Ateargo-default'

@@ -1,5 +1,0 @@
-FIRM='Fronius'
-MODEL='Datamanager'
-PROTO='Modbus'
-DESCR='Datamanager Board via Modbus'
-MODULE='fronius-dm'

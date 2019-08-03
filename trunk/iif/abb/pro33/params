@@ -1,6 +1,0 @@
-FIRM='ABB'
-MODEL='ABB Pro'
-PROTO='ABB'
-DESCR='ABB Pro Series Inverter'
-
-MODULE='abb-pro33'
