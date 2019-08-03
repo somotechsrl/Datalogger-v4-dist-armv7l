@@ -1,6 +1,5 @@
 FIRM='Fronius'
 MODEL='Datamanager'
 PROTO='Modbus'
-DESCR=''
-
+DESCR='Datamanager Modbus'
 MODULE='fronius-dm'
