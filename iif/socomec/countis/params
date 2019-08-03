@@ -1,6 +1,0 @@
-FIRM='Socomec'
-MODEL='Countis'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='socomec-countis'

@@ -1,6 +1,0 @@
-FIRM='Setecna'
-MODEL='MBOTG'
-PROTO='Modbus'
-DESCR='Opentherm to Modbus Gateway'
-
-MODULE='setecna-mbotg'

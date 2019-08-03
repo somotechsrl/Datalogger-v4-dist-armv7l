@@ -1,6 +1,0 @@
-FIRM='Enermanager.it'
-MODEL='MQTT'
-PROTO='MQTT'
-DESCR="Sync via MQTT"
-
-MODULE='sync-any-mqtt'

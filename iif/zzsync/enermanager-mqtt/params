@@ -1,5 +1,0 @@
-FIRM='Enermanager.it'
-MODEL='MQTTVPN'
-PROTO='MQTT'
-DESCR="MQTT Sync via VPN"
-MODULE='zzsync-enermanager-mqtt'

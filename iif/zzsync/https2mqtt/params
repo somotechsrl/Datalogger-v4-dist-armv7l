@@ -1,6 +1,0 @@
-FIRM='Enermanager.it'
-MODEL='HTTPS2MQTT'
-PROTO='MQTT'
-DESCR="Sync via https gateway to enermanager.it"
-TARGET='sync-enermanager-https'
-MODULE='sync-enermanager-https'

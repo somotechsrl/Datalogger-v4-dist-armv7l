@@ -1,6 +1,0 @@
-FIRM='Contrel'
-MODEL='Compalarm'
-PROTO='Modbus'
-DESCR='Compalarm-D2'
-
-MODULE='contrel-compalarm'

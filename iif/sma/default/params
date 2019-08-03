@@ -1,6 +1,0 @@
-FIRM='SMA'
-MODEL='SMA'
-PROTO='SMA'
-DESCR=''
-
-MODULE='sma-default'

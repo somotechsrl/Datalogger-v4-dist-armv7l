@@ -1,6 +1,0 @@
-FIRM='EnergyTeam'
-MODEL='GSL'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='energyteam-gsl'

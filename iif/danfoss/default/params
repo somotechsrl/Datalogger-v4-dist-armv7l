@@ -1,6 +1,0 @@
-FIRM='Danfoss'
-MODEL='RKLogger'
-PROTO='Danfoss'
-DESCR=''
-
-MODULE='danfoss-default'

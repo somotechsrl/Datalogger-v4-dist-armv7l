@@ -1,6 +1,0 @@
-FIRM='Arduino'
-MODEL='Sensorbox'
-PROTO='CSV'
-DESCR='Modulo di comando'
-
-MODULE='arduino-default'

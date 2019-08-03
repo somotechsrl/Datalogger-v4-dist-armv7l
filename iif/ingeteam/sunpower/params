@@ -1,6 +1,0 @@
-FIRM='Ingeteam'
-MODEL='Sunpower'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='ingeteam-sunpower'

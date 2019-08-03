@@ -1,6 +1,0 @@
-FIRM='Astrid'
-MODEL='Array Monitor'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='astrid-array'

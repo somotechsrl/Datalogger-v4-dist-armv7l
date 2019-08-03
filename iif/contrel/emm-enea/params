@@ -1,6 +1,0 @@
-FIRM='Contrel'
-MODEL='EMM-ENEA'
-PROTO='Modbus'
-DESCR='EMM - ENEA'
-
-MODULE='contrel-emm-enea'

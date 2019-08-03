@@ -1,5 +1,0 @@
-FIRM='Modbus'
-MODEL='CMD'
-PROTO='Modbus'
-DESCR='Modbus Base CMD Wrapper'
-MODULE='modbus-cmd'

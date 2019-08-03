@@ -1,6 +1,0 @@
-FIRM='TEM'
-MODEL='SB-16'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='tem-sb-16'

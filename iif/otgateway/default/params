@@ -1,6 +1,0 @@
-FIRM='OTMonitor'
-MODEL='OTGateway'
-PROTO='TTL'
-DESCR='Interfaccia via TTL '
-
-MODULE='otgateway-default'

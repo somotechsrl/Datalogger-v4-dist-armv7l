@@ -1,6 +1,0 @@
-FIRM='RENU'
-MODEL='gwy00b'
-PROTO='Modbus'
-DESCR=''
-
-MODULE='renu-gwy00b'
