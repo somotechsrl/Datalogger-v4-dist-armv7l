@@ -1,6 +1,0 @@
-FIRM='Fronius'
-MODEL='HTTP'
-PROTO='JSON'
-DESCR=''
-
-MODULE='froniusWEB-default'

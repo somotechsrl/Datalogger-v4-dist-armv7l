@@ -1,0 +1,5 @@
+FIRM='Fronius'
+MODEL='HTTP'
+PROTO='JSON'
+DESCR='Fronius via REST http'
+MODULE='fronius-web'
