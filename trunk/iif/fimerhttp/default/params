@@ -1,6 +1,0 @@
-FIRM='Fimer'
-MODEL='Fimer'
-PROTO='HTTP'
-DESCR=''
-
-MODULE='fimerhttp-default'
