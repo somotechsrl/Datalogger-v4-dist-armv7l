@@ -1,6 +1,5 @@
-FIRM='Generico'
+FIRM='Modbus'
 MODEL='Gateway'
-PROTO='ModbusTCP'
+PROTO='Modbus'
 DESCR='Gateway Modbus rtu => TCP'
-
-MODULE='ModbusTCP-default'
+MODULE='modbus-tcp-gateway'
