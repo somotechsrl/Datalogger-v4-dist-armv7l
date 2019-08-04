@@ -42,26 +42,16 @@ sub dllastdata_show {
 		}
 
 	# DL API queries
-	#my $bdescr=$text{@pressed[0]} ne '' ? $text{@pressed[0]} : @pressed[0];
 	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
-	my $filedata=`/opt/datalogger/api/iifLast $module`;
-	my $filestat=`stat /tmp/@pressed[0].last`;
 	
-	# Header and some file statistics
+	# File statistics
+	my $filestat=`stat /tmp/$module.last`;
 	print &ui_table_start($text{'dllastdata_drdata'}.": ".$bdescr);
 	print "<pre>$filestat</pre>";
 	print &ui_table_end(); 
-	
-	# check if is a 'CSV' data file or flat
-	my $title=$text{'dllastdata_result'}.": ".$bdescr;
-	if(($filedata =~ /^head[|]/ ||  $filedata =~ /^data/) ) {
-		csv2uiColumns($title,$filedata);
-		return;
-		}
 
-	# print flat text file
-	print &ui_table_start($title);
-	print "<pre>$filedata</pre>"; 
-	print &ui_table_end(); 
+	# outputs data 
+	my $filedata=`/opt/datalogger/api/iifLast $module`;
+	dataFileOut($text{'dllastdata_result'}.": ".$bdescr,$filedata);
 	}
 

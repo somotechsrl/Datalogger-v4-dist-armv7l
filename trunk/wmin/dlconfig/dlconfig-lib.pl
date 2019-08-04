@@ -2,6 +2,7 @@
 
 use Switch;
 use WebminCore;
+use datalogger_lib;
 init_config();
 
 sub  dlconfigdb_buttons {
@@ -31,54 +32,11 @@ sub dlconfigdb_show {
 	my @pressed=keys %in;
 
 	# DL API queries
-	#my $bdescr=$text{@pressed[0]} ne '' ? $text{@pressed[0]} : @pressed[0];
-	my $bdescr=`/opt/datalogger/api/iifAltDescr @pressed[0]`;
-	#my $command='cd /opt/datalogger;api/iifConfig '.@pressed[0].' print | bin/CSVRow2Swap -vseparator=\'|\'';
-	my $command='cd /opt/datalogger;api/iifConfig '.@pressed[0].' print ';
+	my $module=@pressed[0];
+	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
+	my $filedata=`cd /opt/datalogger;api/iifConfig $module print `;
 
-	# this is a CSV with '|' as separator - first line is 'head'
-	my @result=split /\n/ , `$command`;
-	my @data,@head,@type;	
-
-	# extracts data from textfile
-	foreach my $line (split /\n/,`$command`) {
-
-		# extracts row head and nr
-		my @row=split /[|]/, $line;
-		my $typ=shift @row;
-		my $num=shift(@row);
-
-		# creates array(s)
-		if($typ eq "head") {
-			@head=@row;
-			}
-		if($typ eq "data") {
-			push(@hidd,["nr",$num]);
-			push(@data,[ @row ]);
-			}
-		}
-
-
-	# normalized head (language table)
-	my @nhead;
-	foreach $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
-
-	# Show the table with add links
-	print &ui_table_start($text{'dlconfig_drdata'}.": ".$bdescr);
-	print ui_form_columns_table(
-		undef,
-		[ ui_submit('create'),ui_submit('erase'),ui_submit('save') ],
-		1,
-		undef,
-		undef,
-		\@nhead,
-		100,
-		\@data,
-		undef,
-		0,
-		undef,
-		$text{'dlconfig_nodata'},
-		);
-	print &ui_table_end();
+	# outputs data
+	dataFileOut($sbdescr,$filedata);
 	}
 
