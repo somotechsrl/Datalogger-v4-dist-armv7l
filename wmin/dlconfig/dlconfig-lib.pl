@@ -33,7 +33,8 @@ sub dlconfigdb_show {
 	# DL API queries
 	#my $bdescr=$text{@pressed[0]} ne '' ? $text{@pressed[0]} : @pressed[0];
 	my $bdescr=`/opt/datalogger/api/iifAltDescr @pressed[0]`;
-	my $command='cd /opt/datalogger;api/iifConfig '.@pressed[0].' print';
+	#my $command='cd /opt/datalogger;api/iifConfig '.@pressed[0].' print | bin/CSVRow2Swap -vseparator=\'|\'';
+	my $command='cd /opt/datalogger;api/iifConfig '.@pressed[0].' print ';
 
 	# this is a CSV with '|' as separator - first line is 'head'
 	my @result=split /\n/ , `$command`;
@@ -49,15 +50,11 @@ sub dlconfigdb_show {
 
 		# creates array(s)
 		if($typ eq "head") {
-			push(@head,@row);
+			@head=@row;
 			}
 		if($typ eq "data") {
 			push(@hidd,["nr",$num]);
 			push(@data,[ @row ]);
-			# check type 'awful...'
-			foreach $f (@row) {
-				push(@type,$f =~ /^[0-9,.E]+$/ ? 'number' : 'string');
-				}
 			}
 		}
 
@@ -77,7 +74,7 @@ sub dlconfigdb_show {
 		\@nhead,
 		100,
 		\@data,
-		\@type,
+		undef,
 		0,
 		undef,
 		$text{'dlconfig_nodata'},

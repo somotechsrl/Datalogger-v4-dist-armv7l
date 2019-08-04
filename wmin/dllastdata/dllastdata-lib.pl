@@ -3,6 +3,8 @@
 use WebminCore;
 init_config();
 
+use datalogger_lib;
+
 sub  dllastdata_buttons {
 	my $fn,@fl,$button_desc;
 	$fn=`ls /tmp | grep .last`;
@@ -30,10 +32,19 @@ sub dllastdata_show {
 	ReadParse();
 	my @pressed=keys %in;
 
+	# selected module
+	my $module=@pressed[0];
+
+	if($module eq "") {
+		print &ui_table_start($text{'dllastdata_nomodule'});
+		print &ui_table_end();
+		return;
+		}
+
 	# DL API queries
 	#my $bdescr=$text{@pressed[0]} ne '' ? $text{@pressed[0]} : @pressed[0];
-	my $bdescr=`/opt/datalogger/api/iifAltDescr @pressed[0]`;
-	my $filedata=`/opt/datalogger/api/iifLast @pressed[0]`;
+	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
+	my $filedata=`/opt/datalogger/api/iifLast $module`;
 	my $filestat=`stat /tmp/@pressed[0].last`;
 	
 	# Header and some file statistics
@@ -42,55 +53,15 @@ sub dllastdata_show {
 	print &ui_table_end(); 
 	
 	# check if is a 'CSV' data file or flat
-	print &ui_table_start($text{'dllastdata_result'}.": ".$bdescr);
-	if(! ($filedata =~ /^head[|]/ ||  $filedata =~ /^data/) ) {
-		print "<pre>$filedata</pre>"; 
-		print &ui_table_end(); 
+	my $title=$text{'dllastdata_result'}.": ".$bdescr;
+	if(($filedata =~ /^head[|]/ ||  $filedata =~ /^data/) ) {
+		csv2uiColumns($title,$filedata);
 		return;
 		}
 
-	# this is a CSV with '|' as separator - first line is 'head'
-	my @data,@head,@type;	
-
-	# extracts data from textfile
-	foreach my $line (split /\n/,$filedata) {
-
-		# extracts row head and nr
-		my @row=split /[|]/, $line;
-		my $typ=shift @row;
-
-		# creates array(s)
-		if($typ eq "head") {
-			push(@head,@row);
-			}
-		if($typ eq "data") {
-			push(@data,[ @row ]);
-			# check type 'awful...'
-			foreach $f (@row) {
-				push(@type,$f =~ /^[0-9,.E]+$/ ? 'number' : 'string');
-				}
-			}
-		}
-
-	# normalized head (language table)
-	my @nhead;
-	foreach $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
-
-	# Show the table with add links
-	print ui_form_columns_table(
-		undef,
-		undef,
-		0,
-		undef,
-		undef,
-		\@nhead,
-		100,
-		\@data,
-		\@type,
-		0,
-		undef,
-		$text{'dlconfig_nodata'},
-		);
-	print &ui_table_end();
+	# print flat text file
+	print &ui_table_start($title);
+	print "<pre>$filedata</pre>"; 
+	print &ui_table_end(); 
 	}
 
