@@ -1,9 +1,56 @@
-# Converts CSV table to Columns Table Webmin
-# # Doesn't se ui_table_start, ui_table end
-#
+# define datalogger global path
+$DLPACKAGE="/opt/datalogger";
+$DLBWIDTH="width=16em;min-width: 16em;";
 
-# Output CSV data 
-sub csvFileOut {
+#========================================================================
+# Generates Submit Buttons for Enabled Drivers
+#========================================================================
+sub  dataloggershowSubmitModule {
+
+	my $fn,@fl,$button_desc;
+	$fn=`ls $DLPACKAGE/etc/iif.d`;
+	@fl = split(/[ \t\n\r]/,$fn);	
+	
+	print &ui_form_start("index.cgi","post");
+	print &ui_table_start($text{'dllastdata_active'});
+	print &ui_buttons_start();
+	foreach my $button_name (@fl) {
+		#print $button_name;
+		$button_desc=`/opt/datalogger/api/iifAltDescr $button_name`;
+		print &ui_submit($button_desc ne '' ? $button_desc : $button_name,$button_name,0,"value=1 style='$DLBWIDTH'");
+		}
+	print &ui_buttons_end();
+	print &ui_table_end();
+	print &ui_form_end();
+	}
+
+
+#========================================================================
+# Returns submit button form modules
+#========================================================================
+sub dataloggerReadSubmitModule {
+
+	# loads submit parameters and connects to api - gets CSV format
+	&ReadParse();
+	my @pressed=keys %in;
+
+	# selected module
+	my $module=@pressed[0];
+
+	if($module eq "") {
+		print &ui_table_start($text{'dllastdata_nomodule'});
+		print &ui_table_end();
+		return undef;
+		}
+
+	print $module;
+	return $module;
+	}
+
+#========================================================================
+# Converts CSV table to Columns Table Webmin
+#========================================================================
+sub dataloggerCsvOut {
 
 	my ($filedata) = @_;
 
@@ -51,8 +98,10 @@ sub csvFileOut {
 	}
 
 
-# Generic data file output - tries to recognize format
-sub dataFileOut {
+#========================================================================
+# Generic data file output - tries to automagically recognize format
+#========================================================================
+sub dataloggerFileOut {
 
 	my ($title,$filedata) = @_;
 	
@@ -62,7 +111,7 @@ sub dataFileOut {
 	# check if is a 'CSV' data file or flat
 	# must contain data[|] statements
 	if($filedata =~ /[\n]?data[|]/) {
-		csvFileOut($filedata);
+		dataloggerCsvOut($filedata);
 	} else {
 		print "<pre>$filedata</pre>"; 
 		}

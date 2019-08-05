@@ -3,45 +3,21 @@
 use WebminCore;
 init_config();
 
+# Base libraru for Datalogger System
 use datalogger_lib;
 
 sub  dllastdata_buttons {
-	my $fn,@fl,$button_desc;
-	$fn=`ls /tmp | grep .last`;
-	$fn =~ s/[.].*//g;
-	@fl = split(/[ \t\n\r]/,$fn);	
-	
-	#print @fl;
-	print ui_form_start("index.cgi","post");
-	print &ui_table_start($text{'dllastdata_active'});
-	print ui_buttons_start();
-	foreach my $button_name (@fl) {
-		#print $button_name;
-		$button_desc=`/opt/datalogger/api/iifAltDescr $button_name`;
-		print ui_submit($button_desc ne '' ? $button_desc : $button_name,$button_name,0,"value=1 style='max-width: 20em;width: 20em;'");
-		}
-	print ui_buttons_end();
-	print &ui_table_end();
-	print ui_form_end();
+	&dataloggershowSubmitModule($text{'dllastdata_active'});
 	}
 
 # Raw data format - best to specilize
 sub dllastdata_show {
+	
+	# reads pressed button
+	my $module=&dataloggerReadSubmitModule();
+       $module eq undef && return;
 
-	# loads submit parameters and connects to api - gets CSV format
-	ReadParse();
-	my @pressed=keys %in;
-
-	# selected module
-	my $module=@pressed[0];
-
-	if($module eq "") {
-		print &ui_table_start($text{'dllastdata_nomodule'});
-		print &ui_table_end();
-		return;
-		}
-
-	# DL API queries
+	# Gets buttons name from API
 	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
 	
 	# File statistics
@@ -52,6 +28,6 @@ sub dllastdata_show {
 
 	# outputs data 
 	my $filedata=`/opt/datalogger/api/iifLast $module`;
-	dataFileOut($text{'dllastdata_result'}.": ".$bdescr,$filedata);
+	&dataloggerFileOut($text{'dllastdata_result'}.": ".$bdescr,$filedata);
 	}
 
