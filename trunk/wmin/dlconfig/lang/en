@@ -1,5 +1,5 @@
-dlconfig_active=Enabled Drivers
-dlconfig_drdata=Selected Driver
+dlconfig_active=Enabled Modules
+dlconfig_drdata=Selected Module
 dlconfig_nodata=No Data for This Driver
 dlconfig_module_list=Driver Current Config
 
