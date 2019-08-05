@@ -7,7 +7,7 @@ init_config();
 use datalogger_lib;
 
 sub  dllastdata_buttons {
-	&dataloggershowSubmitModule($text{'dllastdata_active'});
+	&dataloggerShowSubmitModule($text{'dllastdata_active'});
 	}
 
 # Raw data format - best to specilize

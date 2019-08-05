@@ -5,14 +5,16 @@ $DLBWIDTH="width=16em;min-width: 16em;";
 #========================================================================
 # Generates Submit Buttons for Enabled Drivers
 #========================================================================
-sub  dataloggershowSubmitModule {
+sub  dataloggerShowSubmitModule {
+
+	my ($title) = @_;
 
 	my $fn,@fl,$button_desc;
 	$fn=`ls $DLPACKAGE/etc/iif.d`;
 	@fl = split(/[ \t\n\r]/,$fn);	
 	
 	print &ui_form_start("index.cgi","post");
-	print &ui_table_start($text{'dllastdata_active'});
+	print &ui_table_start($title);
 	print &ui_buttons_start();
 	foreach my $button_name (@fl) {
 		#print $button_name;
@@ -43,7 +45,6 @@ sub dataloggerReadSubmitModule {
 		return undef;
 		}
 
-	print $module;
 	return $module;
 	}
 
