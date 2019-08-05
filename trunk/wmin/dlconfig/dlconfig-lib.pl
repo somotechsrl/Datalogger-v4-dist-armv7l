@@ -11,6 +11,8 @@ sub  dlconfig_buttons {
 # Raw data format - best to specilize
 sub dlconfig_show {
 
+	#dataloggerShowSelect("prova","Serial",10);
+
 	my $module=&dataloggerReadSubmitModule();
 	$module eq undef && return;
 
