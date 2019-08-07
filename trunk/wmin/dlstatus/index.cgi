@@ -3,10 +3,12 @@
 
 require 'dlstatus-lib.pl';
 
-ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
+&ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
+
+my $module='raspi';
 my $bdescr=`/opt/datalogger/api/iifAltDescr raspi`;
-my $lastdata=`/opt/datalogger/api/iifLast raspi`;
-print &ui_table_start($text{'dlstatus_drdata'}.": ".$bdescr);
-print "<pre>$lastdata</pre>";
-print &ui_table_end();
-ui_print_footer('/', $text{'index'});
+my $filedata=`/opt/datalogger/api/iifLast $module`;
+
+&dataloggerFileOut($text{'dlstatus_drdata'}.": ".$bdescr,$filedata);
+
+&ui_print_footer('/', $text{'index'});

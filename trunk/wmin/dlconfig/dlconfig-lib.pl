@@ -11,10 +11,13 @@ sub  dlconfig_buttons {
 # Raw data format - best to specilize
 sub dlconfig_show {
 
-	#dataloggerShowSelect("prova","Serial",10);
+	my ($module) = @_;
 
-	my $module=&dataloggerReadSubmitModule();
-	$module eq undef && return;
+	if($module eq undef) {
+		print &ui_table_start($text{"dlconfig_drundef"});
+		print $ui_table_end();
+		return;
+		}
 
 	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
 	my $filedata=`cd /opt/datalogger;api/iifConfig $module print `;
