@@ -12,6 +12,110 @@ my $DLPACKAGE="/opt/datalogger";
 my $DLBWIDTH="width=16em;min-width: 16em;";
 
 #========================================================================
+<<<<<<< .mine
+# loads variables from file - returns assoc array with data
+# format is compatible with data|name|value format used by display 
+#========================================================================
+sub dataloggerLoadConfig {
+
+	my ($flist,$filename) = @_;
+
+	# reads variable from file
+	my %fdata;
+
+	# reads config data in assoc array from file
+	open(CONF, $filename);
+	while(<CONF>) {
+		s/[\'\r\n]//g;
+		my ($name, $value) = split(/=/, $_);
+		if ($name && $value) {
+			$fdata{$name}=$value;
+			}
+		}
+	close(CONF);
+
+	# generates required fields list
+	my @data;
+	for my $fform (@$flist) {
+		my $fname=@$fform[0];
+		my $ftype=@$fform[1];
+		my $fsize=@$fform[2];
+		my $value=$fdata{$fname};
+
+		my $checked;
+		if($ftype eq "checkbox") {
+			$checked=$value==1 ? "checked" : "";
+			$value=1
+			}
+
+		my $align=$ftype eq "text" ? "left" : "right";
+		my $finput="<input type='$ftype' size='$fsize' $checked  value='$value' name='$fname'>";
+		push(@data, [ $fname , $text{$fname}, $finput ] );
+		}
+
+	return @data;
+	}
+	
+
+#========================================================================
+# saves ALL variables to file - returns assoc array with data
+# format is compatible with data|name|value format used by display 
+#========================================================================
+sub dataloggerSaveConfig {
+
+	my ($flist,$filename) = @_;
+
+	# reads POST
+	ReadParse();
+
+	open(FD,">",$filename) or die $!;
+
+	# generates required fields list
+	for my $fform (@$flist) {
+		my $fname=@$fform[0];
+		my $ftype=@$fform[1];
+		my $value=$in{$fname};
+
+		if($ftype eq "checkbox") {
+			if($value ne 1) {
+				$value=0
+				};
+			}
+
+		print FD "$fname='$value'\n";
+		}
+	close(FD);
+
+	}
+	
+
+#========================================================================
+# generates html table from Config generic file 
+# format name='values in the variable' as must be bbash compliant
+#========================================================================
+sub dataloggerShowConfig {
+
+	my ($flist,$filename) = @_;
+
+	# loads configyration parameters
+	my @data=dataloggerLoadConfig($flist,$filename);
+
+	# Show the table with add links
+	print &ui_columns_table(
+		undef,
+		100,
+		\@data,
+		undef,
+		0,
+		undef,
+		$text{'table_nodata'},
+		);
+	}
+
+
+#========================================================================
+||||||| .r1173
+=======
 # loads variables from file - returns assoc array with data
 # format is compatible with data|name|value format used by display 
 #========================================================================
@@ -59,6 +163,7 @@ sub dataloggerShowConfig {
 
 
 #========================================================================
+>>>>>>> .r1176
 # Generates Array from CSV 'standard' datalogger API
 #========================================================================
 sub  dataloggerArrayFromCSV {
