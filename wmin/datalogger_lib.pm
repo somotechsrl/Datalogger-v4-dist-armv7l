@@ -1,10 +1,62 @@
 # Needed for debug
-#use strict;
-#use warnings;
+use strict;
+use warnings;
+use Data::Dump;  # use Data::Dumper;
+
+my %text;
+use WebminCore;
+init_config();
 
 # define datalogger global path
-$DLPACKAGE="/opt/datalogger";
-$DLBWIDTH="width=16em;min-width: 16em;";
+my $DLPACKAGE="/opt/datalogger";
+my $DLBWIDTH="width=16em;min-width: 16em;";
+
+#========================================================================
+# loads variables from file - returns assoc array with data
+# format is compatible with data|name|value format used by display 
+#========================================================================
+sub dataloggerLoadConfig {
+
+	my ($filename) = @_;
+
+	# reads variable from file
+	my @data;
+	open(CONF, $filename);
+	while(<CONF>) {
+		s/[\'\r\n]//g;
+		my ($name, $value) = split(/=/, $_);
+		if ($name && $value) {
+			push(@data, [ $name , $text{$name}, $value ]);
+			}
+		}
+	close(CONF);
+	return @data;
+	}
+	
+
+#========================================================================
+# generates html table from Config generic file 
+# format name='values in the variable' as must be bbash compliant
+#========================================================================
+sub dataloggerShowConfig {
+
+	my ($filedata) = @_;
+
+	# loads configyration parameters
+	my @data=&dataloggerLoadConfig($filedata);
+
+	# Show the table with add links
+	print &ui_columns_table(
+		undef,
+		100,
+		\@data,
+		undef,
+		0,
+		undef,
+		$text{'table_nodata'},
+		);
+	}
+
 
 #========================================================================
 # Generates Array from CSV 'standard' datalogger API
@@ -12,7 +64,7 @@ $DLBWIDTH="width=16em;min-width: 16em;";
 sub  dataloggerArrayFromCSV {
 
 	my ($filedata) = @_;
-	my @head,@data;
+	my @head,my @data;
 	
 	#print "<pre>$filedata</pre>";
 
@@ -35,6 +87,8 @@ sub  dataloggerArrayFromCSV {
 			}
 		}
 
+	#dd \@data;
+	
 	return (\@head,\@data);
 	}
 
@@ -43,25 +97,53 @@ sub  dataloggerArrayFromCSV {
 #========================================================================
 sub  dataloggerShowSelect {
 
-	my ($title,$name,$value) = @_;
+	my ($value,$selectName,$apiVars) = @_;
+	my $selectValue=$value ne "" ? $value : %in{$selectName};
 
 	# extracts from api value
-	$filedata=`$DLPACKAGE/api/sel$name`;	
+	my $filedata=`$apiVars $DLPACKAGE/api/sel/$selectName`;	
 
 	# this is a CSV with '|' as separator - first line is 'head'
 	my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-	my @head=\@$rhead,@data=\@$rdata;
+	my @head=\@$rhead,my @options=\@$rdata;
+	
+	print &ui_select($selectName,$selectValue,@options,undef,undef,undef,undef,"onchange='submit()'");
 
-	# format is always 'key' 'descr'
-	my @options,$count=0;
-	foreach my $sel (@data) {
-		push(@options,[[$count, "Prova".$count ],[$count,"Pippo".$count]]);
-		$count++;
-		}
-
-	print &ui_select($name,$value,@options);
+	##if($selectValue eq "") $selectValue=@options[0][0];
+	
+	return $selectValue;
 	}
 
+
+#========================================================================
+# Generates Driver Params form Enabled Driver
+#========================================================================
+sub  dataloggerDriverParamsOptions {
+
+	return;
+	my ($module) = @_;
+	my $plist=`$DLPACKAGE/api/iifConfig $module params`;
+
+
+	foreach my $param (split / /,$plist) {
+		my $found=undef;
+		if($param eq "mbserial") {
+			$found=dataloggerShowSelect(undef,$param);
+			}
+		if($param eq "mbchannel") {
+			$found=dataloggerShowSelect(undef,"mbserial");
+			}
+		if($param eq "mbaddress") {
+			$found=dataloggerShowSelect(undef,$param);
+			}
+		if($found==undef) {
+			print "$param:UNFOUND";
+			}
+		}
+
+
+	print $plist;
+	}
 
 #========================================================================
 # Generates Submit Buttons for Enabled Drivers
@@ -69,45 +151,22 @@ sub  dataloggerShowSelect {
 sub  dataloggerShowSubmitModule {
 
 	my ($title) = @_;
-
-	my $fn,@fl,$button_desc;
+	
+	my $button_name="module";
+	my $fn,my @fl,my $button_desc;
 	$fn=`ls $DLPACKAGE/etc/iif.d`;
 	@fl = split(/[ \t\n\r]/,$fn);	
 	
-	print &ui_form_start("index.cgi","post");
 	print &ui_table_start($title);
 	print &ui_buttons_start();
-	foreach my $button_name (@fl) {
-		#print $button_name;
-		$button_desc=`/opt/datalogger/api/iifAltDescr $button_name`;
-		print &ui_submit($button_desc ne '' ? $button_desc : $button_name,$button_name,0,"value=1 style='$DLBWIDTH'");
+	foreach my $button_value (@fl) {
+		my $button_descr=`/opt/datalogger/api/iifAltDescr $button_value`;
+		print &ui_submit($button_value,$button_name,0,"value='$button_value' style='$DLBWIDTH'");
 		}
 	print &ui_buttons_end();
 	print &ui_table_end();
-	print &ui_form_end();
 	}
 
-
-#========================================================================
-# Returns submit button form modules
-#========================================================================
-sub dataloggerReadSubmitModule {
-
-	# loads submit parameters and connects to api - gets CSV format
-	&ReadParse();
-	my @pressed=keys %in;
-
-	# selected module
-	my $module=@pressed[0];
-
-	if($module eq "") {
-		print &ui_table_start($text{'dllastdata_nomodule'});
-		print &ui_table_end();
-		return undef;
-		}
-
-	return $module;
-	}
 
 #========================================================================
 # Converts CSV table to Columns Table Webmin
@@ -118,19 +177,14 @@ sub dataloggerCsvOut {
 
 	# this is a CSV with '|' as separator - first line is 'head'
 	my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-	my @head=@$rhead,@data=@$rdata;
+	my @head=@$rhead,my @data=@$rdata;
 
 	# normalized head (from webmin language table, if any)
 	my @nhead;
-	foreach $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
+	foreach my $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
 
 	# Show the table with add links
-	print &ui_form_columns_table(
-		undef,
-		undef,
-		0,
-		undef,
-		undef,
+	print &ui_columns_table(
 		\@nhead,
 		100,
 		\@data,
@@ -156,7 +210,14 @@ sub dataloggerFileOut {
 	# must contain data[|] statements
 	if($filedata =~ /[\n]?data[|]/) {
 		&dataloggerCsvOut($filedata);
-	} else {
+		}
+	# XML/HTML file - to display we must escape <>
+	 elsif($filedata =~ /<\?xml/) {
+		$filedata =~ s/</\&lt;/g;
+		$filedata =~ s/>/\&gt;/g;
+		print "<pre>$filedata</pre>"; 
+		}
+	else {
 		print "<pre>$filedata</pre>"; 
 		}
 

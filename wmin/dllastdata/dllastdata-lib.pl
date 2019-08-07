@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 
 use WebminCore;
+use datalogger_lib;
+
 init_config();
 
 # Base libraru for Datalogger System
@@ -14,12 +16,12 @@ sub  dllastdata_buttons {
 sub dllastdata_show {
 	
 	# reads pressed button
-	my $module=&dataloggerReadSubmitModule();
+	my $module=%in{"module"};
        $module eq undef && return;
 
 	# Gets buttons name from API
 	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
-	
+
 	# File statistics
 	my $filestat=`stat /tmp/$module.last`;
 	print &ui_table_start($text{'dllastdata_drdata'}.": ".$bdescr);

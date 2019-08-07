@@ -5,10 +5,13 @@
 require 'dllastdata-lib.pl';
 
 
-ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
+print &ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
+print &ui_form_start("index.cgi","POST");
+ReadParse();
 dllastdata_buttons();
-dllastdata_show();
+print &ui_form_end();
 
-ui_print_footer('/', $text{'index'});
+dllastdata_show();
+print &ui_print_footer('/', $text{'index'});
 
