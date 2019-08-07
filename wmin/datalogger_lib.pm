@@ -12,7 +12,6 @@ my $DLPACKAGE="/opt/datalogger";
 my $DLBWIDTH="width=16em;min-width: 16em;";
 
 #========================================================================
-<<<<<<< .mine
 # loads variables from file - returns assoc array with data
 # format is compatible with data|name|value format used by display 
 #========================================================================
@@ -45,10 +44,9 @@ sub dataloggerLoadConfig {
 		my $checked;
 		if($ftype eq "checkbox") {
 			$checked=$value==1 ? "checked" : "";
-			$value=1
+			$value=1;
 			}
 
-		my $align=$ftype eq "text" ? "left" : "right";
 		my $finput="<input type='$ftype' size='$fsize' $checked  value='$value' name='$fname'>";
 		push(@data, [ $fname , $text{$fname}, $finput ] );
 		}
@@ -114,56 +112,6 @@ sub dataloggerShowConfig {
 
 
 #========================================================================
-||||||| .r1173
-=======
-# loads variables from file - returns assoc array with data
-# format is compatible with data|name|value format used by display 
-#========================================================================
-sub dataloggerLoadConfig {
-
-	my ($filename) = @_;
-
-	# reads variable from file
-	my @data;
-	open(CONF, $filename);
-	while(<CONF>) {
-		s/[\'\r\n]//g;
-		my ($name, $value) = split(/=/, $_);
-		if ($name && $value) {
-			push(@data, [ $name , $text{$name}, $value ]);
-			}
-		}
-	close(CONF);
-	return @data;
-	}
-	
-
-#========================================================================
-# generates html table from Config generic file 
-# format name='values in the variable' as must be bbash compliant
-#========================================================================
-sub dataloggerShowConfig {
-
-	my ($filedata) = @_;
-
-	# loads configyration parameters
-	my @data=&dataloggerLoadConfig($filedata);
-
-	# Show the table with add links
-	print &ui_columns_table(
-		undef,
-		100,
-		\@data,
-		undef,
-		0,
-		undef,
-		$text{'table_nodata'},
-		);
-	}
-
-
-#========================================================================
->>>>>>> .r1176
 # Generates Array from CSV 'standard' datalogger API
 #========================================================================
 sub  dataloggerArrayFromCSV {
