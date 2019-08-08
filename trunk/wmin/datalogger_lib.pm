@@ -3,60 +3,11 @@
 use warnings;
 
 use WebminCore;
-init_config();
-
 use Data::Dump;  # use Data::Dumper;
 
 # define datalogger global path
 my $DLPACKAGE="/opt/datalogger";
 my $DLBWIDTH="width=16em;min-width: 16em;";
-
-#========================================================================
-# Generates Variable HTML input for  Mapped vars
-#========================================================================
-sub dataloggerVarHtml {
-
-	my ($name,$value) = @_;
-
-	# 'pause boxes
-	if($name =~ /PAUSE$/) {
-		return ui_checkbox($name,"true",undef,$value eq "true");
-		}
-	if($name =~ /FREQ$/) {
-		return ui_textbox($name,$value,5,0,5,"type='number'");
-		}
-	if($name eq "module") {
-		$filedata=`$DLPACKAGE/api/sel/module`;
-		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-		my @head=\@$rhead,my @options=\@$rdata;
-		return &ui_select($name,$value,@options,undef,undef,undef,undef,"onchange='submit()'");
-		}
-
-	if($name eq "mbchannel") {
-		$filedata=`$DLPACKAGE/api/sel/mbserial`;
-		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-		my @head=\@$rhead,my @options=\@$rdata;
-		return &ui_select($name,$value,@options,undef,undef,undef,undef,"onchange='submit()'");
-		}
-
-	if($name eq "mbaddress") {
-		$filedata=`$DLPACKAGE/api/sel/mbaddress`;
-		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-		my @head=\@$rhead,my @options=\@$rdata;
-		return &ui_select($name,$value,@options,undef,undef,undef,undef,"onchange='submit()'");
-		}
-
-	if($name =~ "hidden_") {
-		@nn=split "_",$name;
-		$xname=@nn[1];
-		return &ui_hidden($xname,$value);
-		}	
-
-		
-	# default
-	return ui_textbox($name,$value,undef,0,undef,undef);
-	return $selectValue;
-	}
 
 #========================================================================
 # loads variables from file - returns assoc array with data
@@ -84,7 +35,7 @@ sub dataloggerLoadConfig {
 	my @data;
 	for my $fname (@$flist) {
 		my $value=$fdata{$fname};
-		push(@data, [ $text{$fname} ? $text{$fname} : $fname, $fname, dataloggerVarHtml($fname,$value) ]);
+		push(@data, [ $fname, $text{$fname} ? $text{$fname} : $fname, dataloggerVarHtml($fname,$value) ]);
 		}
 
 	return @data;
@@ -163,6 +114,10 @@ sub  dataloggerArrayFromCSV {
 			@head=@row;
 			}
 		if($typ eq "data") {
+			if(@head[0] eq "n") {
+				$num=shift @row;
+				unshift @row,ui_checkbox("row_$num",$num);
+				}
 			push(@data,[ @row ]);
 			}
 		}
@@ -177,7 +132,7 @@ sub  dataloggerArrayFromCSV {
 #========================================================================
 sub  dataloggerShowSubmitModule {
 
-	my ($title) = @_;
+	my ($title,$disable) = @_;
 	
 	my $button_name="module";
 	my $fn,my @fl,my $button_desc;
@@ -188,7 +143,7 @@ sub  dataloggerShowSubmitModule {
 	print &ui_buttons_start();
 	foreach my $button_value (@fl) {
 		my $button_descr=`/opt/datalogger/api/iifAltDescr $button_value`;
-		print &ui_submit($button_value,"module",0,"value='$button_value' style='$DLBWIDTH'");
+		print &ui_submit($button_value,"moduleButton",$disable, "value='$button_value' style='$DLBWIDTH'");
 		}
 	print &ui_buttons_end();
 	print &ui_table_end();
@@ -207,13 +162,13 @@ sub dataloggerCsvOut {
 	my @head=@$rhead,my @data=@$rdata;
 
 	# normalized head (from webmin language table, if any)
-	my @nhead;
+	my @nhead,@ntype;
 	foreach my $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
 
 	# Show the table with add links
 	print &ui_columns_table(
 		\@nhead,
-		100,
+		undef,
 		\@data,
 		undef,
 		0,
