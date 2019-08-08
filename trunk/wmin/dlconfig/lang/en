@@ -11,7 +11,9 @@ mbaddress=ModBus Address
 mbdelay=ModBus Delay/Query
 mboffset=Register Offset
 
+moduleid=Unique ID
 podid=ID POD
 lat=Latitude
-lat=Longitude
+lng=Longitude
 format=Data Format
+

@@ -1,28 +1,31 @@
 #!/usr/bin/perl
 
 use WebminCore;
-init_config();
-
 use datalogger_lib;
-sub  dlconfig_buttons {
-	&dataloggerShowSubmitModule($text{"dlconfig_active"});	
-	}
+
+init_config();
 
 # Raw data format - best to specilize
 sub dlconfig_show {
 
 	my ($module) = @_;
 
-	if($module eq undef) {
-		print &ui_table_start($text{"dlconfig_drundef"});
-		print $ui_table_end();
-		return;
-		}
-
-	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
-	my $filedata=`cd /opt/datalogger;api/iifConfig $module print `;
-
-	# outputs data
-	&dataloggerFileOut($text{"dlconfig_drdata"}.": ".$bdescr,$filedata);
+	print ui_form_start('index.cgi',"POST");
+	# gets parameters from API
+	$params=`/opt/datalogger/api/iifParams '$module'`;
+	@plist=split / / , $params;
+	#push(@plist,"hidden_module");
+	&dataloggerShowConfig(\@plist,"/tmp/$module.edit");
+	print ui_form_end([ [ undef, $text{'save'} ] ]);
 	}
 
+sub show_polldata {
+
+	&dataloggerShowConfig(@flist,$filename);
+
+	}
+
+sub save_polldata {
+	&dataloggerSaveConfig(@flist,$filename);
+	&show_polldata(@flist,$filename);
+	}
