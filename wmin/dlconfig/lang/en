@@ -1,8 +1,15 @@
 dlconfig_active=Enabled Modules
+dlconfig_select=Current Module
 dlconfig_drdata=Selected Module
 dlconfig_dredit=Module Editor
+dlconfig_drshow=Current Config
 dlconfig_nodata=No Data for This Driver
 dlconfig_module_list=Driver Current Config
+
+create=Add Config
+delete=Del Config
+remove=Remove Module
+
 
 module=Data Module
 
@@ -11,9 +18,16 @@ mbaddress=ModBus Address
 mbdelay=ModBus Delay/Query
 mboffset=Register Offset
 
+localproto=Local Protocol
+localport=Local Proxy Port
+daddr=Destination Address
+dport=Destination Port
+ddescr=Destination Descr
+
 moduleid=Unique ID
 podid=ID POD
 lat=Latitude
 lng=Longitude
 format=Data Format
 
+remove=Remove Config

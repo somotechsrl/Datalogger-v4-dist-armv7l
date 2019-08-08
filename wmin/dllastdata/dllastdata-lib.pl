@@ -16,8 +16,8 @@ sub  dllastdata_buttons {
 sub dllastdata_show {
 	
 	# reads pressed button
-	my $module=%in{"module"};
-       $module eq undef && return;
+	my $module=%in{"moduleButton"};
+       	$module eq undef && return;
 
 	# Gets buttons name from API
 	my $bdescr=`/opt/datalogger/api/iifAltDescr $module`;
