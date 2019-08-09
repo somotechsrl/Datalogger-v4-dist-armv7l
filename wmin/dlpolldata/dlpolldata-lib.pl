@@ -1,5 +1,6 @@
 use WebminCore;
 use datalogger_lib;
+use datalogger_var;
 
 init_config();
 
@@ -8,13 +9,10 @@ my $filename="/opt/datalogger/etc/datalogger";
 
 # List of fields for this module
 my @flist=[
-	[ "COMMPAUSE","checkbox",undef ],
-	[ "COMMFREQ","number",3 ],
-	[ "POLLPAUSE","checkbox",undef ],
-	[ "POLLFREQ", "number",3 ],
-	[ "SYNCPAUSE","checkbox",undef ],
-	[ "SYNCFREQ", "number",3 ],
-	[ "DLDESCR", "text",60]
+	"COMMPAUSE","COMMFREQ",
+	"POLLPAUSE","POLLFREQ",
+	"SYNCPAUSE","SYNCFREQ",
+	"DLDESCR"
 ];
 
 sub show_polldata {
@@ -22,7 +20,7 @@ sub show_polldata {
 	print ui_form_start('save.cgi',"POST");
 
 	&dataloggerShowConfig(@flist,$filename);
-
+	
 	print ui_form_end([ [ undef, $text{'save'} ] ]);
 	ui_print_footer('/', $text{'index'});
 	}
