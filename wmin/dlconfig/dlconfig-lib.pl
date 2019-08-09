@@ -6,7 +6,6 @@ use datalogger_var;
 
 init_config();
 
-
 sub dlconfig_delete {
 
 	my ($module,$row) = @_;
@@ -18,14 +17,7 @@ sub dlconfig_delete {
 		}
 	}
 
-sub dlconfig_remove {
-
-	my ($module) = @_;
-
-	`/opt/datalogger/api/iifConfig $module remove`;
-	}
-
-sub dlconfig_addrow {
+sub dlconfig_save {
 
 	my ($module) = @_;
 
@@ -49,21 +41,23 @@ sub dlconfig_create {
 	# create new rowe/config
 	@plist=split /[\n\r ]/, `/opt/datalogger/api/iifParams '$module'`;
 
-	print ui_table_start($text{"dlconfig_dredit"}.": ".$module);
+	print &ui_table_start($text{"dlconfig_dredit"}.": ".$module);
 	&dataloggerShowConfig(\@plist,"/tmp/$module.edit");
 	print &ui_table_end();
 
-
+	@cmdlist=[ ["command" , $text{"save_data"} ], [ "command" , $text{"cancel_data"} ]  ];
 	}
 
 sub dlconfig_display {
 
-	my ($module) = @_;
+	my ($module,$value) = @_;
 
 	print &ui_table_start($text{"dlconfig_drshow"}.": ".$module);
 	$filedata=`/opt/datalogger/api/iifConfig $module print`;
 	&dataloggerCsvOut($filedata);
 	print &ui_table_end();
+
+	@cmdlist=[ [ "command" , $text{"create_data"} ], [ "command", $text{"delete_data"} ] ];
 	}
 
 # Raw data format - best to specilize
@@ -80,65 +74,38 @@ sub dlconfig_show {
 	if($in{"moduleButton"} ne "") {
 		$module=$in{"moduleButton"};
 		}
-	elsif($in{"moduleSelect"} ne "") {
-		$module=$in{"moduleSelect"};
+	elsif($in{"module"} ne "") {
+		$module=$in{"module"};
 		}
-	else {
-		$command=$in{"last_command"};
-		}
-
-	print "***** $command +++ $module";
-
-	# Earse alla Config - here to update correctly buttons.
-	if($command eq $text{"remove"}) {
-		&dlconfig_remove($module);
-		}
-	# if we are saving append data via API
-	if($command eq $text{"save"}) {	
-		&dlconfig_addrow($module);
-		}
-	# Delete Config row(s) via API
-	if($command eq $text{"delete"}) {
-		&dlconfig_delete($module,$row);
+	if($in{"command"} ne "") {
+		$command=$in{"command"};
 		}
 
 	# sets form management
-	print &ui_form_start('index.cgi',"POST");
+	print &ui_form_start('mod_config.cgi',"POST");
 
-	print &ui_table_start($text{"dlconfig_select"});
-	print &ui_buttons_start();
-	print &dataloggerVarHtml("moduleSelect",$module);
-	print &ui_submit($text{"find"});
-	print &ui_buttons_end();
-	print &ui_table_end();
+	# Creates new config - here to update correctly buttons.
+	if($command eq $text{"save_data"}) {
+		&dlconfig_save($module);
+		}
+	# Earse alla Config - here to update correctly buttons.
+	elsif($command eq $text{"delete_data"}) {
+		&dlconfig_delete($module);
+		}
+	elsif($command eq $text{"create_data"}) {
+		&dlconfig_create($module);
+		}
+	# default action
+	elsif($module ne "")  {
+		&dlconfig_display($module,);
+		}
+
 
 	# Active Modules
-	&dataloggerShowSubmitModule($text{"dlconfig_active"},0);	
-
-	# no module defined - do nothing
-	if(!$module) {
-		print ui_form_end();
-		return;
-		}
-
-	# check 'insert button' -- show form
-	my @cmdlist;
-
-	# create new rowe/config
-	if($command eq $text{"create"}) {
-		&dlconfig_create($module);
-		@cmdlist=[ ["command" , $text{"save"} ], [ "command" , $text{"cancel"} ]  ];
-		}
-
-	# default action
-	else {
-		&dlconfig_display($module);
-		@cmdlist=[ [ "command" , $text{"create"} ], ["command" , $text{"delete"} ], [ "command", $text{"remove"} ] ];
-		}
-
+	print &dataloggerVarHtml("moduleSelectActive",$module);	
 
 	# saves last command for re-usage
-	print ui_hidden("last_command",$command);
+	print ui_hidden("module",$module);
 	print ui_form_end(@cmdlist);
 	}
 
