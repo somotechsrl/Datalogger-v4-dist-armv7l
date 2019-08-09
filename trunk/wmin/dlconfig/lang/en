@@ -6,10 +6,14 @@ dlconfig_drshow=Current Config
 dlconfig_nodata=No Data for This Driver
 dlconfig_module_list=Driver Current Config
 
-create=Add Config
-delete=Del Config
-remove=Remove Module
+mod_enable_title=Enabling
+mod_config_title=Configuration
+mod_lastdata_title=Last Data
 
+save_data=Save Data
+cancel_data=Cancel
+create_data=Create Data
+delete_data=Delete Selected
 
 module=Data Module
 
