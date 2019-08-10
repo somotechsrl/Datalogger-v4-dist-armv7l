@@ -111,10 +111,14 @@ sub  dataloggerArrayFromCSV {
 
 		# creates array(s)
 		if($typ eq "head") {
+			if(@row[0] eq "n") {
+				shift @row;
+				unshift @row,"select";
+				}
 			@head=@row;
 			}
 		if($typ eq "data") {
-			if(@head[0] eq "n") {
+			if(@head[0] eq "select") {
 				$num=shift @row;
 				unshift @row,ui_checkbox("row_$num",$num);
 				}
@@ -125,28 +129,6 @@ sub  dataloggerArrayFromCSV {
 	#dd \@data;
 	
 	return (\@head,\@data);
-	}
-
-#========================================================================
-# Generates Submit Buttons for Enabled Drivers
-#========================================================================
-sub  dataloggerShowSubmitModule {
-
-	my ($title,$disable) = @_;
-	
-	my $button_name="module";
-	my $fn,my @fl,my $button_desc;
-	$fn=`ls $DLPACKAGE/etc/iif.d`;
-	@fl = split(/[ \t\n\r]/,$fn);	
-	
-	print &ui_table_start($title);
-	print &ui_buttons_start();
-	foreach my $button_value (@fl) {
-		my $button_descr=`/opt/datalogger/api/iifAltDescr $button_value`;
-		print &ui_submit($button_value,"moduleButton",$disable, "value='$button_value' style='$DLBWIDTH'");
-		}
-	print &ui_buttons_end();
-	print &ui_table_end();
 	}
 
 #========================================================================
@@ -169,8 +151,6 @@ sub  dataloggerGetActiveModules {
 	return @sl;
 	}
 
-
-#========================================================================
 
 #========================================================================
 # Converts CSV table to Columns Table Webmin
