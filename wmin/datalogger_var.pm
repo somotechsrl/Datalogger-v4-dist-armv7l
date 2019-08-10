@@ -31,7 +31,6 @@ sub getModuleByAltDescr($descr) {
 #========================================================================
 sub  dataloggerShowSubmitModule {
 
-	our %dataloggerModuleByDescr;
 	my ($name,$disable) = @_;
 	
 	$fn=`ls $DLPACKAGE/etc/iif.d`;
