@@ -10,11 +10,50 @@ my $DLPACKAGE="/opt/datalogger";
 my $DLBWIDTH="width=16em;min-width: 16em;";
 
 #========================================================================
+# Gets  Module key by Alt Descr - AWFUL
+#========================================================================
+sub getModuleByAltDescr($descr) {
+	my ($descr) = @_;
+	my $mlist=`/opt/datalogger/iif/00list`;
+	my @md = split /[\n]/,$mlist;
+	foreach my $mo (@md) {
+		@ml = split /[|]/,$mo;
+		$alt=@ml[1]." ".@ml[2];
+		if($alt eq $descr) {
+			return @ml[5];
+			}
+		}
+	return "";
+	}
+
+#========================================================================
+# Generates Submit Buttons for Enabled Drivers
+#========================================================================
+sub  dataloggerShowSubmitModule {
+
+	our %dataloggerModuleByDescr;
+	my ($name,$disable) = @_;
+	
+	$fn=`ls $DLPACKAGE/etc/iif.d`;
+	@fl = split(/[ \t\n\r]/,$fn);	
+	
+	my $res=&ui_buttons_start();
+	foreach my $button_value (@fl) {
+		my $button_descr=`/opt/datalogger/api/iifAltDescr $button_value`;
+		$res.=&ui_submit($button_descr,$name,$disable, "style='$DLBWIDTH'");
+		}
+	$res.=&ui_buttons_end();
+	
+	return $res;
+	}
+
+
+#========================================================================
 # Generates Variable HTML input for  Mapped vars
 #========================================================================
 sub dataloggerVarHtml {
 
-	my ($name,$value) = @_;
+	my ($name,$value,$disable) = @_;
 
 	# 'pause boxes
 	if($name =~ /PAUSE$/) {
@@ -27,11 +66,15 @@ sub dataloggerVarHtml {
 		return ui_textbox($name,$value,40,0,5,"type='text'");
 		}
 	if($name eq "moduleSelectActive") {
-		$filedata=`$DLPACKAGE/api/sel/mactive`;
+		$filedata=`$DLPACKAGE/api/sel/menabled`;
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
 		}	
+	if($name eq "moduleSubmitActive") {
+		return &dataloggerShowSubmitModule($name,$disable);
+		}	
+
 	if($name eq "moduleSelectAll") {
 		$filedata=`$DLPACKAGE/api/sel/module`;
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
