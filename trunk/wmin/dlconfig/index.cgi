@@ -6,7 +6,7 @@ require './dlconfig-lib.pl';
 
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-foreach $i ('dlconfig_activate', 'dlconfig_modify', 'dlconfig_lastdata') {
+foreach $i ('dlconfig_activate', 'dlconfig_modify') {
 	push(@links, "${i}.cgi");
 	push(@titles, $text{"${i}"});
 	push(@icons, "images/${i}.gif");
