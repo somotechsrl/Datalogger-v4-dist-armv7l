@@ -30,10 +30,10 @@ if($in{"command"} ne "") {
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"create_config"}) {
-	&dlconfig_enable($module);
+	print &dlconfig_enable($module);
 	}
 elsif($command eq $text{"delete_config"}) {
-	&dlconfig_disable($module);
+	print &dlconfig_disable($module);
 	}
 
 # sets form management
