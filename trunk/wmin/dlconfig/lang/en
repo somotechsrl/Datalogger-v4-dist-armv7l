@@ -7,6 +7,9 @@ dlconfig_modify=Interface Configuration
 dlconfig_lastdata=Interface Last Data
 dlconfig_return=Interfaces Management
 
+dlconfig_activate=Enable Interface
+dlconfig_activate=Disable Interface
+
 save_data=Save Data
 cancel_data=Cancel
 create_data=Create
