@@ -59,11 +59,11 @@ sub dlconfig_display {
 
 sub dlconfig_enable {
 	my ($module) = @_;
-	`touch /opt/datalogger/etc/iif.d/$module`;
+	return `/opt/datalogger/api/iifEnable $module`;
 	}
 
 sub dlconfig_disable {
 	my ($module) = @_;
-	`rm /opt/datalogger/etc/iif.d/$module`;
+	return `/opt/datalogger/api/iifDisable $module`;
 	}
 
