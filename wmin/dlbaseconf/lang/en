@@ -9,12 +9,53 @@ DLDESCR=Datalogger Description
 
 dlbaseconf_polldata=Working Parameters
 dlbaseconf_licensing=License Management
+dlbaseconf_dractivate=Interface Activation
+dlbaseconf_drconfig=Interface Configuration
+
 dlbaseconf_return=Configuration Management
 dlbaseconf_save=Save Configuration
 dlbaseconf_working=Working Parameters
 dlbaseconf_apply_lic=Renew License
 
+dlbaseconf_active=Current Active Interfaces
+dlbaseconf_drshow=Current Config
+dlbaseconf_nodata=No Data for This Interface
+
+dlbaseconf_lastdata=Interface Last Data
+dlbaseconf_return=Interfaces Management
+dlbaseconf_activate=Interface Enabling
+
 generated=Generation Time 
 type=License Generation Type
 released=Release Date
 expiration=Expiration Date
+
+save_data=Save Data
+cancel_data=Cancel
+create_data=Create
+delete_data=Delete
+modify_data=Modify
+
+create_config=Enable Interface
+delete_config=Delete Interface
+
+Interface=Data Interface
+
+mbchannel=ModBus Channel
+mbaddress=ModBus Address
+mbdelay=ModBus Delay/Query
+mboffset=Register Offset
+
+localproto=Local Protocol
+localport=Local Proxy Port
+daddr=Destination Address
+dport=Destination Port
+ddescr=Destination Descr
+
+Interfaceid=Unique ID
+podid=ID POD
+lat=Latitude
+lng=Longitude
+format=Data Format
+
+remove=Remove Config
