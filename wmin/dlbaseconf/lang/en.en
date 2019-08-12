@@ -1,0 +1,5 @@
+COMMFREQ=Preload Polling Frequency (s)
+POLLFREQ=Drivers Polling Frequency (s)
+XFERMAX=Max Events Queue Flush  
+DLDESCR=Datalogger Human Description
+
