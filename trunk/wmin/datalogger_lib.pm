@@ -6,8 +6,17 @@ use WebminCore;
 use Data::Dump;  # use Data::Dumper;
 
 # define datalogger global path
-my $DLPACKAGE="/opt/datalogger";
 my $DLBWIDTH="width=16em;min-width: 16em;";
+
+#========================================================================
+# Calls API module prefixing values 
+# string must scontain API ansd parameters
+#========================================================================
+sub callDatalloggerAPI {
+	
+	my ($apicall) = @_;
+	return `/opt/datalogger/api/$apicall`;
+	}
 
 #========================================================================
 # loads variables from file - returns assoc array with data
@@ -140,11 +149,11 @@ sub  dataloggerGetActiveModules {
 	
 	my $button_name="module";
 	my $fn,my @fl,my @sl;
-	$fn=`ls $DLPACKAGE/etc/iif.d`;
+	$fn=`ls /opt/datalogger/etc/iif.d`;
 	@fl = split(/[ \t\n\r]/,$fn);	
 	
 	foreach my $module (@fl) {
-		my $description=`/opt/datalogger/api/iifAltDescr $module`;
+		my $description=callDataloggerAPI("iifAltDescr $module");
 		push @sl, [ $module, $description ];
 		}
 
