@@ -24,7 +24,7 @@ sub callDataloggerAPI {
 #========================================================================
 sub dataloggerLoadConfig {
 
-	my ($flist,$filename) = @_;
+	my ($flist,$filename,$protect) = @_;
 
 	# reads variable from file
 	my %fdata;
@@ -44,7 +44,7 @@ sub dataloggerLoadConfig {
 	my @data;
 	for my $fname (@$flist) {
 		my $value=$fdata{$fname};
-		push(@data, [ $fname, $text{$fname} ? $text{$fname} : $fname, dataloggerVarHtml($fname,$value) ]);
+		push(@data, [ $fname, $text{$fname} ? $text{$fname} : $fname, dataloggerVarHtml($fname,$value,$protect) ]);
 		}
 
 	return @data;
@@ -80,15 +80,15 @@ sub dataloggerSaveConfig {
 #========================================================================
 sub dataloggerShowConfig {
 
-	my ($flist,$filename) = @_;
+	my ($flist,$filename,$protect) = @_;
 
 	# loads configyration parameters
-	my @data=dataloggerLoadConfig($flist,$filename);
+	my @data=dataloggerLoadConfig($flist,$filename,$protect);
 
 	# Show the table with add links
 	print &ui_columns_table(
 		undef,
-		100,
+		undef,
 		\@data,
 		undef,
 		0,

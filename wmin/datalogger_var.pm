@@ -67,7 +67,7 @@ sub dataloggerVarHtml {
 		return ui_textbox($name,$value,60,0,60,"type='text'");
 		}
 	if($name eq "moduleSelectActive") {
-		$filedata=`$DLPACKAGE/api/sel/menabled`;
+		$filedata=callDataloggerAPI("sel/menabled");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
@@ -77,14 +77,14 @@ sub dataloggerVarHtml {
 		}	
 
 	if($name eq "moduleSelectAll") {
-		$filedata=`$DLPACKAGE/api/sel/module`;
+		$filedata=callDataloggerAPI("sel/module");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
 		}
 
 	if($name eq "schannel" || $name eq "mbserial") {
-		$filedata=`$DLPACKAGE/api/sel/mbserial`;
+		$filedata=callDataloggerAPI("sel/mbserial");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
@@ -99,7 +99,7 @@ sub dataloggerVarHtml {
 		}
 
 	if($name eq "mbaddress") {
-		$filedata=`$DLPACKAGE/api/sel/mbaddress`;
+		$filedata=callDataloggerAPI("sel/mbaddress");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
@@ -123,7 +123,7 @@ sub dataloggerVarHtml {
 
 		
 	# default
-	return ui_textbox($name,$value,40,0,undef,undef);
+	return ui_textbox($name,$value,40,$disable,undef,undef);
 	return $selectValue;
 	}
 
