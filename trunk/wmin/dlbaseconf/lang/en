@@ -1,0 +1,15 @@
+COMMPAUSE=Pause Pre Run Modules 
+COMMFREQ=Pre Modules Frequency (s)
+POLLPAUSE=Pause Device Modules 
+POLLFREQ=Device Modules Frequency (s)
+SYNCPAUSE=Pause Sync Post Modules 
+SYNCFREQ=Sync Post Modules Frequency (s)
+MAXQFLUSH=Max Queue Flush In Sync
+DLDESCR=Datalogger Description
+
+dlbaseconf_polldata=Working Parameters
+dlbaseconf_licensing=License Management
+dlbaseconf_return=Configuration Management
+dlbaseconf_save=Save Configuration
+dlbaseconf_working=Working Parameters
+dlbaseconf_renew=Renew License
