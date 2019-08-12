@@ -12,4 +12,9 @@ dlbaseconf_licensing=License Management
 dlbaseconf_return=Configuration Management
 dlbaseconf_save=Save Configuration
 dlbaseconf_working=Working Parameters
-dlbaseconf_renew=Renew License
+dlbaseconf_apply_lic=Renew License
+
+generated=Generation Time 
+type=License Generation Type
+released=Release Date
+expiration=Expiration Date
