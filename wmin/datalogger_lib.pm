@@ -12,7 +12,7 @@ my $DLBWIDTH="width=16em;min-width: 16em;";
 # Calls API module prefixing values 
 # string must scontain API ansd parameters
 #========================================================================
-sub callDatalloggerAPI {
+sub callDataloggerAPI {
 	
 	my ($apicall) = @_;
 	return `/opt/datalogger/api/$apicall`;

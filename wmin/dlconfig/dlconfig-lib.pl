@@ -22,7 +22,7 @@ sub dlconfig_save {
 	my ($module) = @_;
 
 	# get params list via API
-	$params=callDatalloggerAPI("iifConfig $module params");
+	$params=callDataloggerAPI("iifConfig $module params");
 	@parray=split /[\n\r ]/,$params;
 
 	# generates from POST
@@ -39,7 +39,7 @@ sub dlconfig_create {
 	my ($module) = @_;
 
 	# create new rowe/config
-	@plist=split /[\n\r ]/, callDatalloggerAPI("iifParams '$module'");
+	@plist=split /[\n\r ]/, callDataloggerAPI("iifParams '$module'");
 
 	print &ui_table_start($text{"dlconfig_dredit"}.": ".$module);
 	&dataloggerShowConfig(\@plist,"/tmp/$module.edit");
@@ -52,7 +52,7 @@ sub dlconfig_display {
 	my ($module,$value) = @_;
 
 	print &ui_table_start($text{"dlconfig_drshow"}.": ".$module);
-	$filedata=callDatalloggerAPI("iifConfig $module print");
+	$filedata=callDataloggerAPI("iifConfig $module print");
 	&dataloggerCsvOut($filedata);
 	print &ui_table_end();
 	}
@@ -64,6 +64,6 @@ sub dlconfig_enable {
 
 sub dlconfig_disable {
 	my ($module) = @_;
-	return callDatalloggerAPI("iifDisable $module");
+	return callDataloggerAPI("iifDisable $module");
 	}
 

@@ -1,13 +1,17 @@
 #!/usr/bin/perl
-# Show Datalogger Status
+# index.cgi
+# Display a menu of various network screens
 
-require 'dlquerydb-lib.pl';
-
+require './dlquerydb-lib.pl';
 
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-dlquerydb_buttons();
-dlquerydb_show();
+foreach $i ('dlquerydb_datalogger', 'dlquerydb_lastdata', 'dlquerydb_database', 'dlquerydb_exportcsv', 'dlquerydb_exportxls') {
+	push(@links, "${i}.cgi");
+	push(@titles, $text{${i}});
+	push(@icons, "images/${i}.svg");
+	}
+&icons_table(\@links, \@titles, \@icons, @icons > 4 ? scalar(@icons) : 4);
 
-ui_print_footer('/', $text{'index'});
+&ui_print_footer("/", $text{'index'});
 
