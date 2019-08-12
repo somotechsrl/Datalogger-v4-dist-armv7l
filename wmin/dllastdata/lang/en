@@ -1,6 +1,6 @@
 dllastdata_active=Enabled Modules
 dllastdata_drdata=Selected Module
-dllastdata_result=Module Exec Result
+dllastdata_result=Last Data Result
 dllastdata_nodata=No Data for This Module
 dllastdata_nomodule=No Module Selected
 dllastdata_module_list=Module Current Config
