@@ -64,7 +64,7 @@ sub dataloggerVarHtml {
 		return ui_textbox($name,$value,5,0,5,"type='number'");
 		}
 	if($name =~ /DESCR$/) {
-		return ui_textbox($name,$value,40,0,5,"type='text'");
+		return ui_textbox($name,$value,60,0,60,"type='text'");
 		}
 	if($name eq "moduleSelectActive") {
 		$filedata=`$DLPACKAGE/api/sel/menabled`;
