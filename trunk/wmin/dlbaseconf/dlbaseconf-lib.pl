@@ -17,7 +17,7 @@ my @flist=[
 ];
 
 my @liclist=[
-	"type","released","expiration","generated","md5sum","sha1sum"
+	"type","released","expiration","generated","md5sum","sha256sum"
 	];
 
 sub show_polldata {
