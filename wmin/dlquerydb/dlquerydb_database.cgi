@@ -29,10 +29,12 @@ if($bdescr) {
 	#print "<pre>$filestat</pre>";
 	#print &ui_table_end(); 
 
+	print `setDataTables.sh`
+
 	# outputs data 
-	my $filedata=callDataloggerAPI("db-moduledata '$module' '*' '\$(date -I)'","group=Potenza");
+	#my $filedata=callDataloggerAPI("db-moduledata '$module' '*' '\$(date -I)'","group=Potenza");
 	#print "<pre>".$filedata."</pre>";
-	&dataloggerCsvOut($filedata);
+	#&dataloggerCsvOut($filedata);
 	}
 
 print &ui_print_footer("", $text{'dlquerydb_return'});
