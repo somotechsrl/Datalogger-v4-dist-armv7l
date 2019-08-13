@@ -67,7 +67,7 @@ sub dataloggerVarHtml {
 		return ui_textbox($name,$value,60,0,60,"type='text'");
 		}
 	if($name eq "moduleSelectActive") {
-		$filedata=callDataloggerAPI("sel/menabled");
+		$filedata=callDataloggerAPI("sel_menabled");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
@@ -77,14 +77,14 @@ sub dataloggerVarHtml {
 		}	
 
 	if($name eq "moduleSelectAll") {
-		$filedata=callDataloggerAPI("sel/module");
+		$filedata=callDataloggerAPI("sel_module");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
 		}
 
 	if($name eq "schannel" || $name eq "mbserial") {
-		$filedata=callDataloggerAPI("sel/mbserial");
+		$filedata=callDataloggerAPI("sel_mbserial");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
@@ -99,7 +99,7 @@ sub dataloggerVarHtml {
 		}
 
 	if($name eq "mbaddress") {
-		$filedata=callDataloggerAPI("sel/mbaddress");
+		$filedata=callDataloggerAPI("sel_mbaddress");
 		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 		my @head=\@$rhead,my @options=\@$rdata;
 		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
