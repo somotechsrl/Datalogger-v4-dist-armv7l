@@ -31,7 +31,7 @@ if($bdescr) {
 
 	# outputs data 
 	my $filedata=callDataloggerAPI("get-dbModuleData '$module' '*' '\$(date -I)'");
-	//print $filedata;
+	#print $filedata;
 	&dataloggerCsvOut($text{'dlquerydb_database'}.": ".$bdescr,$filedata);
 	}
 
