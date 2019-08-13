@@ -14,8 +14,8 @@ my $DLBWIDTH="width=16em;min-width: 16em;";
 #========================================================================
 sub callDataloggerAPI {
 	
-	my ($apicall) = @_;
-	return `/opt/datalogger/api/$apicall`;
+	my ($apicall,$envparams) = @_;
+	return `$envparams /opt/datalogger/api/$apicall`;
 	}
 
 #========================================================================
