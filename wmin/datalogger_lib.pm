@@ -176,6 +176,8 @@ sub dataloggerCsvOut {
 	my @nhead,@ntype;
 	foreach my $f (@head) {push(@nhead,$text{$f} ne '' ? $text{$f} : $f);}
 
+	dd @nhead;
+
 	# Show the table with add links
 	print &ui_columns_table(
 		\@nhead,
