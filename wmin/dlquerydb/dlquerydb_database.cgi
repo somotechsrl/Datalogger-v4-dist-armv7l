@@ -30,7 +30,7 @@ if($bdescr) {
 	#print &ui_table_end(); 
 
 	# outputs data 
-	my $filedata=callDataloggerAPI("get-dbModuleData '$module' '*' '\$(date -I)'");
+	my $filedata=callDataloggerAPI("db-ModuleData '$module' '*' '\$(date -I)'");
 	#print $filedata;
 	&dataloggerCsvOut($text{'dlquerydb_database'}.": ".$bdescr,$filedata);
 	}
