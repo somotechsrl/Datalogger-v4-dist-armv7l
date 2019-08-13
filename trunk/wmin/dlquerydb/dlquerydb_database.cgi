@@ -6,7 +6,7 @@ require 'dlquerydb-lib.pl';
 # reads submitted data
 ReadParse();
 
-print &ui_print_header(undef, $text{'dlquerydb_lastdata'}, "", undef, 1, 1);
+print &ui_print_header(undef, $text{'dlquerydb_database'}, "", undef, 1, 1);
 print &ui_form_start("dlquerydb_lastdata.cgi","POST");
 
 # Active Modules
