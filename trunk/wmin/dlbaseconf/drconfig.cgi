@@ -26,10 +26,10 @@ if($in{"command"} ne "") {
 	}
 
 # sets form management
-print &ui_form_start('dlbaseconf_drconfig.cgi',"POST");
+print &ui_form_start('drconfig.cgi',"POST");
 
 # Active Modules
-print &ui_table_start($text{"dlbaseconf_active"});
+print &ui_table_start($text{"active"});
 print &dataloggerVarHtml("moduleSubmitActive",$module);	
 print&ui_table_end();
 
@@ -38,16 +38,16 @@ my @cmdlist;
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"save_data"}) {
-	&dlbaseconf_save($module);
+	&save($module);
 	}
 elsif($command eq $text{"delete_data"}) {
-	&dlbaseconf_delete($module);
+	&delete($module);
 	}
 
 
 if($command eq $text{"modify_data"}) {
 	print "Not yet enabled";
-	# &dlbaseconf_modify($module);
+	# &modify($module);
 	@cmdlist=[ 
 		["command" , $text{"save_data"} ], 
 		[ "command" , $text{"cancel_data"} ]  
@@ -55,7 +55,7 @@ if($command eq $text{"modify_data"}) {
 	}
 
 if($command eq $text{"create_data"}) {
-	&dlbaseconf_create($module);
+	&create($module);
 	@cmdlist=[ 
 		["command" , $text{"save_data"} ], 
 		[ "command" , $text{"cancel_data"} ]  
@@ -63,7 +63,7 @@ if($command eq $text{"create_data"}) {
 	}
 # default action
 elsif($module ne "")  {
-	&dlbaseconf_display($module,);
+	&display($module,);
 	@cmdlist=[ 
 		[ "command" , $text{"create_data"} ], 
 		[ "command" , $text{"modify_data"} ], 
@@ -79,4 +79,4 @@ print ui_hidden("module",$module);
 print ui_form_end(@cmdlist);
 
 # end of ui
-&ui_print_footer("", $text{'dlbaseconf_return'});
+&ui_print_footer("", $text{'return'});
