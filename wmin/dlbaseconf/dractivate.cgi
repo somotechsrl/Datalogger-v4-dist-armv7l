@@ -12,17 +12,15 @@ ReadParse();
 # work variables
 my $command, my $module;
 
-# searches command and module -- priority tu submit buttons..
-$command=$in{"command"};
-if($in{"moduleSubmitActive"} ne "") {
-	my $vmod=$in{"moduleSubmitActive"};
-	$module=getModuleByAltDescr($vmod);	
+my $bdescr=$in{"moduleSubmitActive"};
+
+# Button pressed
+if($bdescr ne "") {
+	$module=getModuleByAltDescr($bdescr);
 	}
-elsif($in{"moduleSelectAll"} ne "") {
+# select pressed
+if($module -eq "" && $in{"moduleSelectAll"} ne "") {
 	$module=$in{"moduleSelectAll"};
-	}
-elsif($in{"module"} ne "") {
-	$module=$in{"module"};
 	}
 if($in{"command"} ne "") {
 	$command=$in{"command"};
@@ -30,17 +28,17 @@ if($in{"command"} ne "") {
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"create_config"}) {
-	print &enable($module);
+	print &dlbaseconf_enable($module);
 	}
 elsif($command eq $text{"delete_config"}) {
-	print &disable($module);
+	print &dlbaseconf_disable($module);
 	}
 
 # sets form management
-print &ui_form_start('dractivate.cgi',"POST");
+print &ui_form_start('dlbaseconf_dractivate.cgi',"POST");
 
 # Active Modules
-print &ui_table_start($text{"active"});
+print &ui_table_start($text{"dlbaseconf_active"});
 print &dataloggerVarHtml("moduleSelectAll",$module);	
 print &dataloggerVarHtml("moduleSubmitActive",$module);	
 print&ui_table_end();
@@ -52,8 +50,7 @@ my @cmdlist= [
 	];
 
 # saves last command for re-usage
-print ui_hidden("module",$module);
 print ui_form_end(@cmdlist);
 
 # end of ui
-&ui_print_footer("", $text{'return'});
+&ui_print_footer("", $text{'dlbaseconf_return'});
