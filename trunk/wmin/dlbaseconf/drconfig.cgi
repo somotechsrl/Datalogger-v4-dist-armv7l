@@ -38,16 +38,16 @@ my @cmdlist;
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"save_data"}) {
-	&save($module);
+	&save_module($module);
 	}
 elsif($command eq $text{"delete_data"}) {
-	&delete($module);
+	&delete_module($module);
 	}
 
 
 if($command eq $text{"modify_data"}) {
 	print "Not yet enabled";
-	# &modify($module);
+	# &modify_module($module);
 	@cmdlist=[ 
 		["command" , $text{"save_data"} ], 
 		[ "command" , $text{"cancel_data"} ]  
@@ -55,7 +55,7 @@ if($command eq $text{"modify_data"}) {
 	}
 
 if($command eq $text{"create_data"}) {
-	&create($module);
+	&create_module($module);
 	@cmdlist=[ 
 		["command" , $text{"save_data"} ], 
 		[ "command" , $text{"cancel_data"} ]  
@@ -63,7 +63,7 @@ if($command eq $text{"create_data"}) {
 	}
 # default action
 elsif($module ne "")  {
-	&display($module,);
+	&display_module($module);
 	@cmdlist=[ 
 		[ "command" , $text{"create_data"} ], 
 		[ "command" , $text{"modify_data"} ], 
