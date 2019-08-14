@@ -15,17 +15,7 @@ my $DLBWIDTH="width=16em;min-width: 16em;";
 # Gets  Module key by Alt Descr - AWFUL
 #========================================================================
 sub getModuleByAltDescr($descr) {
-	my ($descr) = @_;
-	my $mlist=`/opt/datalogger/iif/00list`;
-	my @md = split /[\n]/,$mlist;
-	foreach my $mo (@md) {
-		@ml = split /[|]/,$mo;
-		$alt=@ml[1]." ".@ml[2];
-		if($alt eq $descr) {
-			return @ml[5];
-			}
-		}
-	return "";
+	return callDataloggerAPI("api/iifModuleByAltDescr '$descr'");
 	}
 
 #========================================================================
