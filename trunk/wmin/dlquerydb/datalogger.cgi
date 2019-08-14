@@ -9,6 +9,7 @@ my $module='raspi';
 my $bdescr=callDataloggerAPI("iifAltDescr $module");
 my $filedata=callDataloggerAPI("iifLast $module");
 
+print $filedata;
 &dataloggerFileOut($text{'datalogger'}.": ".$bdescr,$filedata);
 
 &ui_print_footer("", $text{'return'});
