@@ -21,22 +21,22 @@ my @liclist=[
 	];
 
 sub show_polldata {
-	print ui_form_start('dlbaseconf_save.cgi',"POST");
+	print ui_form_start('save.cgi',"POST");
 	&dataloggerShowConfig(@flist,$filename);
-	print ui_form_end([ [ undef, $text{'dlbaseconf_save'} ] ]);
+	print ui_form_end([ [ undef, $text{'save'} ] ]);
 	}
 
 sub show_licensing {
-	print ui_form_start('dlbaseconf_licensing.cgi',"POST");
+	print ui_form_start('licensing.cgi',"POST");
 	&dataloggerShowConfig(@liclist,$licfile,1);
-	print ui_form_end([ [ undef, $text{'dlbaseconf_apply_lic'} ] ]);
+	print ui_form_end([ [ undef, $text{'apply_lic'} ] ]);
 	}
 
 sub save_polldata {
 	&dataloggerSaveConfig(@flist,$filename);
 	}
 
-sub dlbaseconf_delete {
+sub delete {
 
 	my ($module,$row) = @_;
 
@@ -47,7 +47,7 @@ sub dlbaseconf_delete {
 		}
 	}
 
-sub dlbaseconf_save {
+sub save {
 
 	my ($module) = @_;
 
@@ -64,35 +64,35 @@ sub dlbaseconf_save {
 	}
 
 
-sub dlbaseconf_create {
+sub create {
 
 	my ($module) = @_;
 
 	# create new rowe/config
 	@plist=split /[\n\r ]/, callDataloggerAPI("iifParams '$module'");
 
-	print &ui_table_start($text{"dlbaseconf_dredit"}.": ".$module);
+	print &ui_table_start($text{"dredit"}.": ".$module);
 	&dataloggerShowConfig(\@plist,"/tmp/$module.edit");
 	print &ui_table_end();
 
 	}
 
-sub dlbaseconf_display {
+sub display {
 
 	my ($module,$value) = @_;
 
-	print &ui_table_start($text{"dlbaseconf_drshow"}.": ".$module);
+	print &ui_table_start($text{"drshow"}.": ".$module);
 	$filedata=callDataloggerAPI("iifConfig $module print");
 	&dataloggerCsvOut($filedata);
 	print &ui_table_end();
 	}
 
-sub dlbaseconf_enable {
+sub enable {
 	my ($module) = @_;
 	return callDataloggerAPI("iifEnable $module");
 	}
 
-sub dlbaseconf_disable {
+sub disable {
 	my ($module) = @_;
 	return callDataloggerAPI("iifDisable $module");
 	}
