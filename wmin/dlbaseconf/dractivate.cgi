@@ -7,12 +7,9 @@ require 'dlbaseconf-lib.pl';
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
 ReadParse();
-#dd %in;
 
 # work variables
 my $command, my $module;
-
-my $bdescr=$in{"moduleSubmitActive"};
 
 # command to exec
 if($in{"command"} ne "") {
@@ -20,6 +17,7 @@ if($in{"command"} ne "") {
 	}
 
 # Button pressed
+my $bdescr=$in{"moduleSubmitActive"};
 if($bdescr ne "") {
 	$module=getModuleByAltDescr($bdescr);
 	}
@@ -27,6 +25,7 @@ if($bdescr ne "") {
 elsif($in{"moduleSelectAll"} ne "") {
 	$module=$in{"moduleSelectAll"};
 	}
+
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"create_config"}) {
 	print &enable_module($module);
@@ -35,6 +34,8 @@ elsif($command eq $text{"delete_config"}) {
 	print &disable_module($module);
 	}
 
+print $command,$module;
+
 # sets form management
 print &ui_form_start('dractivate.cgi',"POST");
 
@@ -42,7 +43,7 @@ print &ui_form_start('dractivate.cgi',"POST");
 print &ui_table_start($text{"active"});
 print &dataloggerVarHtml("moduleSelectAll",$module);	
 print &dataloggerVarHtml("moduleSubmitActive",$module);	
-print&ui_table_end();
+print &ui_table_end();
 
 # default
 my @cmdlist= [
@@ -51,7 +52,8 @@ my @cmdlist= [
 	];
 
 # saves last command for re-usage
-print ui_form_end(@cmdlist);
+print &ui_hidden("module",$module);
+print &ui_form_end(@cmdlist);
 
 # end of ui
 &ui_print_footer("", $text{'return'});

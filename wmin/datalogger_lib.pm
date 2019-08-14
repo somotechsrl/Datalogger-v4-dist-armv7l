@@ -5,16 +5,13 @@ use warnings;
 use WebminCore;
 use Data::Dump;  # use Data::Dumper;
 
-# define datalogger global path
-my $DLBWIDTH="width=16em;min-width: 16em;";
-
 #========================================================================
 # Calls API module prefixing values 
 # string must scontain API ansd parameters
 #========================================================================
 sub callDataloggerAPI {
 	my ($apicall,$envparams) = @_;
-	return `$envparams /opt/datalogger/api/$apicall`;
+	return `$envparams /opt/datalogger/api/$apicall 2>&1`;
 	}
 
 #========================================================================

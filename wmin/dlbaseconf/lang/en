@@ -16,28 +16,22 @@ return=Configuration Management
 save=Save Configuration
 working=Working Parameters
 apply_lic=Renew License
-
-active=Current Active Interfaces
-drshow=Current Config
-nodata=No Data for This Interface
-
-lastdata=Interface Last Data
-return=Interfaces Management
-activate=Interface Enabling
-
-generated=Generation Time 
-type=License Generation Type
-released=Release Date
-expiration=Expiration Date
-
+create_config=Enable Interface
+delete_config=Disable Interface
 save_data=Save Data
 cancel_data=Cancel
 create_data=Create
 delete_data=Delete
 modify_data=Modify
 
-create_config=Enable Interface
-delete_config=Disable Interface
+drshow=Current Config
+active=Current Active Interfaces
+nodata=No Data for This Interface
+
+generated=Generation Time 
+type=License Generation Type
+released=Release Date
+expiration=Expiration Date
 
 Interface=Data Interface
 

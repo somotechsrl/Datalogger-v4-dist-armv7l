@@ -7,10 +7,6 @@ use warnings;
 use WebminCore;
 use Data::Dump;  # use Data::Dumper;
 
-# define datalogger global path
-my $DLPACKAGE="/opt/datalogger";
-my $DLBWIDTH="width=16em;min-width: 16em;";
-
 #========================================================================
 # Generates Submit Buttons for Enabled Drivers
 #========================================================================
@@ -18,20 +14,30 @@ sub  dataloggerShowSubmitModule {
 
 	my ($name,$disable) = @_;
 	
-	$fn=`ls $DLPACKAGE/etc/iif.d`;
+	$fn=`ls /opt/datalogger/etc/iif.d`;
 	@fl = split(/[ \t\n\r]/,$fn);	
 	
 	my $res=&ui_buttons_start();
 	foreach my $button_value (@fl) {
 		my $button_descr=`/opt/datalogger/api/iifAltDescr $button_value`;
-		$res.=&ui_submit($button_descr,$name,$disable, "style='$DLBWIDTH'");
+		$res.=&ui_submit($button_descr,$name,$disable, "style='min-width: 18em;'");
 		}
 	$res.=&ui_buttons_end();
 	
 	return $res;
 	}
 
-
+#========================================================================
+# Generates Select  HTML input for standard call
+#========================================================================
+sub dataloggerApiSelect {
+	my ($api,$name,$value) = @_;
+	$filedata=callDataloggerAPI($api);
+	my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
+	my @head=\@$rhead,my @options=\@$rdata;
+	return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
+	}
+	
 #========================================================================
 # Generates Variable HTML input for  Mapped vars
 #========================================================================
@@ -50,27 +56,18 @@ sub dataloggerVarHtml {
 		return ui_textbox($name,$value,60,0,60,"type='text'");
 		}
 	if($name eq "moduleSelectActive") {
-		$filedata=callDataloggerAPI("sel-menabled");
-		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-		my @head=\@$rhead,my @options=\@$rdata;
-		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
+		return &dataloggerApiSelect("sel-menbled",$name,$value,$disable);
 		}	
 	if($name eq "moduleSubmitActive") {
 		return &dataloggerShowSubmitModule($name,$disable);
 		}	
 
 	if($name eq "moduleSelectAll") {
-		$filedata=callDataloggerAPI("sel-module");
-		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-		my @head=\@$rhead,my @options=\@$rdata;
-		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
+		return &dataloggerApiSelect("sel-module",$name,$value,$disable);
 		}
 
 	if($name eq "schannel" || $name eq "mbserial") {
-		$filedata=callDataloggerAPI("sel-mbserial");
-		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-		my @head=\@$rhead,my @options=\@$rdata;
-		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
+		return &dataloggerApiSelect("sel-mbserial",$name,$value,$disable);
 		}
 
 	if($name eq "mbchannel") {
@@ -82,10 +79,7 @@ sub dataloggerVarHtml {
 		}
 
 	if($name eq "mbaddress") {
-		$filedata=callDataloggerAPI("sel-mbaddress");
-		my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
-		my @head=\@$rhead,my @options=\@$rdata;
-		return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
+		return &dataloggerApiSelect("sel-mbaddress",$name,$value,$disable);
 		}
 
 	if($name eq "mbdelay") {
@@ -110,3 +104,5 @@ sub dataloggerVarHtml {
 	return $selectValue;
 	}
 
+return 1;
+exit;
