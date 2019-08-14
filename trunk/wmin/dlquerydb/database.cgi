@@ -6,11 +6,11 @@ require 'dlquerydb-lib.pl';
 # reads submitted data
 ReadParse();
 
-print &ui_print_header(undef, $text{'dlquerydb_database'}, "", undef, 1, 1);
-print &ui_form_start("dlquerydb_database.cgi","POST");
+print &ui_print_header(undef, $text{'database'}, "", undef, 1, 1);
+print &ui_form_start("database.cgi","POST");
 
 # Active Modules
-print &ui_table_start($text{"dlquerydb_active"});
+print &ui_table_start($text{"active"});
 print &dataloggerVarHtml("moduleSubmitActive",$module);	
 print &ui_table_end();
 
@@ -37,6 +37,6 @@ if($bdescr) {
 	#&dataloggerCsvOut($filedata);
 	}
 
-print &ui_print_footer("", $text{'dlquerydb_return'});
+print &ui_print_footer("", $text{'return'});
 
 
