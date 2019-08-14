@@ -14,16 +14,19 @@ print &ui_table_start($text{"active"});
 print &dataloggerVarHtml("moduleSubmitActive",$module);	
 print &ui_table_end();
 
+print &ui_form_end();
+
 # searches command and module -- priority tu submit buttons..
 my $bdescr=$in{"moduleSubmitActive"};
 my $module=getModuleByAltDescr($bdescr);
+
 if($module) {
 
 	# Prnts file status
-	#my $filestat=`stat /tmp/$module.last`;
-	#print &ui_table_start($text{'dllastdata_drdata'}.": ".$bdescr);
-	#print "<pre>$filestat</pre>";
-	#print &ui_table_end(); 
+	my $filestat=`stat /tmp/$module.last`;
+	print &ui_table_start($text{'dllastdata_drdata'}.": ".$bdescr);
+	print "<pre>$filestat</pre>";
+	print &ui_table_end(); 
 
 	# outputs data 
 	my $filedata=callDataloggerAPI("iifLast $module");
