@@ -7,7 +7,6 @@ ReadParse();
 
 	
 &ui_print_header(undef, $text{'licensing'}, "", undef, 1, 1);
-print %in;
 if($command eq $text{"apply_lic"}) {
 	print "Not yet enabled";
 	}
