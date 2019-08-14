@@ -15,7 +15,7 @@ my $DLBWIDTH="width=16em;min-width: 16em;";
 # Gets  Module key by Alt Descr - AWFUL
 #========================================================================
 sub getModuleByAltDescr($descr) {
-	return callDataloggerAPI("api/iifModuleByAltDescr '$descr'");
+	return callDataloggerAPI("iifModuleByAltDescr '$descr'");
 	}
 
 #========================================================================
