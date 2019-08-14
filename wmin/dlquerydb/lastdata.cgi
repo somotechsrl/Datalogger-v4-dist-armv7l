@@ -6,11 +6,11 @@ require 'dlquerydb-lib.pl';
 # reads submitted data
 ReadParse();
 
-print &ui_print_header(undef, $text{'dlquerydb_lastdata'}, "", undef, 1, 1);
-print &ui_form_start("dlquerydb_lastdata.cgi","POST");
+print &ui_print_header(undef, $text{'lastdata'}, "", undef, 1, 1);
+print &ui_form_start("lastdata.cgi","POST");
 
 # Active Modules
-print &ui_table_start($text{"dlquerydb_active"});
+print &ui_table_start($text{"active"});
 print &dataloggerVarHtml("moduleSubmitActive",$module);	
 print &ui_table_end();
 
@@ -31,9 +31,9 @@ if($bdescr) {
 
 	# outputs data 
 	my $filedata=callDataloggerAPI("iifLast $module");
-	&dataloggerFileOut($text{'dlquerydb_lastdata'}.": ".$bdescr,$filedata);
+	&dataloggerFileOut($text{'lastdata'}.": ".$bdescr,$filedata);
 	}
 
-print &ui_print_footer("", $text{'dlquerydb_return'});
+print &ui_print_footer("", $text{'return'});
 
 
