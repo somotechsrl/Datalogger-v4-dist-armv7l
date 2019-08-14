@@ -36,7 +36,7 @@ sub save_polldata {
 	&dataloggerSaveConfig(@flist,$filename);
 	}
 
-sub delete {
+sub delete_module {
 
 	my ($module,$row) = @_;
 
@@ -47,7 +47,7 @@ sub delete {
 		}
 	}
 
-sub save {
+sub save_module {
 
 	my ($module) = @_;
 
@@ -64,7 +64,7 @@ sub save {
 	}
 
 
-sub create {
+sub create_module {
 
 	my ($module) = @_;
 
@@ -77,7 +77,7 @@ sub create {
 
 	}
 
-sub display {
+sub display_module {
 
 	my ($module,$value) = @_;
 
@@ -87,12 +87,12 @@ sub display {
 	print &ui_table_end();
 	}
 
-sub enable {
+sub enable_module {
 	my ($module) = @_;
 	return callDataloggerAPI("iifEnable $module");
 	}
 
-sub disable {
+sub disable_module {
 	my ($module) = @_;
 	return callDataloggerAPI("iifDisable $module");
 	}

@@ -29,10 +29,10 @@ elsif($in{"moduleSelectAll"} ne "") {
 	}
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"create_config"}) {
-	print &enable($module);
+	print &enable_module($module);
 	}
 elsif($command eq $text{"delete_config"}) {
-	print &disable($module);
+	print &disable_module($module);
 	}
 
 # sets form management
