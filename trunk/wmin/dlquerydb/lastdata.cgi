@@ -18,10 +18,9 @@ print &ui_form_end();
 
 # searches command and module -- priority tu submit buttons..
 my $bdescr=$in{"moduleSubmitActive"};
-if($bdescr) {
-
-	# File statistics
-	my $module=getModuleByAltDescr($bdescr);
+my $module=getModuleByAltDescr($bdescr);
+print $bbdescr;
+if($module) {
 
 	# Prnts file status
 	my $filestat=`stat /tmp/$module.last`;
