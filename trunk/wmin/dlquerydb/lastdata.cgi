@@ -17,7 +17,6 @@ print &ui_table_end();
 # searches command and module -- priority tu submit buttons..
 my $bdescr=$in{"moduleSubmitActive"};
 my $module=getModuleByAltDescr($bdescr);
-print "$bdescr $module";
 if($module) {
 
 	# Prnts file status
