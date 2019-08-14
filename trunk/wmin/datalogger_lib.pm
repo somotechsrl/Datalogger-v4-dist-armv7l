@@ -18,6 +18,13 @@ sub callDataloggerAPI {
 	}
 
 #========================================================================
+# Gets  Module key by Alt Descr via API
+#========================================================================
+sub getModuleByAltDescr($descr) {
+	return callDataloggerAPI("iifModuleByAltDescr '$descr'");
+	}
+
+#========================================================================
 # loads variables from file - returns assoc array with data
 # format is compatible with data|name|value format used by display 
 #========================================================================

@@ -12,13 +12,6 @@ my $DLPACKAGE="/opt/datalogger";
 my $DLBWIDTH="width=16em;min-width: 16em;";
 
 #========================================================================
-# Gets  Module key by Alt Descr - AWFUL
-#========================================================================
-sub getModuleByAltDescr($descr) {
-	return callDataloggerAPI("iifModuleByAltDescr '$descr'");
-	}
-
-#========================================================================
 # Generates Submit Buttons for Enabled Drivers
 #========================================================================
 sub  dataloggerShowSubmitModule {
