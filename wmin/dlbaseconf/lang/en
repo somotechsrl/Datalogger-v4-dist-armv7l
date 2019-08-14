@@ -7,23 +7,23 @@ SYNCFREQ=Sync Post Modules Frequency (s)
 MAXQFLUSH=Max Queue Flush In Sync
 DLDESCR=Datalogger Description
 
-dlbaseconf_polldata=Working Parameters
-dlbaseconf_licensing=License Management
-dlbaseconf_dractivate=Interface Activation
-dlbaseconf_drconfig=Interface Configuration
+polldata=Working Parameters
+licensing=License Management
+dractivate=Interface Activation
+drconfig=Interface Configuration
 
-dlbaseconf_return=Configuration Management
-dlbaseconf_save=Save Configuration
-dlbaseconf_working=Working Parameters
-dlbaseconf_apply_lic=Renew License
+return=Configuration Management
+save=Save Configuration
+working=Working Parameters
+apply_lic=Renew License
 
-dlbaseconf_active=Current Active Interfaces
-dlbaseconf_drshow=Current Config
-dlbaseconf_nodata=No Data for This Interface
+active=Current Active Interfaces
+drshow=Current Config
+nodata=No Data for This Interface
 
-dlbaseconf_lastdata=Interface Last Data
-dlbaseconf_return=Interfaces Management
-dlbaseconf_activate=Interface Enabling
+lastdata=Interface Last Data
+return=Interfaces Management
+activate=Interface Enabling
 
 generated=Generation Time 
 type=License Generation Type
