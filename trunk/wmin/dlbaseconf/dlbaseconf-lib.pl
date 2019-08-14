@@ -21,9 +21,9 @@ my @liclist=[
 	];
 
 sub show_polldata {
-	print ui_form_start('save.cgi',"POST");
+	print ui_form_start('polldata.cgi',"POST");
 	&dataloggerShowConfig(@flist,$filename);
-	print ui_form_end([ [ undef, $text{'save'} ] ]);
+	print ui_form_end([ [ "command" , $text{'save'} ] ]);
 	}
 
 sub show_licensing {
@@ -39,7 +39,6 @@ sub save_polldata {
 sub delete_module {
 
 	my ($module,$row) = @_;
-
 	foreach $r (keys %in) {
 		if($r =~ /row_/) {
 			callDataloggerAPI("iifConfig $module del $in{$r}");
