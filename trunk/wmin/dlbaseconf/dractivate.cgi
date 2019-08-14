@@ -14,18 +14,19 @@ my $command, my $module;
 
 my $bdescr=$in{"moduleSubmitActive"};
 
+# command to exec
+if($in{"command"} ne "") {
+	$command=$in{"command"};
+	}
+
 # Button pressed
 if($bdescr ne "") {
 	$module=getModuleByAltDescr($bdescr);
 	}
 # select pressed
-if($module -eq "" && $in{"moduleSelectAll"} ne "") {
+elsif($in{"moduleSelectAll"} ne "") {
 	$module=$in{"moduleSelectAll"};
 	}
-if($in{"command"} ne "") {
-	$command=$in{"command"};
-	}
-
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"create_config"}) {
 	print &dlbaseconf_enable($module);
