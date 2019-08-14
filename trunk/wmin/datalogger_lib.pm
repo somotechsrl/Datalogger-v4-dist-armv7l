@@ -20,7 +20,8 @@ sub callDataloggerAPI {
 #========================================================================
 # Gets  Module key by Alt Descr via API
 #========================================================================
-sub getModuleByAltDescr($descr) {
+sub getModuleByAltDescr() {
+	my ($descr) = @_;
 	return callDataloggerAPI("iifModuleByAltDescr '$descr'");
 	}
 
