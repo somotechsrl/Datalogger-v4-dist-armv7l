@@ -20,10 +20,10 @@ my $module=getModuleByAltDescr($bdescr);
 if($module) {
 
 	# Prnts file status
-	my $filestat=`stat /tmp/$module.last`;
-	print &ui_table_start($text{'dllastdata_drdata'}.": ".$bdescr);
-	print "<pre>$filestat</pre>";
-	print &ui_table_end(); 
+	#my $filestat=`stat /tmp/$module.last`;
+	#print &ui_table_start($text{'dllastdata_drdata'}.": ".$bdescr);
+	#print "<pre>$filestat</pre>";
+	#print &ui_table_end(); 
 
 	# outputs data 
 	my $filedata=callDataloggerAPI("iifLast $module");
