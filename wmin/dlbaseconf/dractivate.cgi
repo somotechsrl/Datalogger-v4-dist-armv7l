@@ -29,17 +29,17 @@ elsif($in{"moduleSelectAll"} ne "") {
 	}
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"create_config"}) {
-	print &dlbaseconf_enable($module);
+	print &enable($module);
 	}
 elsif($command eq $text{"delete_config"}) {
-	print &dlbaseconf_disable($module);
+	print &disable($module);
 	}
 
 # sets form management
-print &ui_form_start('dlbaseconf_dractivate.cgi',"POST");
+print &ui_form_start('dractivate.cgi',"POST");
 
 # Active Modules
-print &ui_table_start($text{"dlbaseconf_active"});
+print &ui_table_start($text{"active"});
 print &dataloggerVarHtml("moduleSelectAll",$module);	
 print &dataloggerVarHtml("moduleSubmitActive",$module);	
 print&ui_table_end();
@@ -54,4 +54,4 @@ my @cmdlist= [
 print ui_form_end(@cmdlist);
 
 # end of ui
-&ui_print_footer("", $text{'dlbaseconf_return'});
+&ui_print_footer("", $text{'return'});
