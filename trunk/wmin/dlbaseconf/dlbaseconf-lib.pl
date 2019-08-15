@@ -68,9 +68,9 @@ sub create_module {
 	my ($module) = @_;
 
 	# create new rowe/config
-	@plist=split /[\n\r ]/, callDataloggerAPI("iifParams '$module'");
+	@plist=split /[\n\r ]/, callDataloggerAPI("iifConfig '$module' 'params'");
 
-	print &ui_table_start($text{"dredit"}.": ".$module);
+	print &ui_table_start($text{"create_data"}.": ".$module);
 	&dataloggerShowConfig(\@plist,"/tmp/$module.edit");
 	print &ui_table_end();
 
@@ -81,9 +81,10 @@ sub display_module {
 	my ($module,$value) = @_;
 
 	print &ui_table_start($text{"drshow"}.": ".$module);
-	$filedata=callDataloggerAPI("iifConfig $module print");
-	&dataloggerCsvOut($filedata);
+	#$filedata=callDataloggerAPI("iifConfig $module print");
+	#&dataloggerCsvOut($filedata);
 	print &ui_table_end();
+	print &dataloggerApiTableSelect("mconfig $module");
 	}
 
 sub enable_module {

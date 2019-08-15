@@ -20,7 +20,7 @@ sub  dataloggerShowSubmitModule {
 	my $res=&ui_buttons_start();
 	foreach my $button_value (@fl) {
 		my $button_descr=`/opt/datalogger/api/iifAltDescr $button_value`;
-		$res.=&ui_submit($button_descr,$name,$disable, "style='min-width: 18em;'");
+		$res.=&ui_submit($button_descr,$name,$disable, "style='width:33.33%;min-width: 18em;'");
 		}
 	$res.=&ui_buttons_end();
 	
@@ -36,8 +36,19 @@ sub dataloggerApiSelect {
 	my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 	my @head=\@$rhead,my @options=\@$rdata;
 	return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
+	#print "******* $name $value";
+	#return `/opt/datalogger/app/select $name $value 1>&2`;
 	}
 	
+#========================================================================
+# Generates API Table  HTML with checkbox select
+#========================================================================
+sub dataloggerApiTableSelect {
+	my ($api) = @_;
+	return `/opt/datalogger/app/tableselect sel-$api`;
+	#qx(cd /opt/datalogger;api/sel-$api | app/tableselect);
+	}
+
 #========================================================================
 # Generates Variable HTML input for  Mapped vars
 #========================================================================
@@ -56,7 +67,7 @@ sub dataloggerVarHtml {
 		return ui_textbox($name,$value,60,0,60,"type='text'");
 		}
 	if($name eq "moduleSelectActive") {
-		return &dataloggerApiSelect("sel-menbled",$name,$value,$disable);
+		return &dataloggerApiSelect("sel-menabled",$name,$value,$disable);
 		}	
 	if($name eq "moduleSubmitActive") {
 		return &dataloggerShowSubmitModule($name,$disable);
