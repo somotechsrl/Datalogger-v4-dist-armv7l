@@ -22,8 +22,8 @@ delete_config=Disable Checked
 save_data=Save Data
 cancel_data=Cancel Device Entry
 create_data=Create Device Entry
-delete_data=Delete Device Entry
-modify_data=Modify Device Entry
+delete_data=Delete Selected Entries
+modify_data=Modify Selected Entry
 
 drshow=Current Config
 active=Current Active Interfaces
