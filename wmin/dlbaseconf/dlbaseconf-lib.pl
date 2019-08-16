@@ -80,7 +80,9 @@ sub display_module {
 
 	my ($module,$value) = @_;
 
-	print &ui_table_start($text{"drshow"}.": ".$module);
+	$dlparams=&dataloggerApiParams($module);
+	$dldescr=$dlparams ? $text{"drshow"} : $text{"drnoshow"};
+	print &ui_table_start($dldescr.": ".$module);
 	#$filedata=callDataloggerAPI("iifConfig $module print");
 	#&dataloggerCsvOut($filedata);
 	print &ui_table_end();
