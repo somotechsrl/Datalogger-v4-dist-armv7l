@@ -31,11 +31,15 @@ print &dataloggerVarHtml("moduleSubmitActive",$module);
 print &ui_table_end();
 
 # default
-my @cmdlist=[ 
-	[ "command" , $text{"create_data"} ], 
-	[ "command" , $text{"modify_data"} ], 
-	[ "command" , $text{"delete_data"} ] 
-	];
+my @cmdlist;
+
+if($module) {
+	@cmdlist=[ 
+		[ "command" , $text{"create_data"} ], 
+		[ "command" , $text{"modify_data"} ], 
+		[ "command" , $text{"delete_data"} ] 
+		];
+	}
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"save_data"}) {
