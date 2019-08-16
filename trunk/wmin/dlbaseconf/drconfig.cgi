@@ -33,7 +33,8 @@ print &ui_table_end();
 # default
 my @cmdlist;
 
-if($module) {
+$dlparams=&dataloggerApiParams($module);
+if($module and $dlparams) {
 	@cmdlist=[ 
 		[ "command" , $text{"create_data"} ], 
 		[ "command" , $text{"modify_data"} ], 

@@ -41,6 +41,16 @@ sub dataloggerApiSelect {
 	}
 	
 #========================================================================
+# Generates Select  HTML input for standard call
+#========================================================================
+sub dataloggerApiParams {
+	my ($module) = @_;
+	my $res=&callDataloggerAPI("iifParams $module");
+	$res =~ s/[ \n\r]//g;
+	return $res;
+	}
+
+#========================================================================
 # Generates API Table  HTML with checkbox select
 #========================================================================
 sub dataloggerApiTableSelect {
@@ -82,11 +92,26 @@ sub dataloggerVarHtml {
 		}
 
 	if($name eq "mbchannel") {
+		# temporary - we'd like to have a 'composer'
+		return ui_textbox($name,$value,40,$disable,undef,undef);
 		my $combos;
-		$combos=&dataloggerVarHtml("mbserial",$value);
+		$combos=&dataloggerVarHtml("mbtype",$value);
 		$combos.=&dataloggerVarHtml("mbserial",$value);
-		$combos.=&dataloggerVarHtml("mbserial",$value);
+		$combos.=&dataloggerVarHtml("mbspeed",$value);
+		$combos.=&dataloggerVarHtml("mbmode",$value);
 		return $combos;
+		}
+
+	if($name eq "mbtype") {
+		return &dataloggerApiSelect("sel-mbtype",$name,$value,$disable);
+		}
+
+	if($name eq "mbmode") {
+		return &dataloggerApiSelect("sel-mbmode",$name,$value,$disable);
+		}
+
+	if($name eq "mbspeed") {
+		return &dataloggerApiSelect("sel-mbspeed",$name,$value,$disable);
 		}
 
 	if($name eq "mbaddress") {

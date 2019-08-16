@@ -26,6 +26,7 @@ delete_data=Delete Selected Entries
 modify_data=Modify Selected Entry
 
 drshow=Current Config
+drnoshow=No Config Options
 active=Current Active Interfaces
 nodata=No Data for This Interface
 
