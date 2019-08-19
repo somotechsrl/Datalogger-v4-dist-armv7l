@@ -7,5 +7,5 @@ exportxls=Excell File Exports
 return=Database Query
 active=Active Interfaces
 
-apply_dbparams=Check/Refresh Parameters
+apply_dbparams=Update Parameters
 apply_dbselect=Extract Database Data
