@@ -22,8 +22,7 @@ if($command eq $text{"apply_fwupdate"}) {
 	`/opt/datalogger/bin/svnupdate`;
 	}
 
-@cmdlist=[ 
-	[ "command" , $text{"apply_fwcheck"} ], 
+my @cmdlist=[ 
 	[ "command" , $text{"apply_fwupdate"} ], 
 	];
 

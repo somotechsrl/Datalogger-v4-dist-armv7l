@@ -6,35 +6,40 @@ require 'dlquerydb-lib.pl';
 # reads submitted data
 ReadParse();
 
+my @cmdlist=[ 
+	[ "command" , $text{"apply_dbparams"} ], 
+	[ "command" , $text{"apply_dbselect"} ], 
+	];
+
 print &ui_print_header(undef, $text{'database'}, "", undef, 1, 1);
 print &ui_form_start("database.cgi","POST");
 
 # Active Modules
 print &ui_table_start($text{"dbsaved"});
-print &dataloggerVarHtml("dbquerymodule",$module);	
-print &ui_table_end();
+print &dataloggerVarHtml("dbquerymodule");	
+print &dataloggerVarHtml("dbquerymoduledevice");
+print &dataloggerVarHtml("dbquerymodulegroups");	
+print &dataloggerVarHtml("dbquerymodulefrdate");	
+print &dataloggerVarHtml("dbquerymoduletodate");	
+print ui_table_end();
+print &ui_form_end(@cmdlist);
 
 print &ui_form_end();
 
 # searches command and module -- priority tu submit buttons..
-my $bdescr=$in{"moduleSubmitActive"};
-if($bdescr) {
+my $bdescr=$in{"command"};
+if($in{"command"} eq $text{"apply_dbselect"}) {
 
 	# File statistics
-	my $module=getModuleByAltDescr($bdescr);
-
-	# Prnts file status
-	#my $filestat=`stat /tmp/$module.last`;
-	#print &ui_table_start($text{'dllastdata_drdata'}.": ".$bdescr);
-	#print "<pre>$filestat</pre>";
-	#print &ui_table_end(); 
-
-	print `setDataTables.sh`
-
+	my $dbmodule=$in{"dbquerymodule"};
+	my $dbdevice=$in{"dbquerymoduledevice"};
+	my $dbfromdate=$in{"dbquerymodulefrdate"};
+	my $dbtodate=$in{"dbquerymoduletodate"};
+	
 	# outputs data 
-	#my $filedata=callDataloggerAPI("db-moduledata '$module' '*' '\$(date -I)'","group=Potenza");
+	my $filedata=callDataloggerAPI("db-moduledata '$dbmodule' '$dbdevice' '$dbfromdate' '$dbtodate'","group=Tensione");
 	#print "<pre>".$filedata."</pre>";
-	#&dataloggerCsvOut($filedata);
+	&dataloggerCsvOut($filedata);
 	}
 
 print &ui_print_footer("", $text{'return'});
