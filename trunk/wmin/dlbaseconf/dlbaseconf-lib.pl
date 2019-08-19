@@ -36,7 +36,7 @@ sub save_polldata {
 	&dataloggerSaveConfig(@flist,$filename);
 	}
 
-sub delete_module {
+sub delete_module_entry {
 
 	my ($module,$row) = @_;
 	foreach $r (keys %in) {
@@ -46,7 +46,7 @@ sub delete_module {
 		}
 	}
 
-sub save_module {
+sub save_module_entry {
 
 	my ($module) = @_;
 
@@ -54,16 +54,19 @@ sub save_module {
 	$params=callDataloggerAPI("iifConfig $module params");
 	@parray=split /[\n\r ]/,$params;
 
+	print "*** @parray *** ";
+
 	# generates from POST
-	my $pdata;
+	my $cmd="iifConfig $module add ";
 	foreach $p (@parray) {
-		$pdata.=" '$in{$p}'";
+		$cmd.=" '$in{$p}'";
 		}
-	callDataloggerAPI("iifConfig $module add $pdata");
+	print "*** $cmd ***";
+	callDataloggerAPI($cmd);
 	}
 
 
-sub create_module {
+sub create_module_entry {
 
 	my ($module) = @_;
 
@@ -76,7 +79,7 @@ sub create_module {
 
 	}
 
-sub display_module {
+sub display_module_entry {
 
 	my ($module,$value) = @_;
 
@@ -88,6 +91,17 @@ sub display_module {
 	print &ui_table_end();
 	print &dataloggerApiTableSelect("mconfig $module");
 	}
+
+sub display_firmware_status {
+
+	$dldescr=$dlparams ? $text{"drshow"} : $text{"drnoshow"};
+	print &ui_table_start($dldescr.": ".$module);
+	#$filedata=callDataloggerAPI("iifConfig $module print");
+	#&dataloggerCsvOut($filedata);
+	print &ui_table_end();
+	print &dataloggerApiTableShow("status-firmware");
+	}
+
 
 sub enable_module {
 	my ($module) = @_;

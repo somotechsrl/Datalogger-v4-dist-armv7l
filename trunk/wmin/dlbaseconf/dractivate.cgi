@@ -30,8 +30,8 @@ if($bdescr ne "") {
 	$module=getModuleByAltDescr($bdescr);
 	}
 # select pressed
-elsif($in{"moduleSelectAll"} ne "") {
-	$module=$in{"moduleSelectAll"};
+elsif($in{"dbmodule"} ne "") {
+	$module=$in{"dbmodule"};
 	}
 
 # Creates new config - here to update correctly buttons.
@@ -50,7 +50,7 @@ print &ui_form_start('dractivate.cgi',"POST");
 
 # Active Modules
 print &ui_table_start($text{"active"});
-print &dataloggerVarHtml("moduleSelectAll",$module,$text{"apply_module"});	
+print &dataloggerVarHtml("dbmodule",$module,$text{"apply_module"});	
 #print &dataloggerVarHtml("moduleSubmitActive",$module);	
 print &ui_table_end();
 print &dataloggerApiTableSelect("menabled");
