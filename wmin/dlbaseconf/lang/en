@@ -9,6 +9,7 @@ DLDESCR=Datalogger Description
 
 polldata=Working Parameters
 licensing=License Management
+dlupdate=Firmware Update
 dractivate=Interface Activation
 drconfig=Interface Configuration
 
@@ -16,6 +17,8 @@ return=Configuration Management
 save=Save Configuration
 working=Working Parameters
 apply_lic=Renew License
+apply_fwcheck=Check Firmware
+apply_fwupdate=Update Firmware
 apply_module=Select Device
 create_config=Enable Interface
 delete_config=Disable Checked
@@ -37,6 +40,12 @@ expiration=Expiration Date
 
 Interface=Data Interface
 
+dbmodule=Device Driver
+
+expmode=Export Format
+
+mbserial=Serial Port
+mbspeed=Serial Speed
 mbchannel=ModBus Channel
 mbaddress=ModBus Address
 mbdelay=ModBus Delay/Query

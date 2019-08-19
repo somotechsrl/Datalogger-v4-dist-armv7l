@@ -60,6 +60,15 @@ sub dataloggerApiTableSelect {
 	}
 
 #========================================================================
+# Generates API Table  HTML without checkbox select
+#========================================================================
+sub dataloggerApiTableShow {
+	my ($api) = @_;
+	return `/opt/datalogger/app/tableshow $api`;
+	#qx(cd /opt/datalogger;api/sel-$api | app/tableselect);
+	}
+
+#========================================================================
 # Generates Variable HTML input for  Mapped vars
 #========================================================================
 sub dataloggerVarHtml {
@@ -83,8 +92,15 @@ sub dataloggerVarHtml {
 		return &dataloggerShowSubmitModule($name,$disable);
 		}	
 
-	if($name eq "moduleSelectAll") {
+	if($name eq "dbmodule") {
 		return &dataloggerApiSelect("sel-module",$name,$value,$disable);
+		}
+	if($name eq "dbquerymodule") {
+		return &dataloggerApiSelect("sel-dbModules",$name,$value,$disable);
+		}
+
+	if($name eq "expmode") {
+		return &dataloggerApiSelect("sel-expmode",$name,$value,$disable);
 		}
 
 	if($name eq "schannel" || $name eq "mbserial") {
@@ -136,7 +152,7 @@ sub dataloggerVarHtml {
 
 		
 	# default
-	return ui_textbox($name,$value,40,$disable,undef,undef);
+	return ui_textbox($name,$value,60,$disable,undef,undef);
 	return $selectValue;
 	}
 

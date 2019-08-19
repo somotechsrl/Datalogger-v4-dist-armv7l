@@ -10,8 +10,8 @@ print &ui_print_header(undef, $text{'database'}, "", undef, 1, 1);
 print &ui_form_start("database.cgi","POST");
 
 # Active Modules
-print &ui_table_start($text{"active"});
-print &dataloggerVarHtml("moduleSubmitActive",$module);	
+print &ui_table_start($text{"dbsaved"});
+print &dataloggerVarHtml("dbquerymodule",$module);	
 print &ui_table_end();
 
 print &ui_form_end();

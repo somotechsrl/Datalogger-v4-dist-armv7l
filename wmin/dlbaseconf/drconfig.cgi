@@ -44,12 +44,12 @@ if($module and $dlparams) {
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"save_data"}) {
-	&save_module($module);
-	&display_module($module);
+	&save_module_entry($module);
+	&display_module_entry($module);
 	}
 elsif($command eq $text{"delete_data"}) {
-	&delete_module($module);
-	&display_module($module);
+	&delete_module_entry($module);
+	&display_module_entry($module);
 	}
 elsif($command eq $text{"modify_data"}) {
 	print "Not yet enabled";
@@ -60,7 +60,7 @@ elsif($command eq $text{"modify_data"}) {
 		];
 	}
 elsif($command eq $text{"create_data"}) {
-	&create_module($module);
+	&create_module_entry($module);
 	@cmdlist=[ 
 		[ "command" , $text{"save_data"} ], 
 		[ "command" , $text{"cancel_data"} ]  
@@ -68,7 +68,7 @@ elsif($command eq $text{"create_data"}) {
 	}
 # default action
 elsif($module ne "")  {
-	&display_module($module);
+	&display_module_entry($module);
 	}
 
 

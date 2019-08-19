@@ -1,6 +1,7 @@
 datalogger=Datalogger Status
 lastdata=Interfaces Last Data
 database=Database Query
+dbsaved=Database Saved Interfaces
 exportcsv=CSV File Exports
 exportxls=Excell File Exports
 return=Database Query
