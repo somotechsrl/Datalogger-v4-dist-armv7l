@@ -10,8 +10,8 @@ use Data::Dump;  # use Data::Dumper;
 # string must scontain API ansd parameters
 #========================================================================
 sub callDataloggerAPI {
-	my ($apicall) = @_;
-	return `/opt/datalogger/api/$apicall 2>&1`;
+	my ($apicall,$environ) = @_;
+	return `$environ /opt/datalogger/api/$apicall 2>&1`;
 	}
 
 #========================================================================

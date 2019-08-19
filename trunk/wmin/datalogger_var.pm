@@ -31,8 +31,9 @@ sub  dataloggerShowSubmitModule {
 # Generates Select  HTML input for standard call
 #========================================================================
 sub dataloggerApiSelect {
-	my ($api,$name,$value) = @_;
-	$filedata=callDataloggerAPI($api);
+	my ($api,$name,$value,$disabled,$environment) = @_;
+	#print "***** $environment ***";
+	$filedata=callDataloggerAPI($api,$environment);
 	my ($rhead,$rdata)=dataloggerArrayFromCSV($filedata);
 	my @head=\@$rhead,my @options=\@$rdata;
 	return &ui_select($name,$value,@options,undef,undef,undef,undef,undef);
@@ -73,7 +74,12 @@ sub dataloggerApiTableShow {
 #========================================================================
 sub dataloggerVarHtml {
 
-	my ($name,$value,$disable) = @_;
+	my ($name,$value,$disable,$environ) = @_;
+
+	# if value is not set, tues to read from %in...
+	if(!$value) {
+		$value=$in{$name};
+		}
 
 	# 'pause boxes
 	if($name =~ /PAUSE$/) {
@@ -96,7 +102,34 @@ sub dataloggerVarHtml {
 		return &dataloggerApiSelect("sel-module",$name,$value,$disable);
 		}
 	if($name eq "dbquerymodule") {
-		return &dataloggerApiSelect("sel-dbModules",$name,$value,$disable);
+		return &dataloggerApiSelect("sel-dbModules",$name,$value,$disable,$module);
+		}
+
+	if($name eq "fr_date") {
+		return &dataloggerApiSelect("sel-dbModuleFromDate",$name,$value,$disable,$module);
+		}
+
+	if($name eq "dbquerymoduledevice") {
+		# uses dbmodule as environment
+		my $dbmodule=$in{"dbquerymodule"};
+		return &dataloggerApiSelect("sel-dbModuleKeys",$name,$value,$disable,"module=$dbmodule");
+		}
+
+	if($name eq "dbquerymodulegroups") {
+		# uses dbmodule as environment
+		my $dbmodule=$in{"dbquerymodule"};
+		return &dataloggerApiSelect("sel-modulegroups",$name,$value,$disable,"module=$dbmodule");
+		}
+
+	# database query range fields
+	if($name =~ /dbquerymodule.*date$/) {
+		my $dbmodule=$in{"dbquerymodule"};
+		my $dbdevice=$in{"dbquerymoduledevice"};
+		my @minmax= split / /,&callDataloggerAPI("get-dbModuleKeyDates","module=$dbmodule device=$dbdevice");
+		$mindate=@minmax[0];
+		$maxdate=@minmax[1];
+		#print "*** $mindate - $maxdate ***" ;
+		return `$environ /opt/datalogger/app/datefield '$name' '$value' '$mindate' '$maxdate'`;
 		}
 
 	if($name eq "expmode") {
