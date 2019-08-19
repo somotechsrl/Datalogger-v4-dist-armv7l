@@ -1,17 +1,17 @@
 COMMPAUSE=Pause Pre Run Modules 
-COMMFREQ=Pre Modules Frequency (s)
-POLLPAUSE=Pause Device Modules 
-POLLFREQ=Device Modules Frequency (s)
-SYNCPAUSE=Pause Sync Post Modules 
-SYNCFREQ=Sync Post Modules Frequency (s)
+COMMFREQ=Pre Run Modules Frequency (s)
+POLLPAUSE=Pause Device Run Modules 
+POLLFREQ=Device Run Modules Frequency (s)
+SYNCPAUSE=Pause Post Run Sync/Data Modules 
+SYNCFREQ=Post Run Sync/Data Modules Frequency (s)
 MAXQFLUSH=Max Queue Flush In Sync
 DLDESCR=Datalogger Description
 
 polldata=Working Parameters
 licensing=License Management
 dlupdate=Firmware Update
-dractivate=Interface Activation
-drconfig=Interface Configuration
+dractivate=Enable Interfaces
+drconfig=Configure Interfaces
 
 return=Configuration Management
 save=Save Configuration

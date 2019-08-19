@@ -32,12 +32,13 @@ if($in{"command"} eq $text{"apply_dbselect"}) {
 
 	# File statistics
 	my $dbmodule=$in{"dbquerymodule"};
+	my $dbgroup=$in{"dbquerymodulegroups"};
 	my $dbdevice=$in{"dbquerymoduledevice"};
 	my $dbfromdate=$in{"dbquerymodulefrdate"};
 	my $dbtodate=$in{"dbquerymoduletodate"};
 	
 	# outputs data 
-	my $filedata=callDataloggerAPI("db-moduledata '$dbmodule' '$dbdevice' '$dbfromdate' '$dbtodate'","group=Tensione");
+	my $filedata=callDataloggerAPI("db-moduledata '$dbmodule' '$dbdevice' '$dbfromdate' '$dbtodate'","group=$dbgroup");
 	#print "<pre>".$filedata."</pre>";
 	&dataloggerCsvOut($filedata);
 	}
