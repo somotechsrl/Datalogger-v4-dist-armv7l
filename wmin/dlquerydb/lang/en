@@ -8,4 +8,6 @@ return=Database Query
 active=Active Interfaces
 
 apply_dbparams=Update Parameters
-apply_dbselect=Extract Database Data
+apply_dbselect=Show
+apply_extractcsv=CSV
+apply_extractxls=Excel

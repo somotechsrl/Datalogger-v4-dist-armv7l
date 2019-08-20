@@ -15,6 +15,15 @@ sub callDataloggerAPI {
 	}
 
 #========================================================================
+# Calls APP module prefixing values 
+# string must scontain API ansd parameters
+#========================================================================
+sub callDataloggerAPP {
+	my ($appcall,$environ) = @_;
+	return `$environ /opt/datalogger/app/$appcall 2>&1`;
+	}
+
+#========================================================================
 # Gets  Module key by Alt Descr via API
 #========================================================================
 sub getModuleByAltDescr() {
