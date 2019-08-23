@@ -151,36 +151,45 @@ sub dataloggerVarHtml {
 
 		# Composes mbchannel by type...
 		my $mbtype=$in{"mbtype"};
+		my $mbesptype=$in{"mbesptype"};
 		my $mbchannel="";
-		if(!$mbtype) {
-			$mbtype="rtu";
-			}
+		if(!$mbtype) {$mbtype="rtu";}
 
+		# select diversion type
 		$combos=&dataloggerVarHtml("mbtype",$mbtype)."<br>";
 
+		# calculates full esp address
 		if($mbtype eq "esp") {
-			$combos.=&ui_textbox("mbespaddr",$in{"mbespaddr"});
-			$mbchannel=sprintf("esp:%s",$in{"mbespaddr"});
+			if($in{"mbespaddr"} eq "") {
+				$in{"mbespaddr"}="127.0.0.1";
+				}
+			if($in{"mbespport"} eq "") {
+				$in{"mbespport"}=2024;
+				}
+			$combos.=&ui_textbox("mbespaddr",$in{"mbespaddr"},20);
+			$combos.=&ui_textbox("mbespport",$in{"mbespport"},5);
+			$combos.=&dataloggerVarHtml("mbesptype",$mbesptype)."<br>";
+			$mbchannel=sprintf("esp:%s:%d-",$in{"mbespaddr"},$in{"mbespport"});
 			}
 
-		if($mbtype eq "tcp" or $mbtype eq "xtcp") {
+		if($mbesptype eq "tcp" or $mbtype eq "tcp" or $mbtype eq "xtcp") {
 			
-			if($in{"mbipport"} eq "") {
-				$in{"mbipport"}=502;
-				}
 			if($in{"mbipaddr"} eq "") {
 				$in{"mbipaddr"}="127.0.0.1";
 				}
+			if($in{"mbipport"} eq "") {
+				$in{"mbipport"}=502;
+				}
 			$combos.=&ui_textbox("mbipaddr",$in{"mbipaddr"});
 			$combos.=&ui_textbox("mbipport",$in{"mbipport"},10);
-			$mbchannel=sprintf("%s:%s,%d",$in{"mbtype"},$in{"mbipaddr"},${"mbipport"});
+			$mbchannel.=sprintf("%s:%s,%d",$in{"mbtype"},$in{"mbipaddr"},${"mbipport"});
 			}
 
-		if($mbtype eq "rtu") {
+		if($mbesptype eq "rtu" or $mbtype eq "rtu") {
 			$combos.=&dataloggerVarHtml("mbserial",$in{"mbserial"});
 			$combos.=&dataloggerVarHtml("mbspeed",$in{"mbspeed"});
 			$combos.=&dataloggerVarHtml("mbmode",$in{"mbmode"});
-			$mbchannel=sprintf("rtu:%s,%s,%s",$in{"mbserial"},$in{"mbspeed"},$in{"mbmode"});
+			$mbchannel.=sprintf("rtu:%s,%s,%s",$in{"mbserial"},$in{"mbspeed"},$in{"mbmode"});
 			}
 
 
@@ -192,7 +201,7 @@ sub dataloggerVarHtml {
 		return $combos;
 		}
 
-	if($name eq "mbtype") {
+	if($name eq "mbtype" or $name eq "mbesptype") {
 		return &dataloggerApiSelect("sel-mbtype",$name,$value,$disable);
 		}
 
