@@ -91,6 +91,9 @@ sub dataloggerVarHtml {
 	if($name =~ /DESCR$/) {
 		return ui_textbox($name,$value,60,0,60,"type='text'");
 		}
+	if($name eq "module") {
+		return &dataloggerApiSelect("sel-menabled",$name,$value,$disable);
+		}	
 	if($name eq "moduleSelectActive") {
 		return &dataloggerApiSelect("sel-menabled",$name,$value,$disable);
 		}	
@@ -141,13 +144,47 @@ sub dataloggerVarHtml {
 		}
 
 	if($name eq "mbchannel") {
-		# temporary - we'd like to have a 'composer'
-		return ui_textbox($name,$value,40,$disable,undef,undef);
-		my $combos;
-		$combos=&dataloggerVarHtml("mbtype",$value);
-		$combos.=&dataloggerVarHtml("mbserial",$value);
-		$combos.=&dataloggerVarHtml("mbspeed",$value);
-		$combos.=&dataloggerVarHtml("mbmode",$value);
+
+		# Composes mbchannel by type...
+		my $mbtype=$in{"mbtype"};
+		my $mbchannel="";
+		if(!$mbtype) {
+			$mbtype="rtu";
+			}
+
+		$combos=&dataloggerVarHtml("mbtype",$mbtype)."<br>";
+
+		if($mbtype eq "esp") {
+			$combos.=&ui_textbox("mbespaddr",$in{"mbespaddr"});
+			$mbchannel=sprintf("esp:%s",$in{"mbespaddr"});
+			}
+
+		if($mbtype eq "tcp" or $mbtype eq "xtcp") {
+			
+			if($in{"mbipport"} eq "") {
+				$in{"mbipport"}=502;
+				}
+			if($in{"mbipaddr"} eq "") {
+				$in{"mbipaddr"}="127.0.0.1";
+				}
+			$combos.=&ui_textbox("mbipaddr",$in{"mbipaddr"});
+			$combos.=&ui_textbox("mbipport",$in{"mbipport"},10);
+			$mbchannel=sprintf("%s:%s,%d",$in{"mbtype"},$in{"mbipaddr"},${"mbipport"});
+			}
+
+		if($mbtype eq "rtu") {
+			$combos.=&dataloggerVarHtml("mbserial",$in{"mbserial"});
+			$combos.=&dataloggerVarHtml("mbspeed",$in{"mbspeed"});
+			$combos.=&dataloggerVarHtml("mbmode",$in{"mbmode"});
+			$mbchannel=sprintf("rtu:%s,%s,%s",$in{"mbserial"},$in{"mbspeed"},$in{"mbmode"});
+			}
+
+
+		# sets composed value
+		$combos.="<br>".ui_textbox("mbchannel_dummy",$mbchannel,60,1);
+		$combos.=ui_hidden("mbchannel",$mbchannel);
+		
+			
 		return $combos;
 		}
 
