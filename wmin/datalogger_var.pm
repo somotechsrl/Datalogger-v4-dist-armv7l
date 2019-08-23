@@ -143,6 +143,10 @@ sub dataloggerVarHtml {
 		return &dataloggerApiSelect("sel-mbserial",$name,$value,$disable);
 		}
 
+	if($name eq "sspeed") {
+		return &dataloggerApiSelect("sel-mbspeed",$name,$value,$disable);
+		}
+
 	if($name eq "mbchannel") {
 
 		# Composes mbchannel by type...
