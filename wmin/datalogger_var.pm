@@ -168,7 +168,7 @@ sub dataloggerVarHtml {
 				}
 			$combos.=&ui_textbox("mbespaddr",$in{"mbespaddr"},20);
 			$combos.=&ui_textbox("mbespport",$in{"mbespport"},5);
-			$combos.=&dataloggerVarHtml("mbesptype",$mbesptype,"exclude=esp")."<br>";
+			$combos.=&dataloggerVarHtml("mbesptype",$mbesptype,undef,"exclude=esp")."<br>";
 			$mbchannel=sprintf("esp:%s:%d-",$in{"mbespaddr"},$in{"mbespport"});
 			}
 
@@ -202,7 +202,8 @@ sub dataloggerVarHtml {
 		}
 
 	if($name eq "mbtype" or $name eq "mbesptype") {
-		return &dataloggerApiSelect("sel-mbtype",$name,$value,$disable);
+		print "*** $environ ***";
+		return &dataloggerApiSelect("sel-mbtype",$name,$value,$disable,$environ);
 		}
 
 	if($name eq "mbmode") {
