@@ -57,7 +57,7 @@ sub dataloggerLoadConfig {
 	my @data;
 	for my $fname (@$flist) {
 		my $value=$fdata{$fname};
-		push(@data, [ $fname, $text{$fname} ? $text{$fname} : $fname, dataloggerVarHtml($fname,$value,$protect) ]);
+		push(@data, [ $text{$fname} ? $text{$fname} : $fname, dataloggerVarHtml($fname,$value,$protect) ]);
 		}
 
 	return @data;
