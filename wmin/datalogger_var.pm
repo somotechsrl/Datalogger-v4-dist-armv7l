@@ -168,8 +168,8 @@ sub dataloggerVarHtml {
 				}
 			$combos.=&ui_textbox("mbespaddr",$in{"mbespaddr"},20);
 			$combos.=&ui_textbox("mbespport",$in{"mbespport"},5);
-			$combos.=&dataloggerVarHtml("mbesptype",$mbesptype,undef,"exclude=esp")."<br>";
-			$mbchannel=sprintf("esp:%s:%d-",$in{"mbespaddr"},$in{"mbespport"});
+			$combos.="<br>".&dataloggerVarHtml("mbesptype",$mbesptype,undef,"exclude=esp");
+			$mbchannel=sprintf("esp:%s:%d@",$in{"mbespaddr"},$in{"mbespport"});
 			}
 
 		if($mbesptype eq "tcp" or $mbtype eq "tcp" or $mbtype eq "xtcp") {
@@ -182,14 +182,17 @@ sub dataloggerVarHtml {
 				}
 			$combos.=&ui_textbox("mbipaddr",$in{"mbipaddr"});
 			$combos.=&ui_textbox("mbipport",$in{"mbipport"},10);
-			$mbchannel.=sprintf("%s:%s,%d",$in{"mbtype"},$in{"mbipaddr"},${"mbipport"});
+			$mbchannel.=sprintf("%s:%s:%d",$in{"mbtype"},$in{"mbipaddr"},$in{"mbipport"});
 			}
 
 		if($mbesptype eq "rtu" or $mbtype eq "rtu") {
-			$combos.=&dataloggerVarHtml("mbserial",$in{"mbserial"});
+			# noty diverted from ESP - ha it's own serial...
+			if($mbtype eq "rtu") {
+				$combos.=&dataloggerVarHtml("mbserial",$in{"mbserial"});
+				}
 			$combos.=&dataloggerVarHtml("mbspeed",$in{"mbspeed"});
 			$combos.=&dataloggerVarHtml("mbmode",$in{"mbmode"});
-			$mbchannel.=sprintf("rtu:%s,%s,%s",$in{"mbserial"},$in{"mbspeed"},$in{"mbmode"});
+			$mbchannel.=sprintf("rtu:%s,%s",$in{"mbspeed"},$in{"mbmode"});
 			}
 
 
@@ -202,7 +205,6 @@ sub dataloggerVarHtml {
 		}
 
 	if($name eq "mbtype" or $name eq "mbesptype") {
-		print "*** $environ ***";
 		return &dataloggerApiSelect("sel-mbtype",$name,$value,$disable,$environ);
 		}
 
