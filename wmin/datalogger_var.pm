@@ -168,7 +168,7 @@ sub dataloggerVarHtml {
 				}
 			$combos.=&ui_textbox("mbespaddr",$in{"mbespaddr"},20);
 			$combos.=&ui_textbox("mbespport",$in{"mbespport"},5);
-			$combos.=&dataloggerVarHtml("mbesptype",$mbesptype)."<br>";
+			$combos.=&dataloggerVarHtml("mbesptype",$mbesptype,"exclude=esp")."<br>";
 			$mbchannel=sprintf("esp:%s:%d-",$in{"mbespaddr"},$in{"mbespport"});
 			}
 
