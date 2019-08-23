@@ -54,14 +54,11 @@ sub save_module_entry {
 	$params=callDataloggerAPI("iifConfig $module params");
 	@parray=split /[\n\r ]/,$params;
 
-	print "*** @parray *** ";
-
 	# generates from POST
 	my $cmd="iifConfig $module add ";
 	foreach $p (@parray) {
 		$cmd.=" '$in{$p}'";
 		}
-	print "*** $cmd ***";
 	callDataloggerAPI($cmd);
 	}
 

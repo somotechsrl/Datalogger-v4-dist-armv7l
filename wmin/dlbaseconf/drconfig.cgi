@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 # Show Datalogger Status
 
+use WebminCore;
+use Data::Dump;  # use Data::Dumper;
 require 'dlbaseconf-lib.pl';
 
 # start of ui
@@ -13,31 +15,33 @@ ReadParse();
 my $module=$in{"module"};
 my $command=$in{"command"};
 
-# cleanup garbage (???) module name can be only letters or _-
-$module =~ s/[^a-zA-Z-_]//g;
-
-# searches command and module -- priority tu submit buttons..
-my $vmod=$in{"moduleSubmitActive"};
-if($vmod ne "") {
-	$module=getModuleByAltDescr($vmod);
-	}
-
 # sets form management
 print &ui_form_start('drconfig.cgi',"POST");
 
 # Active Modules
 print &ui_table_start($text{"active"});
-print &dataloggerVarHtml("moduleSubmitActive",$module);	
+print &dataloggerVarHtml("module",$module);	
 print &ui_table_end();
 
+# cleanup garbage (???) module name can be only letters or _-
+$module =~ s/[^a-zA-Z-_]//g;
+
+# searches command and module -- priority tu submit buttons..
+my $vmod=$in{"moduleSelectActive"};
+if($vmod ne "") {
+	$module=getModuleByAltDescr($vmod);
+	}
+
 # default
-my @cmdlist;
+my @cmdlist = [
+	[ "command", $text{"apply_module"} ], 
+	];
 
 $dlparams=&dataloggerApiParams($module);
 if($module and $dlparams) {
 	@cmdlist=[ 
+		[ "command", $text{"apply_module"} ], 
 		[ "command" , $text{"create_data"} ], 
-		[ "command" , $text{"modify_data"} ], 
 		[ "command" , $text{"delete_data"} ] 
 		];
 	}
@@ -51,29 +55,21 @@ elsif($command eq $text{"delete_data"}) {
 	&delete_module_entry($module);
 	&display_module_entry($module);
 	}
-elsif($command eq $text{"modify_data"}) {
-	print "Not yet enabled";
-	# &modify_module($module);
-	@cmdlist=[ 
-		[ "command" , $text{"save_data"} ], 
-		[ "command" , $text{"cancel_data"} ]  
-		];
-	}
-elsif($command eq $text{"create_data"}) {
+elsif($command eq $text{"create_data"} or $command eq $text{"apply_refresh"}) {
 	&create_module_entry($module);
 	@cmdlist=[ 
+		[ "command" , $text{"apply_refresh"} ], 
 		[ "command" , $text{"save_data"} ], 
-		[ "command" , $text{"cancel_data"} ]  
+		[ "command" , $text{"apply_data"} ]  
 		];
 	}
 # default action
 elsif($module ne "")  {
 	&display_module_entry($module);
 	}
-
-
+	
 # adds 'find' to cmdlist
-print &ui_hidden("module",$module);
+#print &ui_hidden("module",$module);
 print &ui_form_end(@cmdlist);
 
 # end of ui
