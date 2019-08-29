@@ -11,7 +11,7 @@ print &ui_form_start("lastdata.cgi","POST");
 
 # Active Modules
 print &ui_table_start($text{"active"});
-print &dataloggerVarHtml("moduleSubmitActive",$module);	
+print &dataloggerShowSubmitModule("moduleSubmitActive");	
 print &ui_table_end();
 
 print &ui_form_end();
