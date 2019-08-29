@@ -12,7 +12,7 @@ ReadParse();
 #dd %in;
 
 # work variables
-my $module=$in{"module"};
+my $module=$in{"menabled"};
 my $command=$in{"command"};
 
 # sets form management
@@ -20,7 +20,7 @@ print &ui_form_start('drconfig.cgi',"POST");
 
 # Active Modules
 print &ui_table_start($text{"active"});
-print &dataloggerVarHtml("module",$module);	
+print &dataloggerVarHtml("menabled",$module);	
 print &ui_table_end();
 
 # cleanup garbage (???) module name can be only letters or _-

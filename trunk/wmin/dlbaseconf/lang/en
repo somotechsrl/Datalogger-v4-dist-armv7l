@@ -49,10 +49,10 @@ expmode=Export Format
 
 mbserial=Serial Port
 mbspeed=Serial Speed
-mbchannel=ModBus Channel
-mbaddress=ModBus Address
+mbchannel=Device Channel
+mbaddress=Device Address
 mbdelay=ModBus Delay/Query
-mboffset=Register Offset
+mboffset=Modbus Register Offset
 
 localproto=Local Protocol
 localport=Local Proxy Port
