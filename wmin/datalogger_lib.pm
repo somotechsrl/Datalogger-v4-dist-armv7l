@@ -145,8 +145,18 @@ sub dataloggerLoadConfig {
 		}
 	close(CONF);
 
-	# generates required fields list
+	# resul array
 	my @data;
+
+	# checks if flist is undef -- uses native mnames
+	if(!$flist) {
+		foreach $fname (keys %fdata) {
+			push(@data, [ $text{$fname} ? $text{$fname} : $fname, dataloggerVarHtml($fname,$fdata{$fname},$protect) ]);
+			}
+		return @data;
+		}
+
+	# generates required fields list
 	for my $fname (@$flist) {
 		my $value=$fdata{$fname};
 		push(@data, [ $text{$fname} ? $text{$fname} : $fname, dataloggerVarHtml($fname,$value,$protect) ]);
@@ -178,7 +188,6 @@ sub dataloggerSaveConfig {
 
 	}
 	
-
 #========================================================================
 # generates html table from Config generic file 
 # format name='values in the variable' as must be bbash compliant
