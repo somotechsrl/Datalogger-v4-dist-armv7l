@@ -5,7 +5,6 @@ use datalogger_var;
 init_config();
 
 # hardcoded!!!
-my $licfile="/opt/datalogger/etc/.license";
 my $filename="/opt/datalogger/etc/datalogger";
 
 # List of fields for this module
@@ -16,20 +15,10 @@ my @flist=[
 	"DLDESCR"
 ];
 
-my @liclist=[
-	"type","released","expiration","generated","md5sum","sha256sum"
-	];
-
 sub show_polldata {
 	print ui_form_start('polldata.cgi',"POST");
 	&dataloggerShowConfig(@flist,$filename);
 	print ui_form_end([ [ "command" , $text{'save'} ] ]);
-	}
-
-sub show_licensing {
-	print ui_form_start('licensing.cgi',"POST");
-	&dataloggerShowConfig(@liclist,$licfile,1);
-	print ui_form_end([ [ undef, $text{'apply_lic'} ] ]);
 	}
 
 sub save_polldata {

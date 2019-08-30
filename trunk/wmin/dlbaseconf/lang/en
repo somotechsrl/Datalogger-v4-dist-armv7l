@@ -36,10 +36,10 @@ drnoshow=No Config Options
 active=Current Active Interfaces
 nodata=No Data for This Interface
 
-generated=Generation Time 
-type=License Generation Type
-released=Release Date
-expiration=Expiration Date
+licgenerated=Generation Time 
+lictype=License Generation Type
+licreleased=Release Date
+licexpiration=Expiration Date
 
 Interface=Data Interface
 
