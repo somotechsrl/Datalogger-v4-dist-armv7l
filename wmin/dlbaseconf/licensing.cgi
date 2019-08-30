@@ -4,7 +4,7 @@ require 'dlbaseconf-lib.pl';
 
 # harcoded vars
 my $licfile="/opt/datalogger/etc/.license";
-my @liclist=["lictype","licreleased","licexpiration","licgenerated","licmd5sum","licsha256sum"];
+my @liclist=["licdlserial","lictype","licreleased","licexpiration","licgenerated","licsha1sum","licsha256sum"];
 my @cmdlist=[ [ "command" , $text{"apply_lic"} ], ];
 
 # read post
@@ -21,4 +21,4 @@ if($command eq $text{"apply_lic"}) {
 print ui_form_start('licensing.cgi',"POST");
 &dataloggerShowConfig(@liclist,$licfile,1);
 print ui_form_end(@cmdlist);
-&ui_print_footer("command", $text{'return'});
+&ui_print_footer('', $text{'return'});

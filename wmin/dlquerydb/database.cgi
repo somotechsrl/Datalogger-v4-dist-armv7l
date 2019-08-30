@@ -19,8 +19,6 @@ my $command="db-moduledata '$dbmodule' '$dbdevice' '$dbfrdate' '$dbtodate' 2>&1"
 my @cmdlist=[ 
 	[ "command" , $text{"apply_dbparams"} ], 
 	[ "command" , $text{"apply_dbselect"} ], 
-	#[ "command" , $text{"apply_extractcsv"} ], 
-	#[ "command" , $text{"apply_extractxls"} ], 
 	];
 
 # OK, interactive session
@@ -39,8 +37,6 @@ my $encoder = URI::Encode->new({encode_reserved => 0});
 my $uc=$encoder->encode($command);
 my $ue=$encoder->encode($environ);
 
-#print $uc,$ue;
-
 print ui_button('Download CSV','CSV',undef,"onClick=window.open('database_csv.cgi?c=$uc&e=$ue')");
 print ui_button('Download Excel','XLS',undef,"onClick=alert(\'Excel\')");
 print ui_table_end();
@@ -48,8 +44,7 @@ print &ui_form_end(@cmdlist);
 
 # extracts data and eventually sends files...
 if($in{"command"} eq $text{"apply_dbselect"}) {
-	my $filedata=callDataloggerAPI($command,$environ);
-	&dataloggerCsvOut($filedata);
+	print dataloggerApiTableShow($command,$environ);
 	}
 
 print &ui_print_footer("", $text{'return'});
