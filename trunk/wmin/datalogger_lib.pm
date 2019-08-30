@@ -71,8 +71,8 @@ sub dataloggerApiTableSelect {
 # Generates API Table  HTML without checkbox select
 #========================================================================
 sub dataloggerApiTableShow {
-	my ($api) = @_;
-	return `/opt/datalogger/app/tableshow $api`;
+	my ($api,$environ) = @_;
+	return `$environ /opt/datalogger/app/tableshow $api`;
 	}
 
 #========================================================================

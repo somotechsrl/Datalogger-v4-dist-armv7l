@@ -20,8 +20,11 @@ apply_lic=Renew License
 apply_fwcheck=Check Firmware
 apply_fwupdate=Update Firmware
 apply_module=Select Device
+
+apply_config=Refresh
 create_config=Enable Interface
 delete_config=Disable Checked
+
 save_data=Save Data
 cancel_data=Cancel Device Entry
 create_data=Create Device Entry
@@ -36,10 +39,13 @@ drnoshow=No Config Options
 active=Current Active Interfaces
 nodata=No Data for This Interface
 
+licdlserial=Datalogger ID
 licgenerated=Generation Time 
 lictype=License Generation Type
 licreleased=Release Date
 licexpiration=Expiration Date
+licsha1sum=License ID #1
+licsha256sum=License ID #2
 
 Interface=Data Interface
 
