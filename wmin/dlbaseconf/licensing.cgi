@@ -13,7 +13,7 @@ $command=$in{"command"};
 
 # renew license
 if($command eq $text{"apply_lic"}) {
-	`/opt/datalogger/bin/lstatus force`;
+	`/opt/datalogger/bin/lstatus 93 force`;
 	}
 	
 # shows data
