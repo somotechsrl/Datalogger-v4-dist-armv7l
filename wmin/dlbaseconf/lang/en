@@ -16,7 +16,10 @@ drconfig=Configure Interfaces
 return=Configuration Management
 save=Save Configuration
 working=Working Parameters
+
 apply_lic=Renew License
+apply_lck=Check License
+
 apply_fwcheck=Check Firmware
 apply_fwupdate=Update Firmware
 apply_module=Select Device
