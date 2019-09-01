@@ -19,6 +19,7 @@ working=Working Parameters
 
 apply_lic=Renew License
 apply_lck=Check License
+apply_reg=Activate Datalogger
 
 apply_fwcheck=Check Firmware
 apply_fwupdate=Update Firmware
@@ -47,8 +48,7 @@ licgenerated=Generation Time
 lictype=License Generation Type
 licreleased=Release Date
 licexpiration=Expiration Date
-licsha1sum=License ID #1
-licsha256sum=License ID #2
+licsha256sum=License ID
 
 Interface=Data Interface
 

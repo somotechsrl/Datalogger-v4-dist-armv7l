@@ -4,10 +4,11 @@ require 'dlbaseconf-lib.pl';
 
 # harcoded vars
 my $licfile="/opt/datalogger/etc/.license";
-my @liclist=["licdlserial","lictype","licreleased","licexpiration","licgenerated","licsha1sum","licsha256sum"];
+my @liclist=["licdlserial","licreleased","licexpiration","licgenerated","licsha256sum"];
 my @cmdlist=[ 
 	[ "command" , $text{"apply_lck"} ], 
 	[ "command" , $text{"apply_lic"} ], 
+	[ "command" , $text{"apply_reg"} ], 
 	];
 
 # read post
