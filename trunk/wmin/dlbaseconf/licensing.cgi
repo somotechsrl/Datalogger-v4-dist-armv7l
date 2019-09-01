@@ -10,6 +10,13 @@ my @liclist=["licdlserial","licreleased","licexpiration","licgenerated","licsha2
 ReadParse();
 $command=$in{"command"};
 $lickey=$in{"license_key"};
+
+# renew license
+my $force="";
+if($command eq $text{"apply_lic"}) {
+	$force="force";
+	}
+
 $status=`/opt/datalogger/bin/lstatus 93 $force`;
 
 if($command eq $text{"apply_reg"}) {
@@ -37,12 +44,7 @@ my @cmdlist=[
 	[ "command" , $text{"apply_reg"} ], 
 	];
 
-# renew license
-my $force="";
-if($command eq $text{"apply_lic"}) {
-	$force="force";
-	}
-	
+
 # shows data
 &ui_print_header(undef, $text{'licensing'}, "", undef, 1, 1);
 print ui_form_start('licensing.cgi',"POST");
