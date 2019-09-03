@@ -6,7 +6,7 @@ require './dlquerydb-lib.pl';
 
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-foreach $i ('datalogger', 'lastdata', 'database', 'exportcsv', 'exportxls') {
+foreach $i ('datalogger', 'lastdata', 'database', 'exportcsv') {
 	push(@links, "${i}.cgi");
 	push(@titles, $text{${i}});
 	push(@icons, "images/${i}.svg");

@@ -37,8 +37,6 @@ my $encoder = URI::Encode->new({encode_reserved => 0});
 my $uc=$encoder->encode($command);
 my $ue=$encoder->encode($environ);
 
-print ui_button('Download CSV','CSV',undef,"onClick=window.open('database_csv.cgi?c=$uc&e=$ue')");
-print ui_button('Download Excel','XLS',undef,"onClick=alert(\'Excel\')");
 print ui_table_end();
 print &ui_form_end(@cmdlist);
 
