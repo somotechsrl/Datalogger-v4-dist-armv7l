@@ -14,7 +14,7 @@ $lickey=$in{"license_key"};
 # renew license
 my $force="";
 if($command eq $text{"apply_lic"}) {
-	$force="force";
+	$status.=`/opt/datalogger/bin/lstatus 93 force`;
 	}
 
 if($command eq $text{"apply_reg"}) {
