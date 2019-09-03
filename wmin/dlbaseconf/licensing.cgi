@@ -17,20 +17,37 @@ if($command eq $text{"apply_lic"}) {
 	$force="force";
 	}
 
-$status=`/opt/datalogger/bin/lstatus 93 $force`;
-
 if($command eq $text{"apply_reg"}) {
 	my @cmdlist=[ 
 		[ "command" , $text{"apply_bck"} ], 
 		[ "command" , $text{"apply_reg"} ], 
 		];
-	&ui_print_header(undef, $text{'registering'}, "", undef, 1, 1);
+	&ui_print_header(undef, $text{'register'}, "", undef, 1, 1);
 	print ui_form_start('licensing.cgi',"POST");
-	print "<h4>Please enter Bundle Activation key</h4>";
+	print "<h4>Please enter Key</h4>";
 	print ui_textbox("license_key",$in{"license_key"},80);
 	print ui_hr();
 	if($lickey ne "") {
 		$status=`/opt/datalogger/bin/lenable $lickey`.$status;
+		}
+	$status.=`/opt/datalogger/bin/lstatus 93 force`;
+	print "<pre>$status</pre>";
+	print ui_form_end(@cmdlist);
+	&ui_print_footer('', $text{'return'});
+	}
+
+if($command eq $text{"apply_unr"}) {
+	my @cmdlist=[ 
+		[ "command" , $text{"apply_bck"} ], 
+		[ "command" , $text{"apply_unr"} ], 
+		];
+	&ui_print_header(undef, $text{'unregister'}, "", undef, 1, 1);
+	print ui_form_start('licensing.cgi',"POST");
+	print "<h4>Please enter Key</h4>";
+	print ui_textbox("license_key",$in{"license_key"},80);
+	print ui_hr();
+	if($lickey ne "") {
+		$status=`/opt/datalogger/bin/ldisable $lickey`.$status;
 		}
 	print "<pre>$status</pre>";
 	print ui_form_end(@cmdlist);
@@ -42,6 +59,7 @@ my @cmdlist=[
 	[ "command" , $text{"apply_lck"} ], 
 	[ "command" , $text{"apply_lic"} ], 
 	[ "command" , $text{"apply_reg"} ], 
+	[ "command" , $text{"apply_unr"} ], 
 	];
 
 

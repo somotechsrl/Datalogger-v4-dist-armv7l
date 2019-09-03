@@ -9,7 +9,8 @@ DLDESCR=Datalogger Description
 
 polldata=Working Parameters
 licensing=License Management
-registering=Enable Datalogger License 
+register=Register License 
+unregister=Unregster License 
 dlupdate=Firmware Update
 dractivate=Enable Interfaces
 drconfig=Configure Interfaces
@@ -20,7 +21,8 @@ working=Working Parameters
 
 apply_lic=Renew License
 apply_lck=Check License
-apply_reg=Activate Datalogger
+apply_reg=Register License
+apply_unr=Unregister License
 apply_bck=Return to License Management
 
 apply_fwcheck=Check Firmware
