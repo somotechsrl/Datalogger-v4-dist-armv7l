@@ -13,11 +13,14 @@ $lickey=$in{"license_key"};
 
 # renew license
 my $force="";
-if($command eq $text{"apply_lic"}) {
-	$status.=`/opt/datalogger/bin/lstatus 93 force`;
+if(!$command or $command eq $text{"apply_lck"} or $command eq $text{"apply_bck"}) {
+	$status=`/opt/datalogger/bin/lstatus 93`;
+	}
+elsif($command eq $text{"apply_lic"}) {
+	$status=`/opt/datalogger/bin/lstatus 93 force`;
 	}
 
-if($command eq $text{"apply_reg"}) {
+elsif($command eq $text{"apply_reg"}) {
 	my @cmdlist=[ 
 		[ "command" , $text{"apply_bck"} ], 
 		[ "command" , $text{"apply_reg"} ], 
@@ -28,15 +31,16 @@ if($command eq $text{"apply_reg"}) {
 	print ui_textbox("license_key",$in{"license_key"},80);
 	print ui_hr();
 	if($lickey ne "") {
-		$status=`/opt/datalogger/bin/lenable $lickey`.$status;
+		$status=`/opt/datalogger/bin/lenable $lickey`;
 		}
 	$status.=`/opt/datalogger/bin/lstatus 93 force`;
 	print "<pre>$status</pre>";
 	print ui_form_end(@cmdlist);
 	&ui_print_footer('', $text{'return'});
+	return;
 	}
 
-if($command eq $text{"apply_unr"}) {
+elsif($command eq $text{"apply_unr"}) {
 	my @cmdlist=[ 
 		[ "command" , $text{"apply_bck"} ], 
 		[ "command" , $text{"apply_unr"} ], 
@@ -47,11 +51,12 @@ if($command eq $text{"apply_unr"}) {
 	print ui_textbox("license_key",$in{"license_key"},80);
 	print ui_hr();
 	if($lickey ne "") {
-		$status=`/opt/datalogger/bin/ldisable $lickey`.$status;
+		$status=`/opt/datalogger/bin/ldisable $lickey`;
 		}
 	print "<pre>$status</pre>";
 	print ui_form_end(@cmdlist);
 	&ui_print_footer('', $text{'return'});
+	return;
 	}
 
 # default behaviour	
@@ -61,7 +66,6 @@ my @cmdlist=[
 	[ "command" , $text{"apply_reg"} ], 
 	[ "command" , $text{"apply_unr"} ], 
 	];
-
 
 # shows data
 &ui_print_header(undef, $text{'licensing'}, "", undef, 1, 1);
