@@ -76,6 +76,14 @@ sub dataloggerApiTableShow {
 	}
 
 #========================================================================
+# Generates API Table CSV without checkbox select
+#========================================================================
+sub dataloggerApiTableCSV {
+	my ($cmd,$environ) = @_;
+	return `$environ /opt/datalogger/api/$cmd | grep -v '^form' | sed 's/[|]/;/g'`;
+	}
+
+#========================================================================
 # Generates Variable HTML input for  Mapped vars
 #========================================================================
 sub dataloggerVarHtml {
