@@ -18,8 +18,14 @@ my $command="db-moduledata '$dbmodule' '$dbdevice' '$dbfrdate' '$dbtodate' 2>&1"
 
 my @cmdlist=[ 
 	[ "command" , $text{"apply_dbparams"} ], 
-	[ "command" , $text{"apply_dbselect"} ], 
+	[ "command" , $text{"apply_dbselect"} ]
 	];
+
+# show extract button only if there are data
+#if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
+	#pop @cmdlist;
+	#op @cmdlist;
+#	}
 
 # OK, interactive session
 print &ui_print_header(undef, $text{'database'}, "", undef, 1, 1);
