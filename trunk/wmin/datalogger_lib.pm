@@ -18,7 +18,7 @@ sub  dataloggerShowSubmitModule {
 	my $res=&ui_buttons_start();
 	foreach my $button_value (@fl) {
 		my $button_descr=`/opt/datalogger/api/iifAltDescr $button_value`;
-		$res.=&ui_submit($button_descr,$name,$disable, "style='width:33.33%;min-width: 18em;'");
+		$res.=&ui_submit($button_descr,$name,$disable, "style='width:33.33%;min-width: 12em;'");
 		}
 	$res.=&ui_buttons_end();
 	
