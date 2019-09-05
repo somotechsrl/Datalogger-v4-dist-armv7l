@@ -21,12 +21,6 @@ my @cmdlist=[
 	[ "command" , $text{"apply_dbselect"} ]
 	];
 
-# show extract button only if there are data
-#if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
-	#pop @cmdlist;
-	#op @cmdlist;
-#	}
-
 # OK, interactive session
 print &ui_print_header(undef, $text{'database'}, "", undef, 1, 1);
 
@@ -38,6 +32,13 @@ print &dataloggerVarHtml("dbmoduledevice");
 print &dataloggerVarHtml("dbmodulegroups");	
 print &dataloggerVarHtml("dbmodulefrdate");	
 print &dataloggerVarHtml("dbmoduletodate");	
+# show extract button only if there are data
+if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
+	print ui_button('Download CSV','CSV',undef,
+		"onClick=window.open('exportcsv_data.cgi?gr=$dbgroups&em=$dbmodule&dd=$dbdevice&df=$dbfrdate&dt=$dbtodate')"
+		);
+	}
+
 
 my $encoder = URI::Encode->new({encode_reserved => 0});
 my $uc=$encoder->encode($command);
