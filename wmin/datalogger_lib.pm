@@ -80,7 +80,7 @@ sub dataloggerApiTableShow {
 #========================================================================
 sub dataloggerApiTableCSV {
 	my ($cmd,$environ) = @_;
-	return `$environ /opt/datalogger/api/$cmd | grep -v '^form' | sed 's/[|]/;/g'`;
+	return `$environ /opt/datalogger/app/$cmd | grep -v '^form' | sed 's/[|]/;/`;
 	}
 
 #========================================================================
