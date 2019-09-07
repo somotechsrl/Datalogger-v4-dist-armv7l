@@ -79,8 +79,8 @@ sub dataloggerApiTableShow {
 # Generates API Table CSV without checkbox select
 #========================================================================
 sub dataloggerApiTableCSV {
-	my ($cmd,$environ) = @_;
-	return `$environ /opt/datalogger/app/$cmd | grep -v '^form' | sed 's/[|]/;/`;
+	my ($api,$environ) = @_;
+	return `$environ /opt/datalogger/app/tablecsv $api`;
 	}
 
 #========================================================================
