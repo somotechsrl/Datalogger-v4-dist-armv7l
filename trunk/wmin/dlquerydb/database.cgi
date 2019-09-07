@@ -24,21 +24,33 @@ my @cmdlist=[
 # OK, interactive session
 print &ui_print_header(undef, $text{'database'}, "", undef, 1, 1);
 
+
 # Active Modules
 print &ui_form_start("database.cgi","POST");
 print &ui_table_start($text{"dbsaved"});
+
+
+# green status box
+if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
+	print ui_button("&nbsp;",undef,1,"style='background: green'");
+	}
+else {
+	print ui_button("&nbsp;",undef,1,"style='background: red'");
+	}
+
 print &dataloggerVarHtml("dbmodule");	
 print &dataloggerVarHtml("dbmoduledevice");
 print &dataloggerVarHtml("dbmodulegroups");	
 print &dataloggerVarHtml("dbmodulefrdate");	
 print &dataloggerVarHtml("dbmoduletodate");	
+
+print "<br><br>";
 # show extract button only if there are data
 if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
 	print ui_button('Download CSV','CSV',undef,
 		"onClick=window.open('exportcsv_data.cgi?gr=$dbgroups&em=$dbmodule&dd=$dbdevice&df=$dbfrdate&dt=$dbtodate')"
 		);
 	}
-
 
 my $encoder = URI::Encode->new({encode_reserved => 0});
 my $uc=$encoder->encode($command);

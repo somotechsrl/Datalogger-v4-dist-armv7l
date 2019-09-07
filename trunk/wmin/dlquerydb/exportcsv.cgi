@@ -19,7 +19,17 @@ print &ui_print_header(undef, $text{'database'}, "", undef, 1, 1);
 
 # Active Modules
 print &ui_form_start("exportcsv.cgi","POST");
+
 print &ui_table_start($text{"dbsaved"});
+
+# green status box
+if($dbmodule ne "" and $dbdate ne "") {
+	print ui_button("&nbsp;",undef,1,"style='background: green'");
+	}
+else {
+	print ui_button("&nbsp;",undef,1,"style='background: red'");
+	}
+
 print &dataloggerVarHtml("expmodule");	
 print &dataloggerVarHtml("expmoduledate");
 
@@ -27,9 +37,14 @@ my $encoder = URI::Encode->new({encode_reserved => 0});
 my $uc=$encoder->encode($command);
 my $ue=$encoder->encode($environ);
 
+print "<br><br>";
+# show extract button only if there are data
 if($dbmodule ne "" and $dbdate ne "") {
-	print ui_button('Download CSV','CSV',undef,"onClick=window.open('exportcsv_file.cgi?em=$dbmodule&dt=$dbdate')");
+	print ui_button('Download CSV','CSV',undef,
+		"onClick=window.open('exportcsv_file.cgi?em=$dbmodule&dt=$dbdate')"
+		);
 	}
+	
 print ui_table_end();
 print &ui_form_end(@cmdlist);
 
