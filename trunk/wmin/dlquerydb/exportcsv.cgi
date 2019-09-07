@@ -40,9 +40,10 @@ my $ue=$encoder->encode($environ);
 print "<br><br>";
 # show extract button only if there are data
 if($dbmodule ne "" and $dbdate ne "") {
-	print ui_button('Download CSV','CSV',undef,
+	print ui_button($text{"apply_extractcsv"},'CSV',undef,
 		"onClick=window.open('exportcsv_file.cgi?em=$dbmodule&dt=$dbdate')"
 		);
+	print "<br><br>";
 	}
 	
 print ui_table_end();

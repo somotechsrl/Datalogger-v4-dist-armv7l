@@ -9,5 +9,6 @@ active=Active Interfaces
 
 apply_dbparams=Refresh Parameters
 apply_dbselect=Extract Data
-apply_extractcsv=CSV
-apply_extractxls=Excel
+apply_extractcsv=Download CSV
+apply_extractxml=Download XML
+apply_extractxls=Download Excel
