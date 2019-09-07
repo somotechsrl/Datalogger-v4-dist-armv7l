@@ -46,10 +46,10 @@ print &dataloggerVarHtml("dbmoduletodate");
 print "<br><br>";
 # show extract button only if there are data
 if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
+	print ui_submit($text{"apply_dbselect"},"command",undef,undef);
 	print ui_button($text{"apply_extractcsv"},'CSV',undef,
 		"onClick=window.open('exportcsv_data.cgi?gr=$dbgroups&em=$dbmodule&dd=$dbdevice&df=$dbfrdate&dt=$dbtodate')"
 		);
-	print ui_submit($text{"apply_dbselect"},"command",undef,undef);
 	print "<br><br>";
 	}
 
