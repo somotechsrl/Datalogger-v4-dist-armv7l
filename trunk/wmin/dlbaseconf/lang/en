@@ -14,6 +14,7 @@ unregister=Unregster License
 dlupdate=Firmware Update
 dractivate=Enable Interfaces
 drconfig=Configure Interfaces
+dbcleanup=Database Cleanup
 
 return=Configuration Management
 save=Save Configuration
