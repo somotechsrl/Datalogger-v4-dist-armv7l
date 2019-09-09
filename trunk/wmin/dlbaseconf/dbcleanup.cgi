@@ -11,9 +11,8 @@ my $dbmodule=$in{"dbmodule"};
 my $dbdevice=$in{"dbmoduledevice"};
 my $dbfrdate=$in{"dbmodulefrdate"};
 my $dbtodate=$in{"dbmoduletodate"};
-my $dbgroups=$in{"dbmodulegroups"};
 	
-my $environ="group=$dbgroups";
+my $environ="";
 my $tableshow="db-moduledata '$dbmodule' '$dbdevice' '$dbfrdate' '$dbtodate' 2>&1";
 
 my @cmdlist=[ 
@@ -30,7 +29,7 @@ print &ui_table_start($text{"dbsaved"});
 
 
 # green status box
-if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
+if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate)) {
 	print ui_button("&nbsp;",undef,1,"style='background: green'");
 	}
 else {
@@ -39,18 +38,13 @@ else {
 
 print &dataloggerVarHtml("dbmodule");	
 print &dataloggerVarHtml("dbmoduledevice");
-print &dataloggerVarHtml("dbmodulegroups");	
 print &dataloggerVarHtml("dbmodulefrdate");	
 print &dataloggerVarHtml("dbmoduletodate");	
 
 print "<br><br>";
 # show extract button only if there are data
-if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate or !$dbgroups)) {
+if(not (!$dbmodule or !$dbdevice or !$dbfrdate or !$dbtodate)) {
 	print ui_submit($text{"apply_dbcleanup"},"command",undef,undef);
-	print ui_submit($text{"apply_dbselect"},"command",undef,undef);
-	print ui_button($text{"apply_extractcsv"},'CSV',undef,
-		"onClick=window.open('exportcsv_data.cgi?gr=$dbgroups&em=$dbmodule&dd=$dbdevice&df=$dbfrdate&dt=$dbtodate')"
-		);
 	print "<br><br>";
 	}
 
