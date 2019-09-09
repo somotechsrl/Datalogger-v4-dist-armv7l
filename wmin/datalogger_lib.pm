@@ -78,6 +78,14 @@ sub dataloggerApiTableShow {
 #========================================================================
 # Generates API Table  HTML without checkbox select
 #========================================================================
+sub dataloggerApiTableDelete {
+	my ($api,$environ) = @_;
+	return `$environ /opt/datalogger/app/tabledelete $api`;
+	}
+
+#========================================================================
+# Generates API Table  HTML without checkbox select
+#========================================================================
 sub dataloggerApiCSVShow {
 	my ($module,$date) = @_;
 	return `$environ /opt/datalogger/app/csvshow $module $date 2>&1`;

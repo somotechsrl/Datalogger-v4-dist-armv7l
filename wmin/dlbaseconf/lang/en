@@ -25,6 +25,10 @@ apply_lck=Check License
 apply_reg=Register License
 apply_unr=Unregister License
 apply_bck=Return to License Management
+apply_dbselect=Show Data
+apply_dbcleanup=Delete Data
+apply_dbparams=Refresh Parameters
+apply_extractcsv=Download CSV
 
 apply_fwcheck=Check Firmware
 apply_fwupdate=Update Firmware
