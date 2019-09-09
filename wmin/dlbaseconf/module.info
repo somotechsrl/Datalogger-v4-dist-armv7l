@@ -1,5 +1,4 @@
-desc=Configuration
-head=Datalogger Parameters Configuration
+desc=Management
+head=Datalogger Management
 category=datalogger
-config=/opt/datalogger/etc/datalogger
 version=1.0
