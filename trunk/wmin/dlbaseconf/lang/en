@@ -15,6 +15,7 @@ dlupdate=Firmware Update
 dractivate=Enable Interfaces
 drconfig=Configure Interfaces
 dbcleanup=Database Cleanup
+dlidentify=Identify Datalogger
 
 return=Configuration Management
 save=Save Configuration
@@ -29,6 +30,7 @@ apply_dbselect=Show Data
 apply_dbcleanup=Delete Data
 apply_dbparams=Refresh Parameters
 apply_extractcsv=Download CSV
+apply_dlidentify=Identify Datalogger LED
 
 apply_fwcheck=Check Firmware
 apply_fwupdate=Update Firmware
