@@ -16,6 +16,7 @@ dractivate=Enable Interfaces
 drconfig=Configure Interfaces
 dbcleanup=Database Cleanup
 dlidentify=Identify Datalogger
+dbcleanup_warn=ALL DATA IN DATABASE WILL BE ERASED
 
 return=Configuration Management
 save=Save Configuration
