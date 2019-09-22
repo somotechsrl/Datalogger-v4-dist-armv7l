@@ -24,7 +24,7 @@ print &dataloggerVarHtml("menabled",$module);
 print &ui_table_end();
 
 # cleanup garbage (???) module name can be only letters or _-
-$module =~ s/[^a-zA-Z-_]//g;
+$module =~ s/[^a-zA-Z0-9-_]//g;
 
 # searches command and module -- priority tu submit buttons..
 my $vmod=$in{"moduleSelectActive"};
