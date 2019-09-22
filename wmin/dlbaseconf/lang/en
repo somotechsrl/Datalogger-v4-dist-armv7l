@@ -79,8 +79,8 @@ s7ip=S7 PLC Address
 s7rack=S7 PLC Rack 
 s7slot=S7 PLC Slot
 s7type=Register Type
-s7seq_base=Base register(s) sequence (eg. 1,2-10,11,12)
-s7seq_offset=Offsets from Base sequence (eg. 1,2-10,11,12)
+s7seq_base=Data Block Address (eg. 1,2-10,11,12)
+s7seq_offset=Data Block Register Offset (eg. 1,2-10,11,12)
 s7length=Number of Registers to read
 
 localproto=Local Protocol
