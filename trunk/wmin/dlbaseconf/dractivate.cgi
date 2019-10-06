@@ -33,13 +33,11 @@ print &ui_form_start('dractivate.cgi',"POST");
 
 # Active Modules
 print &ui_table_start($text{"active"});
-#print &dataloggerVarHtml("moduleSubmitActive",$module);	
+print &dataloggerVarHtml("module",$module,$text{"apply_module"});	
 print &ui_table_end();
 print &dataloggerApiTableSelect("menabled");
 
 # saves last command for re-usage
-#print &ui_hidden("module",$module);
-print &dataloggerVarHtml("module",$module,$text{"apply_module"});	
 print &ui_form_end(@cmdlist);
 
 # end of ui
