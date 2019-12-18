@@ -1,3 +1,3 @@
 <?php
 
-readfile("/tmp/raspi.last")
+readfile("/tmp/raspi.last");
