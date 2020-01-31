@@ -73,6 +73,7 @@ mbspeed=Serial Speed
 mbchannel=Device Channel
 mbaddress=Device Address
 mbdelay=ModBus Delay/Query
+mbsequence=Modbus Sequence
 mboffset=Modbus Register Offset
 
 s7ip=S7 PLC Address
