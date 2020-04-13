@@ -42,6 +42,10 @@ apply_config=Refresh
 create_config=Enable Interface
 delete_config=Disable Checked
 
+apply_install=Refresh
+create_install=Install Selecected
+delete_install=Uninstall Checked
+
 save_data=Save Data
 cancel_data=Cancel Device Entry
 create_data=Create Device Entry
