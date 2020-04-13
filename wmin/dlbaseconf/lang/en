@@ -44,7 +44,7 @@ delete_config=Disable Checked
 
 apply_install=Refresh
 create_install=Install Selecected
-delete_install=Uninstall Checked
+delete_uninstall=Uninstall Checked
 
 save_data=Save Data
 cancel_data=Cancel Device Entry
