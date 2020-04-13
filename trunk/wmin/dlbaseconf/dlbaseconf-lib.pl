@@ -100,3 +100,13 @@ sub disable_module {
 	return callDataloggerAPI("iifDisable $module");
 	}
 
+sub install_module {
+	my ($module) = @_;
+	return callDataloggerAPI("iiInstall $module");
+	}
+
+sub uninstall_module {
+	my ($module) = @_;
+	return callDataloggerAPI("iifUninstall $module");
+	}
+
