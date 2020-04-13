@@ -5,7 +5,6 @@ require 'dlbaseconf-lib.pl';
 
 # default
 my @cmdlist= [
-	[ "command" , $text{"apply_config"} ],
 	[ "command" , $text{"create_install"} ],
 	[ "command" , $text{"delete_uninstall"} ]
 	];
