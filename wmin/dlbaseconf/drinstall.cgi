@@ -33,7 +33,7 @@ print &ui_form_start('dractivate.cgi',"POST");
 
 # Active Modules
 print &ui_table_start($text{"active"});
-print &dataloggerVarHtml("module",$module,$text{"apply_module"});	
+print &dataloggerVarHtml("menabled",$module,$text{"apply_module"});	
 print &ui_table_end();
 print &dataloggerApiTableSelect("mpackages");
 
