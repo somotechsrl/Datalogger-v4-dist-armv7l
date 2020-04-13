@@ -19,12 +19,12 @@ my $command=$in{"command"};
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"create_config"}) {
-	&enable_module($module);
+	&install($module);
 	}
 elsif($command eq $text{"delete_config"}) {
 	foreach my $dis (keys %in) {
 		if($dis =~ /^row/) {
-	       		&disable_module($in{$dis});
+	       		&uninstall($in{$dis});
 			}
 		}
 	}
