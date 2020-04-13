@@ -18,13 +18,13 @@ my $module=$in{"module"};
 my $command=$in{"command"};
 
 # Creates new config - here to update correctly buttons.
-if($command eq $text{"delete_config"}) {
-	&install($module);
+if($command eq $text{"delete_install"}) {
+	&uninstall_module($module);
 	}
-elsif($command eq $text{"create_config"}) {
+elsif($command eq $text{"create_install"}) {
 	foreach my $dis (keys %in) {
 		if($dis =~ /^row/) {
-	       		&install($in{$dis});
+	       		&install_module($in{$dis});
 			}
 		}
 	}
