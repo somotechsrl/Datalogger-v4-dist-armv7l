@@ -102,7 +102,7 @@ sub disable_module {
 
 sub install_module {
 	my ($module) = @_;
-	return callDataloggerAPI("iiInstall $module");
+	return callDataloggerAPI("iifInstall $module");
 	}
 
 sub uninstall_module {
