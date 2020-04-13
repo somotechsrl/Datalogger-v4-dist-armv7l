@@ -18,22 +18,22 @@ my $module=$in{"module"};
 my $command=$in{"command"};
 
 # Creates new config - here to update correctly buttons.
-if($command eq $text{"create_config"}) {
+if($command eq $text{"delete_config"}) {
 	&install($module);
 	}
-elsif($command eq $text{"delete_config"}) {
+elsif($command eq $text{"create_config"}) {
 	foreach my $dis (keys %in) {
 		if($dis =~ /^row/) {
-	       		&uninstall($in{$dis});
+	       		&install($in{$dis});
 			}
 		}
 	}
 
-print &ui_form_start('dractivate.cgi',"POST");
+print &ui_form_start('drinstall.cgi',"POST");
 
 # Active Modules
 print &ui_table_start($text{"active"});
-print &dataloggerVarHtml("menabled",$module,$text{"apply_module"});	
+print &dataloggerVarHtml("module",$module,$text{"apply_module"});	
 print &ui_table_end();
 print &dataloggerApiTableSelect("mpackages");
 
