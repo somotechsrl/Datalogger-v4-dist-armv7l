@@ -18,7 +18,7 @@ my $module=$in{"module"};
 my $command=$in{"command"};
 
 # Creates new config - here to update correctly buttons.
-if($command eq $text{"delete_install"}) {
+if($command eq $text{"delete_uninstall"}) {
 	&uninstall_module($module);
 	}
 elsif($command eq $text{"create_install"}) {
