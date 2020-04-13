@@ -12,6 +12,7 @@ licensing=License Management
 register=Register License 
 unregister=Unregster License 
 dlupdate=Firmware Update
+drinstall=Install Module
 dractivate=Enable Interfaces
 drconfig=Configure Interfaces
 dbcleanup=Database Cleanup
