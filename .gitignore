@@ -1,2 +1,4 @@
 modules/
 packages/
+etc/*
+iif/*
