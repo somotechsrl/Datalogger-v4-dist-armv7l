@@ -34,16 +34,19 @@ strip.begin()
  
 r=g=b=0
 
-if args.clear:
-	colorWipe(0,0,0);
+if args.clear:	
+	wipe=1
  
 if args.red:
-	r=LED_BRIGHTNESS;
+	wipe=1
+	r=LED_BRIGHTNESS
 	
 if args.green:
+	wipe=1
 	g=LED_BRIGHTNESS
 	
 if args.blue:
+	wipe=1
 	b=LED_BRIGHTNESS
 
-
+colorWipe(r,g,b)
