@@ -33,7 +33,8 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
  
 r=g=b=0
-if args.clear	
+
+if args.clear:
 	colorWipe(0,0,0);
  
 if args.red:
