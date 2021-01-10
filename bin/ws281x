@@ -21,7 +21,7 @@ def colorWipe(r,g,b):
  
 # Process arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('-p', '--pin', action='store_const', help='pin')
+parser.add_argument('-p', '--pin', help='pin')
 parser.add_argument('-c', '--clear', action='store_true', help='clear')
 parser.add_argument('-r', '--red', action='store_true', help='Set red')
 parser.add_argument('-g', '--green', action='store_true', help='Set green')
