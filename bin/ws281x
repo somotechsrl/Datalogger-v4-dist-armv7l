@@ -36,7 +36,7 @@ strip.begin()
 pin=18 
 r=g=b=0
 
-if args.pin 
+if args.pin:
 	pin=args.pin
 
 if args.clear:	
