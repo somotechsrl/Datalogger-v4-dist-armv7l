@@ -5,6 +5,7 @@ POLLFREQ=Device Run Modules Frequency (s)
 SYNCPAUSE=Pause Post Run Sync/Data Modules 
 SYNCFREQ=Post Run Sync/Data Modules Frequency (s)
 MAXQFLUSH=Max Queue Flush In Sync
+INETPING=Ping Inet Accessibility (s)
 DLDESCR=Datalogger Description
 
 polldata=Working Parameters
