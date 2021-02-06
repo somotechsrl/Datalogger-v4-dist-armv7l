@@ -1,3 +1,3 @@
 <?php
-echo exec("../api/iifJson");
+system("../api/iifJson");
 ?>
