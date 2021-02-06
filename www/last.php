@@ -1,4 +1,4 @@
 <?php
 header('Content-Type: application/json');
-system("../api/iifJson");
+system("cd ..;api/iifJson");
 ?>
