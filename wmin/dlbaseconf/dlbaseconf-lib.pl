@@ -15,6 +15,7 @@ my @flist=[
 	"SYNCPAUSE","SYNCFREQ",
 	"INETPING",
 	"DLDESCR"
+	"MQTT_USER","MQTT_PASS"
 ];
 
 sub show_polldata {
