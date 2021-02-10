@@ -11,6 +11,7 @@ DLDESCR=Datalogger Description
 MQTT_USER=MQTT Username
 MQTT_PASS=MQTT Password
 
+rpcconfig=RPC HUB Config
 polldata=Working Parameters
 licensing=License Management
 register=Register License 
