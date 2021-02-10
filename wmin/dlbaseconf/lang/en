@@ -8,6 +8,9 @@ MAXQFLUSH=Max Queue Flush In Sync
 INETPING=Ping Inet Accessibility IP/FDQN
 DLDESCR=Datalogger Description
 
+MQTT_USER=MQTT Username
+MQTT_PASS=MQTT Password
+
 polldata=Working Parameters
 licensing=License Management
 register=Register License 
