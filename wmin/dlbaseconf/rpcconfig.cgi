@@ -3,7 +3,7 @@
 require 'dlbaseconf-lib.pl';
 
 # hardcoded!!!
-my $filename="/opt/datalogger/etc/datalogger";
+my $filename="/opt/datalogger/etc/RPCConfig";
 
 # List of fields for this module
 my @flist=[
