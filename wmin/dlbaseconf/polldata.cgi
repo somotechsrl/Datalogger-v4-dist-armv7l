@@ -10,7 +10,7 @@ my @flist=[
 	"COMMPAUSE","COMMFREQ",
 	"POLLPAUSE","POLLFREQ",
 	"SYNCPAUSE","SYNCFREQ",
-	"AGGRESSIVE_POLL",
+	"aggressive",
 	"INETPING",
 	"DLDESCR"
 ];
