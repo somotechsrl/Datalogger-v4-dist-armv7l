@@ -55,7 +55,7 @@ sub display_module_entry {
 	#$filedata=callDataloggerAPI("iifConfig $module print");
 	#&dataloggerCsvOut($filedata);
 	print &ui_table_end();
-	print &dataloggerApiTableSelect("mconfig $module");
+	#print &dataloggerApiTableSelect("mconfig $module");
 	}
 
 sub display_firmware_status {
