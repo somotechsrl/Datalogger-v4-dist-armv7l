@@ -76,10 +76,7 @@ licsha256sum=License ID
 Interface=Data Interface
 
 dbmodule=Device Driver
-
 expmode=Export Format
-
-menabled=Transfer Module Data
 
 mbserial=Serial Port
 mbspeed=Serial Speed
