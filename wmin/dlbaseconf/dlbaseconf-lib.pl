@@ -50,31 +50,21 @@ sub display_module_entry {
 	my ($module,$value) = @_;
 
 	$dlparams=&dataloggerApiParams($module);
-	if($dlparams) {
-		$dldescr=$text{"drshow"};
-		print &ui_table_start($dldescr.": ".$module);
-		#$filedata=callDataloggerAPI("iifConfig $module print");
-		#&dataloggerCsvOut($filedata);
-		print &ui_table_end();
-		}
-	else {
-		$dldescr=$text{"drnoshow"};
-		}
+	$dldescr=$dlparams ? $text{"drshow"} : $text{"drnoshow"};
+	print &ui_table_start($dldescr.": ".$module);
+	#$filedata=callDataloggerAPI("iifConfig $module print");
+	#&dataloggerCsvOut($filedata);
+	print &ui_table_end();
 	print &dataloggerApiTableSelect("mconfig $module");
 	}
 
 sub display_firmware_status {
 
-	if($dlparams) {		
-		$dldescr=$text{"drshow"};
-		print &ui_table_start($dldescr.": ".$module);
-		#$filedata=callDataloggerAPI("iifConfig $module print");
-		#&dataloggerCsvOut($filedata);
-		print &ui_table_end();
-		}
-	else {
-		$dldescr=$text{"drnoshow"};
-		}
+	$dldescr=$dlparams ? $text{"drshow"} : $text{"drnoshow"};
+	print &ui_table_start($dldescr.": ".$module);
+	#$filedata=callDataloggerAPI("iifConfig $module print");
+	#&dataloggerCsvOut($filedata);
+	print &ui_table_end();
 	print &dataloggerApiTableShow("status-firmware");
 	}
 
