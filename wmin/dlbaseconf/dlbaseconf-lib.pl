@@ -50,7 +50,7 @@ sub display_module_entry {
 	my ($module,$value) = @_;
 
 	$dlparams=&dataloggerApiParams($module);
-	if(dlparams) {
+	if($dlparams) {
 		$dldescr=$text{"drshow"};
 		print &ui_table_start($dldescr.": ".$module);
 		#$filedata=callDataloggerAPI("iifConfig $module print");
