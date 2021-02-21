@@ -8,7 +8,7 @@ my $filename="/opt/datalogger/etc/datalogger";
 # List of fields for this module
 my @flist=[
 	"COMMPAUSE","COMMFREQ",
-	"POLLPAUSE","aggressive","POLLFREQ",
+	"POLLPAUSE","POLLAGGR","POLLFREQ",
 	"SYNCPAUSE","SYNCFREQ",
 	"INETPING",
 	"DLDESCR"
