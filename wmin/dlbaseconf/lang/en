@@ -75,6 +75,8 @@ licsha256sum=License ID
 
 Interface=Data Interface
 
+menabled=Enable Module Transfer
+
 dbmodule=Device Driver
 expmode=Export Format
 
