@@ -65,11 +65,16 @@ sub display_module_entry {
 
 sub display_firmware_status {
 
-	$dldescr=$dlparams ? $text{"drshow"} : $text{"drnoshow"};
-	print &ui_table_start($dldescr.": ".$module);
-	#$filedata=callDataloggerAPI("iifConfig $module print");
-	#&dataloggerCsvOut($filedata);
-	print &ui_table_end();
+	if($dlparams) {		
+		$dldescr=$text{"drshow"};
+		print &ui_table_start($dldescr.": ".$module);
+		#$filedata=callDataloggerAPI("iifConfig $module print");
+		#&dataloggerCsvOut($filedata);
+		print &ui_table_end();
+		}
+	else {
+		$dldescr=$text{"drnoshow"};
+		}
 	print &dataloggerApiTableShow("status-firmware");
 	}
 
