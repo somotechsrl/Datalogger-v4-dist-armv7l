@@ -1,8 +1,8 @@
 COMMPAUSE=Pause Pre Run Modules 
 COMMFREQ=Pre Run Modules Frequency (s)
-POLLPAUSE=Pause Device Run Modules 
-POLLFREQ=Device Run Modules Frequency (s)
-aggressive=Aggressive Data Polling
+POLLPAUSE=Pause Devices Polling 
+POLLFREQ=Devices Polling Frequency (s)
+aggressive=Aggressive Device Polling
 SYNCPAUSE=Pause Post Run Sync/Data Modules 
 SYNCFREQ=Post Run Sync/Data Modules Frequency (s)
 MAXQFLUSH=Max Queue Flush In Sync
