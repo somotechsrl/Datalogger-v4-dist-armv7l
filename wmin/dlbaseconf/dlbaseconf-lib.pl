@@ -50,11 +50,16 @@ sub display_module_entry {
 	my ($module,$value) = @_;
 
 	$dlparams=&dataloggerApiParams($module);
-	$dldescr=$dlparams ? $text{"drshow"} : $text{"drnoshow"};
-	print &ui_table_start($dldescr.": ".$module);
-	#$filedata=callDataloggerAPI("iifConfig $module print");
-	#&dataloggerCsvOut($filedata);
-	print &ui_table_end();
+	if(dlparams) {
+		$dldescr=$text{"drshow"};
+		print &ui_table_start($dldescr.": ".$module);
+		#$filedata=callDataloggerAPI("iifConfig $module print");
+		#&dataloggerCsvOut($filedata);
+		print &ui_table_end();
+		}
+	else {
+		$dldescr=$text{"drnoshow"};
+		}
 	print &dataloggerApiTableSelect("mconfig $module");
 	}
 
