@@ -18,6 +18,7 @@ licensing=License Management
 register=Register License 
 unregister=Unregster License 
 dlupdate=Firmware Update
+drupdate=Drivers Update
 drinstall=Install Module
 dractivate=Enable Interfaces
 drconfig=Configure Interfaces
@@ -42,6 +43,7 @@ apply_dlidentify=Identify Datalogger LED
 
 apply_fwcheck=Check Firmware
 apply_fwupdate=Update Firmware
+apply_drupdate=Update Drivers
 apply_module=Select Device
 
 apply_config=Refresh
