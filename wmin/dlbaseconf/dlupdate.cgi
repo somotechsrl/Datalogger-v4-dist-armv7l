@@ -19,7 +19,7 @@ if($in{"command"} ne "") {
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"apply_fwupdate"}) {
-	`/opt/datalogger/bin/svnupdate`;
+	$status=`/opt/datalogger/bin/svnupdate`;
 	}
 
 my @cmdlist=[ 
@@ -31,4 +31,5 @@ print &ui_form_start('dlupdate.cgi',"POST");
 print &ui_form_end(@cmdlist);
 
 # end of ui
+print "<pre>$status</pre>";
 &ui_print_footer("", $text{'return'});
