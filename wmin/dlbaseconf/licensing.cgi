@@ -71,6 +71,6 @@ my @cmdlist=[
 &ui_print_header(undef, $text{'licensing'}, "", undef, 1, 1);
 print ui_form_start('licensing.cgi',"POST");
 &dataloggerShowConfig(@liclist,$licfile,1);
-print "<pre>$status</pre>";
 print ui_form_end(@cmdlist);
+print "<h3>License Check:</h3><pre>$status</pre>";
 &ui_print_footer('', $text{'return'});
