@@ -28,8 +28,8 @@ my @cmdlist=[
 
 print &ui_form_start('drupdate.cgi',"POST");
 &display_firmware_status();
-print "<pre>$status</pre>";
 print &ui_form_end(@cmdlist);
 
 # end of ui
+print "<pre>$status</pre>";
 &ui_print_footer("", $text{'return'});
