@@ -19,7 +19,7 @@ if($in{"command"} ne "") {
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"apply_drupdate"}) {
-	`/opt/datalogger/bin/pkgupdate`;
+	$status=`/opt/datalogger/bin/pkgupdate`;
 	}
 
 my @cmdlist=[ 
@@ -28,6 +28,7 @@ my @cmdlist=[
 
 print &ui_form_start('drupdate.cgi',"POST");
 &display_firmware_status();
+print "<pre>$status</pre>";
 print &ui_form_end(@cmdlist);
 
 # end of ui
