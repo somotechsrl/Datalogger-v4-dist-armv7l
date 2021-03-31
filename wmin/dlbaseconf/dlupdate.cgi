@@ -31,5 +31,5 @@ print &ui_form_start('dlupdate.cgi',"POST");
 print &ui_form_end(@cmdlist);
 
 # end of ui
-print "<pre>$status</pre>";
+print "<pre>Command Result:\n$status</pre>";
 &ui_print_footer("", $text{'return'});
