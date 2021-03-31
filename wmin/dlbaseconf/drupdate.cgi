@@ -18,7 +18,7 @@ if($in{"command"} ne "") {
 	}
 
 # Creates new config - here to update correctly buttons.
-if($command eq $text{"apply_fwupdate"}) {
+if($command eq $text{"apply_drupdate"}) {
 	`/opt/datalogger/bin/pkgupdate`;
 	}
 
