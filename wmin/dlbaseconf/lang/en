@@ -85,7 +85,7 @@ expmode=Export Format
 
 mbserial=Serial Port
 mbspeed=Serial Speed
-mvaggressive=Continuous Polling
+mbaggressive=Continuous Polling
 mbchannel=Device Channel
 mbaddress=Device Address
 mbdelay=ModBus Delay/Query
