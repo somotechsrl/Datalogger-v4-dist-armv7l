@@ -28,7 +28,6 @@ my @cmdlist=[
 
 print &ui_form_start('dlupdate.cgi',"POST");
 print ui_upload("setConfig_file",80);
-print ui_submit($text{"setConfig"},"command",undef,undef);
 print &ui_form_end(@cmdlist);
 
 # end of ui
