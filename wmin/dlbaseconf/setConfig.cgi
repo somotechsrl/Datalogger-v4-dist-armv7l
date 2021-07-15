@@ -6,19 +6,19 @@ require 'dlbaseconf-lib.pl';
 # start of ui
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-ReadParseMime();
-#ReadParse();
+ReadParse();
 
 # work variables
 my $command, my $module;
 
 # command to exec
-if(%in{"command"} ne "") {
-	$command=%in{"command"};
+if($in{"command"} ne "") {
+	$command=$in{"command"};
 	}
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"setConfig"}) {
+	ReadParseMime();
 	print %in;
 	$status="Executed";
 	}
