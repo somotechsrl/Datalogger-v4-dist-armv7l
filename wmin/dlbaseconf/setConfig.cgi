@@ -17,9 +17,9 @@ if($in{"command"} ne "") {
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"setConfig"}) {
-	ReadParseMime();
 	$,="\n";
-	print "quiiiii";
+	ReadParseMime();
+	print %in;
 	$status="Executed";
 	}
 
