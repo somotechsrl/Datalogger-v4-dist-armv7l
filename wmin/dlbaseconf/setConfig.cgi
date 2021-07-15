@@ -6,19 +6,19 @@ require 'dlbaseconf-lib.pl';
 # start of ui
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-ReadParse();
+ReadParseMime();
+#ReadParse();
 
 # work variables
 my $command, my $module;
 
 # command to exec
-if($in{"command"} ne "") {
-	$command=$in{"command"};
+if(%in{"command"} ne "") {
+	$command=%in{"command"};
 	}
 
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"setConfig"}) {
-	ReadParseMime();
 	print %in;
 	$status="Executed";
 	}
@@ -27,7 +27,7 @@ my @cmdlist=[
 	[ "command" , $text{"setConfig"} ], 
 	];
 
-print &ui_form_start('dlupdate.cgi',"POST");
+print &ui_form_start('setConfig.cgi',"form-data");
 #print ui_upload("setConfig_file",80);
 print &ui_form_end(@cmdlist);
 
