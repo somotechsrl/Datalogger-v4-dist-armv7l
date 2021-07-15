@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # Show Datalogger Status
-
+use Data::Dumper;
 require 'dlbaseconf-lib.pl';
 
 # start of ui
@@ -19,7 +19,7 @@ if($in{"command"} ne "") {
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"setConfig"}) {
 	ReadParseMime();
-	print %in;
+	Dumper \%in;
 	$status="Executed";
 	}
 
