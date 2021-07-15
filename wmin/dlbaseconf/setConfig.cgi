@@ -16,6 +16,8 @@ if($in{"command"} ne "") {
 	$command=$in{"command"};
 	}
 
+print $command;
+
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"setConfig"}) {
 	&ReadParseMime();
