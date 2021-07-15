@@ -6,7 +6,7 @@ require 'dlbaseconf-lib.pl';
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
 our(%in)
-&ReadParse();
+&ReadParseMime();
 
 # work variables
 my $command, my $module;
@@ -19,7 +19,6 @@ if($in{"command"} ne "") {
 # Creates new config - here to update correctly buttons.
 if($command eq $text{"setConfig"}) {
 	$,="\n";
-	ReadParseMime();
 	print %in;
 	$status="Executed";
 	}
