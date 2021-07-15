@@ -6,8 +6,9 @@ require 'dlbaseconf-lib.pl';
 # start of ui
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
+ReadParse();
 ReadParseMime();
-#print %in;
+print %in;
 
 # work variables
 my $command, my $module;
