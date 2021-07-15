@@ -20,7 +20,7 @@ if($in{"command"} ne "") {
 if($command eq $text{"setConfig"}) {
 	&ReadParseMime();
 	$,="\n";
-	$status="Executed";
+	$status=%in;
 	}
 
 my @cmdlist=[ 
