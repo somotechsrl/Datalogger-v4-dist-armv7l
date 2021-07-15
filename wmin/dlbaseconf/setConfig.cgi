@@ -27,7 +27,7 @@ my @cmdlist=[
 	[ "command" , $text{"setConfig"} ], 
 	];
 
-print &ui_form_start('setConfig.cgi',"form-data");
+print &ui_form_start('setConfig.cgi',"POST");
 print ui_upload("setConfig_file",80);
 print &ui_form_end(@cmdlist);
 
