@@ -19,7 +19,7 @@ if($in{"command"} ne "") {
 if($command eq $text{"setConfig"}) {
 	ReadParseMime();
 	$,="\n";
-	print %in;
+	print "quiiiii";
 	$status="Executed";
 	}
 
