@@ -68,6 +68,9 @@ drnoshow=No Config Options
 active=Current Active Interfaces
 nodata=No Data for This Interface
 
+getConfig=Save Configuration
+setConfig=Load Configuration
+
 licdlserial=Datalogger ID
 licgenerated=Generation Time 
 lictype=License Generation Type
