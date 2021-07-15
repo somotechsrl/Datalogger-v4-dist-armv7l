@@ -18,18 +18,18 @@ if($in{"command"} ne "") {
 	}
 
 # Creates new config - here to update correctly buttons.
-if($command eq $text{"apply_fwupdate"}) {
-	$status=`/opt/datalogger/bin/svnupdate`;
+if($command eq $text{"getConfig"}) {
+	$status=`/opt/datalogger/bin/getConfig`;
 	}
 
 my @cmdlist=[ 
-	[ "command" , $text{"apply_fwupdate"} ], 
+	[ "command" , $text{"getConfig"} ], 
 	];
 
-print &ui_form_start('dlupdate.cgi',"POST");
-&display_firmware_status();
+print &ui_form_start('getConfig.cgi',"POST");
+# &display_firmware_status();
 print &ui_form_end(@cmdlist);
 
 # end of ui
-print "<h3>Command Result:</h3><pre>$status</pre>";
+#print "<h3>Command Result:</h3><pre>$status</pre>";
 &ui_print_footer("", $text{'return'});
