@@ -11,8 +11,7 @@ ReadParse();
 
 print &ui_form_start('getConfig.cgi',"POST");
 # &display_firmware_status();
-print ui_button($text{"getConfig"},'CSV',undef,
-	"onClick=window.open('getConfig_file.cgi')"
+print ui_button($text{"getConfig"},'CSV',undef,"onClick=window.open('getConfig_file.cgi')");
 print &ui_form_end(@cmdlist);
 
 # end of ui
