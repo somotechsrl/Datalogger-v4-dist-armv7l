@@ -9,7 +9,7 @@ our(%in)
 &ReadParseMime();
 $file_data=$in{'setConfig_file'};
 
-my $status;
+our($status);
 
 if(length $file_data) {
 	open my $file, '>', "/tmp/config.tgz" or die $!;
