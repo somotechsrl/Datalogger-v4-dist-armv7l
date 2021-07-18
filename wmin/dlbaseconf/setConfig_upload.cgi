@@ -34,5 +34,5 @@ print ui_upload("setConfig_file",120);
 print &ui_form_end(@cmdlist);
 
 # end of ui
-print "<h3>Command Result:</h3><pre>$status</pre>";
+print "<h3>Command Result:</h3><pre>%in</pre>";
 &ui_print_footer("", $text{'return'});
