@@ -14,6 +14,7 @@ $file_data=$in{'setConfig_file'};
 if(length $file_data) {
 	open my $file, '>', "/tmp/config.tgz" or die $!;
 	print $file $file_data;
+	close($file);
 	sstatus=`/opt/datalogger/bin/setconfig`;
 	}
 
