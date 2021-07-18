@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# Shows only form, handles by setConfig_upload.cfg
 require 'dlbaseconf-lib.pl';
 
 # start of ui
@@ -9,4 +8,6 @@ print ui_upload("setConfig_file",120);
 print &ui_form_end(@cmdlist);
 
 # end of ui
-&ui_print_footer("", $text{'return'});
+print "<h3>Command Result:</h3><pre>";
+print $status;
+print "</pre>";
