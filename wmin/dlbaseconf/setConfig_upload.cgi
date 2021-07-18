@@ -13,7 +13,7 @@ if(length $file_data) {
 	open my $file, '>', "/tmp/config.tgz" or die $!;
 	print $file $file_data;
 	close($file);
-	sstatus="/opt/datalogger/bin/setconfig";
+	$status=`/opt/datalogger/bin/setconfig`;
 	}
 
 do('setConfig.cgi');
