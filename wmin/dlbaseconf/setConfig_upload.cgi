@@ -7,6 +7,6 @@ ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
 our(%in)
 &ReadParseMime();
-$status={'setConfig_file'};
+$status=$in{'setConfig_file'};
 
 do('setConfig.cgi');
