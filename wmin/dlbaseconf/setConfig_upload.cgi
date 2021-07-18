@@ -32,7 +32,6 @@ print &ui_form_end(@cmdlist);
 
 # end of ui
 print "<h3>Command Result:</h3><pre>";
-$,=";";
-print %in;
+print $in{'setConfig_file'};
 print "</pre>";
 &ui_print_footer("", $text{'return'});
