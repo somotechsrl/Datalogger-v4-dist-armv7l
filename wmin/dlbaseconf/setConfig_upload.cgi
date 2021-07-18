@@ -7,9 +7,6 @@ ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
 our(%in)
 &ReadParseMime();
-$,="\n";
-print $in;
-
 
 # work variables
 my $command, my $module;
@@ -35,6 +32,7 @@ print &ui_form_end(@cmdlist);
 
 # end of ui
 print "<h3>Command Result:</h3><pre>";
+$,=";";
 print %in;
 print "</pre>";
 &ui_print_footer("", $text{'return'});
