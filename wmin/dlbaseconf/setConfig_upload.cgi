@@ -5,11 +5,9 @@ require 'dlbaseconf-lib.pl';
 # start of ui
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-our(%in)
+our(%in,$status)
 &ReadParseMime();
-$file_data=$in{'setConfig_file'};
-
-our($status);
+my $file_data=$in{'setConfig_file'};
 
 if(length $file_data) {
 	open my $file, '>', "/tmp/config.tgz" or die $!;
