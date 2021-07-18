@@ -7,6 +7,10 @@ ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
 our(%in)
 &ReadParseMime();
-$status=$in{'setConfig_file'};
+$file_data=$in{'setConfig_file'};
+
+if(length $file_data) {
+	sstatus=`/opt/datalogger/bin/setconfig <<< $file_data`;
+	}
 
 do('setConfig.cgi');
