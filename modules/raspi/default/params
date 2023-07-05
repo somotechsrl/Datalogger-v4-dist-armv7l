@@ -1,6 +1,0 @@
-FIRM='Raspberry'
-MODEL='Diagnostic'
-PROTO='Local'
-DESCR='Datalogger Disagnostics'
-MODULE='raspi'
-AGGRESSIVE='false'

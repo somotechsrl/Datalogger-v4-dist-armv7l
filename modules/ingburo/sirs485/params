@@ -1,6 +1,0 @@
-FIRM='IngBuro'
-MODEL='Si-RS485'
-PROTO='Modbus'
-DESCR='IngBuro Si RS485 Irradiance Sensor'
-REQUIRES="modbus-default"
-MODULE='ingburo-sirs485'

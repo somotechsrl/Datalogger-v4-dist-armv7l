@@ -1,6 +1,0 @@
-FIRM='Enermanager'
-MODEL='SSH-VPN'
-PROTO='HTTPS'
-DESCR="SSH Based VPN via PPPD on HTTPS"
-MODULE='aasync-enermanager-sshvpn'
-PRIORITY='000'

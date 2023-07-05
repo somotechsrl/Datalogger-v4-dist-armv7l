@@ -1,6 +1,0 @@
-FIRM='Socomec'
-MODEL='Socomec'
-PROTO='Modbus'
-DESCR='Socomec Inverters'
-REQUIRES='modbus-default'
-MODULE='socomec-default'

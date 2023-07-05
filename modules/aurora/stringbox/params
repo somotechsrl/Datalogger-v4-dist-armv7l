@@ -1,5 +1,0 @@
-FIRM='Aurora'
-MODEL='Raw StringBox'
-PROTO='Aurora'
-DESCR='Aurora Raw StringBox Driver '
-MODULE='aurora-stringbox'

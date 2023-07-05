@@ -1,6 +1,0 @@
-FIRM='Schuco'
-MODEL='IPEXX'
-PROTO='Modbus'
-DESCR='Schuo IPEXX Inverters'
-REQUIRES='modbus-default'
-MODULE='schuco-ipe'

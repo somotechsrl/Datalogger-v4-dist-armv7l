@@ -1,5 +1,0 @@
-FIRM='Fronius'
-MODEL='Datamanager (JSON)'
-PROTO='JSON'
-DESCR='Datamanager Board via REST HTTP'
-MODULE='fronius-web'

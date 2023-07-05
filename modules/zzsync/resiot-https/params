@@ -1,6 +1,0 @@
-FIRM='ResIOT'
-MODEL='RestAPI'
-PROTO='HTTPS'
-DESCR="HTTPS Sync to ResIOT"
-MODULE='zzsync-http-resiot'
-PRIORITY='999'

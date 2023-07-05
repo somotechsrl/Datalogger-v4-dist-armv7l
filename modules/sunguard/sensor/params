@@ -1,6 +1,0 @@
-FIRM='Sunguard'
-MODEL='Sensor'
-PROTO='Modbus'
-DESCR='Sunguard Sensor Box'
-REQUIRES='modbus-default'
-MODULE='sunguard-sensor'

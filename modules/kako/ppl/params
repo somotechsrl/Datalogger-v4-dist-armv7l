@@ -1,6 +1,0 @@
-FIRM='KAKO'
-MODEL='PPL Datalogger'
-PROTO='http'
-DESCR='KAKO PPL Datalogger'
-REQUIRES=''
-MODULE='kako-ppl'

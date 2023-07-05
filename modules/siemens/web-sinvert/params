@@ -1,5 +1,0 @@
-FIRM='Siemens'
-MODEL='Weblog Sinvert'
-PROTO='http'
-DESCR='Siemens Weblog Sinvert'
-MODULE='siemens-web-sinvert'

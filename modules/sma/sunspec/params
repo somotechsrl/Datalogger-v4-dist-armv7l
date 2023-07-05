@@ -1,6 +1,0 @@
-FIRM='SMA'
-MODEL='Sunspec'
-PROTO='Modbus'
-DESCR='SMA Series Inverter w Suspec'
-REQUIRES='modbus-default'
-MODULE='sma-sunspec'

@@ -1,6 +1,0 @@
-FIRM='ICStation'
-MODEL='ICSE014A'
-PROTO='CSV'
-DESCR='Modulo di comando a 8 Relay'
-
-MODULE='icstation-icse014A'

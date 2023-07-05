@@ -1,6 +1,0 @@
-FIRM='Modbus'
-MODEL='Sniffer'
-PROTO='Modbus'
-DESCR='Sniffer with Circular FIFO for Passive configuration'
-MODULE='aasync-modbus-sniffer'
-PRIORITY='000'

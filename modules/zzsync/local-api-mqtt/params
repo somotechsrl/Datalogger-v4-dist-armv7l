@@ -1,6 +1,0 @@
-FIRM='local'
-MODEL='api'
-PROTO='MQTT'
-DESCR="MQTT local api publish (v4/lastdata)"
-MODULE='zzsync-local-api-mqtt'
-PRIORITY='999'

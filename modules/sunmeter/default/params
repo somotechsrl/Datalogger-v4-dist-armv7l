@@ -1,6 +1,0 @@
-FIRM='Sunmeter'
-MODEL='Sunmeter'
-PROTO='Modbus'
-DESCR='Sunmeter Solarimeter'
-REQUIRES='modbus-default'
-MODULE='sunmeter-default'

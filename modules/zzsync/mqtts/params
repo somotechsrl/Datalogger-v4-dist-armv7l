@@ -1,6 +1,0 @@
-FIRM='Enermanager'
-MODEL='MQTTS'
-PROTO='MQTT'
-DESCR="Sync via secure MQTT"
-MODULE='zzsync-mqtts'
-PRIORITY='999'

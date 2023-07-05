@@ -1,6 +1,0 @@
-FIRM='Socomec'
-MODEL='Countis'
-PROTO='Modbus'
-DESCR='Socomec Countis Energy Meter'
-REQUIRES='modbus-default'
-MODULE='socomec-countis'
