@@ -4,7 +4,7 @@ require 'dlbaseconf-lib.pl';
 
 ui_print_header(undef, $module_info{'desc'}, "", undef, 1, 1);
 
-foreach $i ('licensing', 'dlupdate','drupdate','DlTrigger'.'polldata', 'rpcconfig','dractivate', 'drconfig',"getConfig","setConfig") {
+foreach $i ('licensing', 'dlupdate','drupdate','dltrigger','polldata', 'rpcconfig','dractivate', 'drconfig',"getConfig","setConfig") {
 	push(@links, "${i}.cgi");
 	push(@titles, $text{"${i}"});
 	push(@icons, "images/${i}.svg");
