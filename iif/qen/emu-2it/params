@@ -1,0 +1,6 @@
+FIRM='QEn'
+MODEL='EMU-2IT'
+PROTO='Modbus'
+DESCR='QEN QE EMU 2IT'
+REQUIRES='modbus-default'
+MODULE='qen-emu-2it'

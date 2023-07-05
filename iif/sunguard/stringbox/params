@@ -1,0 +1,6 @@
+FIRM='Sunguard'
+MODEL='Stringbox'
+PROTO='Modbus'
+DESCR='Sunguard Stringbox'
+REQUIRES='modbus-default'
+MODULE='sunguard-stringbox'

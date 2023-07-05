@@ -1,0 +1,6 @@
+FIRM='TEM'
+MODEL='SB-16'
+PROTO='Modbus'
+DESCR='TEM SB-16 Stringbox'
+REQUIRES="modbus-default"
+MODULE='tem-sb-16'

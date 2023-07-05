@@ -1,0 +1,6 @@
+FIRM='Seneca'
+MODEL='S604'
+PROTO='Modbus'
+DESCR='ELECTRICAL MEASUREMENT'
+REQUIRES='modbus-default'
+MODULE='seneca-s604'

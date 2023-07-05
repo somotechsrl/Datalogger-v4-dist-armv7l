@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMM'
+PROTO='Modbus'
+DESCR='ELECTRICAL MULTIFUNCTION METER'
+REQUIRES="modbus-default"
+MODULE='contrel-emm'

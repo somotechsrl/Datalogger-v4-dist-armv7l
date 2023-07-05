@@ -1,0 +1,6 @@
+FIRM='Higeco'
+MODEL='NogaroleRocca'
+PROTO='Modbus'
+DESCR='Custom Modbus via Higeco for Nogarole Rocca (Zalando)'
+REQUIRES="modbus-default"
+MODULE='NogaroleRocca'

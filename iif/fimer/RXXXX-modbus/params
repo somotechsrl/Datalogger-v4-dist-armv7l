@@ -1,0 +1,6 @@
+FIRM='Fimer'
+MODEL='Modbus-RXXXX'
+PROTO='Modbus'
+DESCR='R400,R800,R1200,R2500,R5000 Inverters Centralizzati PV'
+REQUIRES='modbus-default'
+MODULE='fimer-Rxxxx'

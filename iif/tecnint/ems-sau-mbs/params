@@ -1,0 +1,6 @@
+FIRM='Tecnint'
+MODEL='EMS-SAU-MBS'
+PROTO='Modbus'
+DESCR='Tecnint EMS Stringbox'
+REQUIRES='modbus-default'
+MODULE='tecnint-ems-sau-mbs'

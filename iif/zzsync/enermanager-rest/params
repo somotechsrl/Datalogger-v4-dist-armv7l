@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='REST'
+PROTO='HTTPS'
+DESCR="MQTT Sync via REST/HTTPS"
+MODULE='zzsync-enermanager-rest'
+PRIORITY='999'

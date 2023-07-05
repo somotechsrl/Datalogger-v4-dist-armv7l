@@ -1,0 +1,6 @@
+FIRM='Samil'
+MODEL='Inverters'
+PROTO='MQTTGate'
+DESCR='Samil Inverters via solis python script LAN/mqtt'
+REQUIRES=''
+MODULE='samil-lan'

@@ -1,0 +1,6 @@
+FIRM='Solis'
+MODEL='Default Modbus'
+PROTO='Modbus'
+DESCR='Inverters'
+REQUIRES='modbus-default'
+MODULE='solis-default'

@@ -1,0 +1,6 @@
+FIRM='Astrid'
+MODEL='Copernico'
+PROTO='Modbus'
+DESCR='Astrid Copernico Inverters'
+REQUIRES='modbus-default'
+MODULE='astrid-copernico'

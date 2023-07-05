@@ -1,0 +1,5 @@
+FIRM='Aurora'
+MODEL='Compact Driver'
+PROTO='Aurora'
+DESCR='Aurora Compact Driver'
+MODULE='aurora-compact'

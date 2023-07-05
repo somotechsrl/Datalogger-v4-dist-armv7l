@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMS'
+PROTO='Modbus'
+DESCR='RTC System Time Source from EMS'
+REQUIRES='modbus-default'
+MODULE='contrel-ems-time'

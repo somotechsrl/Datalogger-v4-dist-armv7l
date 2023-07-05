@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='MQTT'
+PROTO='MQTT'
+DESCR="Sync via plain MQTT"
+MODULE='zzsync-mqtt'
+PRIORITY='999'

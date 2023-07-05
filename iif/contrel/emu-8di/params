@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMU-8di'
+PROTO='Modbus'
+DESCR='Transducer'
+REQUIRES="modbus-default"
+MODULE='contrel-emu-8di'

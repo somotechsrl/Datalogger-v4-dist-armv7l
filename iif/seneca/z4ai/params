@@ -1,0 +1,6 @@
+FIRM='Seneca'
+MODEL='Z4AI'
+PROTO='Modbus'
+DESCR='Seneca Z4AI Gateway Interface'
+REQUIRES='modbus-default'
+MODULE='seneca-z4ai'

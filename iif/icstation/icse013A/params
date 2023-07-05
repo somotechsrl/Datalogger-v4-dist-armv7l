@@ -1,0 +1,6 @@
+FIRM='ICStation'
+MODEL='ICSE013A'
+PROTO='CSV'
+DESCR='Modulo di comando a 2 Relay'
+
+MODULE='icstation-icse013A'

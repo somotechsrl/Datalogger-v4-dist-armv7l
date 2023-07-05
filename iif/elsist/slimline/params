@@ -1,0 +1,6 @@
+FIRM='Elsist'
+MODEL='SlimLine'
+PROTO='Modbus'
+DESCR='Contabilizzatori Energia Elsist'
+REQUIRES='modbus-default'
+MODULE='elsist-slimline'

@@ -1,0 +1,6 @@
+FIRM='Friem'
+MODEL='Recon STD'
+PROTO='Modbus'
+DESCR='Friem Recon Modbus via RS232'
+REQUIRES='modbus-default'
+MODULE='friem-recon-std'

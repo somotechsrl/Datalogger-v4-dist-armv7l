@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMU-8it'
+PROTO='Modbus'
+DESCR='Temperature Transducer'
+REQUIRES="modbus-default"
+MODULE='contrel-emu-8it'

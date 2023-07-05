@@ -1,0 +1,6 @@
+FIRM='Kernel'
+MODEL='ST1'
+PROTO='Modbus'
+DESCR='Kernel ST1 Stringbox'
+REQUIRES='modbus-default'
+MODULE='kernel-st1'

@@ -1,0 +1,6 @@
+FIRM='BRAHMA'
+MODEL='OT2'
+PROTO='SMS'
+DESCR='Emulatore Modem GSM + Gestione Cronotermostato'
+
+MODULE='brahma-ot2'

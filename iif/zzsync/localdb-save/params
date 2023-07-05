@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='LocalDB Save'
+PROTO='Redis'
+DESCR="Save to local DB"
+MODULE='zzsync-localdb-save'
+PRIORITY='999'

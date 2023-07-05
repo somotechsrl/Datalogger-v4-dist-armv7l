@@ -1,0 +1,5 @@
+FIRM='Siemens'
+MODEL='OZW672'
+PROTO='WEBAPI'
+DESCR='Siemens OZW672 Web Interface'
+MODULE='siemens-OZW672'

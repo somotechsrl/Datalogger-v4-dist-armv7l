@@ -1,0 +1,5 @@
+FIRM='eSolar'
+MODEL='HTTP-GATEWAY'
+PROTO='HTTP'
+DESCR='eSolar HTTP Gateway - HTML to Plain Text'
+MODULE='esolar-http-gateway'

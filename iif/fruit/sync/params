@@ -1,0 +1,6 @@
+FIRM='Fruit'
+MODEL='sync'
+PROTO='none'
+DESCR='Sync modulef for Video'
+MODULE='fruit-sync'
+PRIORITY='000'

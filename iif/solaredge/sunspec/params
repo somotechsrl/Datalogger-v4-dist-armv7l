@@ -1,0 +1,6 @@
+FIRM='Solardge'
+MODEL='Sunspec'
+PROTO='Modbus'
+DESCR='Solaredge Suspec Registers'
+REQUIRES="modbus-default"
+MODULE='solaredge-sunspec'

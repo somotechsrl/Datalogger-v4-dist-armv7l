@@ -1,0 +1,6 @@
+FIRM='EnergyTeam'
+MODEL='GSL'
+PROTO='Modbus'
+DESCR='EnergyTeam GSL Solarimeter'
+REQUIRES='modbus-default'
+MODULE='energyteam-gsl'

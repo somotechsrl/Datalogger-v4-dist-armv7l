@@ -1,0 +1,6 @@
+FIRM='ABB'
+MODEL='ABB Pro'
+PROTO='Modbus'
+DESCR='ABB Pro Series Inverter'
+REQUIRES='modbus-default'
+MODULE='abb-pro33'

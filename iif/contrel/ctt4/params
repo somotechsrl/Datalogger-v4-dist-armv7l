@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='CTT4'
+PROTO='Modbus'
+DESCR='TEMPERATURE MONITOR DEVICE CTT4'
+REQUIRES='modbus-default'
+MODULE='contrel-ctt4'

@@ -1,0 +1,6 @@
+FIRM='Omron'
+MODEL='Inverter'
+PROTO='Modbus'
+DESCR='Omron Inverters'
+REQUIRES='modbus-default'
+MODULE='omron-default'

@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMM-ENEA-XML'
+PROTO='Modbus'
+DESCR='EMM - CUSTOM VERSION FOR ENEA PROJECT (XML OUT)'
+REQUIRES='modbus-default'
+MODULE='contrel-emm-enea'

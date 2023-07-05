@@ -1,0 +1,6 @@
+FIRM='QEn'
+MODEL='DMG210'
+PROTO='Modbus'
+DESCR='QEN QE DMG210'
+REQUIRES='modbus-default'
+MODULE='qen-dmg210'

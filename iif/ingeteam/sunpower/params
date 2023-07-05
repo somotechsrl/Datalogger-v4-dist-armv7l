@@ -1,0 +1,6 @@
+FIRM='Ingeteam'
+MODEL='Sunpower'
+PROTO='Modbus'
+DESCR='Ingeteam Sunpower Inverters'
+REQUIRES='modbus-default'
+MODULE='ingeteam-sunpower'

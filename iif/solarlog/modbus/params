@@ -1,0 +1,6 @@
+FIRM='Solarlog'
+MODEL='Modbus'
+PROTO='Modbus'
+DESCR='Solarlog Modbus Registers'
+REQUIRES="modbus-default"
+MODULE='solarlog-modbus'

@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMA'
+PROTO='Modbus'
+DESCR='ELECTRICAL MULTIFUNCTION ANALYZER RECORDER'
+REQUIRES='modbus-default'
+MODULE='contrel-ema'

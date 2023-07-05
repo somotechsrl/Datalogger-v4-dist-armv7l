@@ -1,0 +1,6 @@
+FIRM='Modbus'
+MODEL='player'
+PROTO='none'
+DESCR='X Player for Video'
+MODULE='fruit-player'
+PRIORITY='000'

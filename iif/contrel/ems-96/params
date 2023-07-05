@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMS-96'
+PROTO='Modbus'
+DESCR='ELECTRICAL MEASUREMENT SUPERVISOR EMS-96'
+REQUIRES='modbus-default'
+MODULE='contrel-ems-96'

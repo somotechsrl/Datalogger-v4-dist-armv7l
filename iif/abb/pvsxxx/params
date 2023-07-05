@@ -1,0 +1,6 @@
+FIRM='ABB'
+MODEL='ABB PVS Sunspec'
+PROTO='Modbus'
+DESCR='ABB PVS Series Inverter'
+REQUIRES='modbus-default'
+MODULE='abb-pvsxxx'

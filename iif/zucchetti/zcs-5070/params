@@ -1,0 +1,6 @@
+FIRM='Zucchetti'
+MODEL='ZCS 50-70 kW'
+PROTO='Modbus'
+DESCR='ZCS Azzurro Inverters 150 to 70kW'
+REQUIRES="modbus-default"
+MODULE='zucchetti-zcs-5070'

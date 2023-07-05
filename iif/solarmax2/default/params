@@ -1,0 +1,6 @@
+FIRM='Solarmax'
+MODEL='Solarmax2'
+PROTO='Solarmax'
+DESCR=''
+
+MODULE='solarmax2-default'
