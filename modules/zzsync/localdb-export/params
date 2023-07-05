@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='LocalDB Export'
+PROTO='Redis'
+DESCR="Export LocalDB (CSV/XLS)"
+MODULE='zzsync-localdb-export'
+PRIORITY='999'

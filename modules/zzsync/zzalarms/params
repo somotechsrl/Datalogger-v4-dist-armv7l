@@ -1,0 +1,6 @@
+FIRM='Generico'
+MODEL='ZZAlarm'
+PROTO='Allarmi'
+DESCR='Generatore allarmi e-mail su condizioni'
+MODULE='zzsync-zzalarms-mail-notify'
+PRIORITY='999'

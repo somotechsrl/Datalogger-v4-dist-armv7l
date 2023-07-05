@@ -1,0 +1,6 @@
+FIRM='Fronius'
+MODEL='Datamanager (Modbus)'
+PROTO='Modbus'
+DESCR='Datamanager Board via Modbus'
+REQUIRES='modbus-default'
+MODULE='fronius-dm'

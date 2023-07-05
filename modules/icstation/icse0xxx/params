@@ -1,0 +1,6 @@
+FIRM='ICStation'
+MODEL='ICSE0xxx'
+PROTO='CSV'
+DESCR='Wrapper Modulo di comand ICStation'
+
+MODULE='icstation-icse0xxx'

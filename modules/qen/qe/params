@@ -1,0 +1,6 @@
+FIRM='QEn'
+MODEL='QE'
+PROTO='Modbus'
+DESCR='QEN QE System'
+REQUIRES='modbus-default'
+MODULE='qen-qe'

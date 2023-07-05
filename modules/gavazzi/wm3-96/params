@@ -1,0 +1,6 @@
+FIRM='Gavazzi'
+MODEL='WM3-96'
+PROTO='Modbus'
+DESCR='3P Network Analyzer'
+REQUIRES='modbus-default'
+MODULE='gavazzi-wm3-96'

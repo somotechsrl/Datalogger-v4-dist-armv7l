@@ -1,0 +1,6 @@
+FIRM='Friem'
+MODEL='Recon ALT'
+PROTO='Modbus'
+DESCR='Friem Recon Alternate Modbus/TCP'
+REQUIRES='modbus-default'
+MODULE='friem-recon-alt'

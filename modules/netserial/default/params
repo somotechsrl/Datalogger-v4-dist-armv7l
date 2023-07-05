@@ -1,0 +1,6 @@
+FIRM='Generico'
+MODEL='NetSerial'
+PROTO='ANY'
+DESCR='COnnettore TCP per porta seriale'
+
+MODULE='netserial-default'

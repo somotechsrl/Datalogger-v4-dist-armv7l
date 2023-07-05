@@ -1,0 +1,6 @@
+FIRM='Ingecon'
+MODEL='SunXXTL'
+PROTO='Modbus'
+DESCR='Ingecon SunXXTL Invereters'
+REQUIRES='modbus-default'
+MODULE='ingecon-sunxxtl'

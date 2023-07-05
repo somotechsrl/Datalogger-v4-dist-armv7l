@@ -1,0 +1,6 @@
+FIRM='Json'
+MODEL='Last Data Aggregator'
+PROTO='Json'
+DESCR="Aggregate Last Data"
+MODULE='zysync-aggregator-lastread'
+PRIORITY='999'

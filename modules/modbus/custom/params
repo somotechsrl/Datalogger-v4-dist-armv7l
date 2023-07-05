@@ -1,0 +1,5 @@
+FIRM='Modbus'
+MODEL='Custom'
+PROTO='Modbus'
+DESCR='Modbus Parametrized Driver via config'
+MODULE='modbus-custom'

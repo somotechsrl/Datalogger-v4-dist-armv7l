@@ -1,0 +1,6 @@
+FIRM='Kernel'
+MODEL='ST21625'
+PROTO='Modbus'
+DESCR='Kernel ST2 1625 Stringbox'
+REQUIRES='modbus-default'
+MODULE='kernel-st21625'

@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='ISOBASE'
+PROTO='Modbus'
+DESCR='ISOBASE RTX poller '
+REQUIRES="modbus-default"
+MODULE='contrel-isobase'

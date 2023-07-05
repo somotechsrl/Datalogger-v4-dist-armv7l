@@ -1,0 +1,5 @@
+FIRM='Siemens'
+MODEL='S7 Sinvert'
+PROTO='Snap7'
+DESCR='Siemens S7 Sinvert'
+MODULE='siemens-s7-sinvert'

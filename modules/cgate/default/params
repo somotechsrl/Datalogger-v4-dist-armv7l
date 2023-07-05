@@ -1,0 +1,5 @@
+FIRM='Generico'
+MODEL='Cgate'
+PROTO='C-BUS'
+DESCR=''
+MODULE='cgate-default'

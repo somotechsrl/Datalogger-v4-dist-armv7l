@@ -1,0 +1,6 @@
+FIRM='Siel'
+MODEL='Soleil'
+PROTO='Modbus'
+DESCR='Siel Soleil Inverters'
+REQUIRES="modbus-default"
+MODULE='siel-dsp-soleil'

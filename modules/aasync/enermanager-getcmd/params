@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='GET-CMD'
+PROTO='HTTPS'
+DESCR="COMMANDS via HTTPS from Enermanager"
+MODULE='aasync-enermanager-getcmd'
+PRIORITY='000'

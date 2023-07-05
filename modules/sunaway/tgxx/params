@@ -1,0 +1,6 @@
+FIRM='Sunaway'
+MODEL='TGXX'
+PROTO='Modbus'
+DESCR='Sunaway TGXX Inverters'
+REQUIRES='modbus-default'
+MODULE='sunaway-tgxx'

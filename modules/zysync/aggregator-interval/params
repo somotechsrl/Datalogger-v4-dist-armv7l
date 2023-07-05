@@ -1,0 +1,6 @@
+FIRM='Json'
+MODEL='Period Data Aggregator'
+PROTO='Json'
+DESCR="Aggregate Data Between Poll Intervals"
+MODULE='zysync-aggregator-interval'
+PRIORITY='999'

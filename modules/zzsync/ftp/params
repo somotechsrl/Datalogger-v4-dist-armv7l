@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='FTP'
+PROTO='FTP'
+DESCR="Sync via FTP"
+MODULE='zzsync-sync-ftp'
+PRIORITY='999'

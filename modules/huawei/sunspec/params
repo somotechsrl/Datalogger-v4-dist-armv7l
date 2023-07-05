@@ -1,0 +1,6 @@
+FIRM='HUAWEI'
+MODEL='Inverters'
+PROTO='Modbus'
+DESCR='HUAWEI Inverters Sunspec'
+REQUIRES='modbus-default'
+MODULE='huawei-sunspec'

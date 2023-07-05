@@ -1,0 +1,5 @@
+FIRM='Enerray'
+MODEL='Solar 1000 Datalogger'
+PROTO='HTTP'
+DESCR='Solar 1000: Valori Sintetici'
+MODULE='enerray-solar-1000'

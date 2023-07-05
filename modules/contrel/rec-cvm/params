@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='REC-CVM'
+PROTO='Modbus'
+DESCR='ELECTRICAL MULTIFUNCTION METER/CONTROLLER'
+REQUIRES="modbus-default"
+MODULE='contrel-rec-cvm'

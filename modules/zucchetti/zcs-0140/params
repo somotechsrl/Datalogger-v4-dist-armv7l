@@ -1,0 +1,6 @@
+FIRM='Zucchetti'
+MODEL='ZCS 1-40 kW'
+PROTO='Modbus'
+DESCR='ZCS Azzurro Inverters 1 to 40kW'
+REQUIRES="modbus-default"
+MODULE='zucchetti-zcs-0140'

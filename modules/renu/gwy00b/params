@@ -1,0 +1,6 @@
+FIRM='RENU'
+MODEL='gwy00b'
+PROTO='Modbus'
+DESCR='RENU Gateway Interface'
+REQUIRES='modbus-default'
+MODULE='renu-gwy00b'

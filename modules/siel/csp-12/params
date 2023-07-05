@@ -1,0 +1,6 @@
+FIRM='Siel'
+MODEL='CSP-12'
+PROTO='Modbus'
+DESCR='Siel CSP-12 Stringbox'
+REQUIRES="modbus-default"
+MODULE='siel-csp-12'

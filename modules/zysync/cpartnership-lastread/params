@@ -1,0 +1,6 @@
+FIRM='QEn'
+MODEL='Send Last Data Read'
+PROTO='HTTPS'
+DESCR="HTTPS Sync Custom Creative Partnership/QEN"
+MODULE='zysync-cpartnership-lastread'
+PRIORITY='999'

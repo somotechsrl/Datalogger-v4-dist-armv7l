@@ -1,0 +1,6 @@
+FIRM='QEn'
+MODEL='UPM209'
+PROTO='Modbus'
+DESCR='QEN QE UPM209'
+REQUIRES='modbus-default'
+MODULE='qen-upm209'

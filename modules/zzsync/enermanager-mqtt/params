@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='MQTTVPN'
+PROTO='MQTT'
+DESCR="MQTT Sync to Somotech HUB"
+MODULE='zzsync-enermanager-mqtt'
+PRIORITY='999'

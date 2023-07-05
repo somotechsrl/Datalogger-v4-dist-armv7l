@@ -1,0 +1,5 @@
+FIRM='Aurora'
+MODEL='Raw Inverter'
+PROTO='Aurora'
+DESCR='Aurora Raw Inverter Driver '
+MODULE='aurora-inverter'

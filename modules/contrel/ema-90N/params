@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EMA-90N'
+PROTO='Modbus'
+DESCR='ELECTRICAL MEASUREMENT SUPERVISOR - version 90N'
+REQUIRES="modbus-default"
+MODULE='contrel-ema-90N'

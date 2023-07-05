@@ -1,0 +1,6 @@
+FIRM='Enermanager'
+MODEL='HTTPS2MQTT'
+PROTO='HTTPS'
+DESCR="HTTPS Sync via enermanager.it"
+MODULE='zzsync-enermanager-https'
+PRIORITY='999'

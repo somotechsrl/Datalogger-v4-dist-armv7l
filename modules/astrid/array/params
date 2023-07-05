@@ -1,0 +1,6 @@
+FIRM='Astrid'
+MODEL='Array Monitor'
+PROTO='Modbus'
+DESCR='Astrif Array Monitor Stringbox'
+REQUIRES='modbus-default'
+MODULE='astrid-array'

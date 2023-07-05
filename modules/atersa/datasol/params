@@ -1,0 +1,6 @@
+FIRM='Atersa'
+MODEL='Datasol'
+PROTO='Atersa'
+DESCR=''
+
+MODULE='atersa-datasol'

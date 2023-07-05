@@ -1,0 +1,6 @@
+FIRM='Sungrow'
+MODEL='TLK Modbus'
+PROTO='Modbus'
+DESCR='TLK Inverters'
+REQUIRES='modbus-default'
+MODULE='sungrow-default'

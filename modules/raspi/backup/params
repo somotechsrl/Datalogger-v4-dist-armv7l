@@ -1,0 +1,5 @@
+FIRM='Raspberry'
+MODEL='Backup'
+PROTO='Local'
+DESCR='Datalogger Config Backup'
+MODULE='raspi-backup'

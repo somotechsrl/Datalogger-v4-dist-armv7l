@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='CTT8'
+PROTO='Modbus'
+DESCR='TEMPERATURE MONITOR DEVICE'
+REQUIRES='modbus-default'
+MODULE='contrel-ctt8'

@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='Compalarm'
+PROTO='Modbus'
+DESCR='Compalarm-D2 GPIO Monitor'
+REQUIRES='modbus-default'
+MODULE='contrel-compalarm'

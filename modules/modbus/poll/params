@@ -1,0 +1,5 @@
+FIRM='Modbus'
+MODEL='Poll'
+PROTO='Modbus'
+DESCR='Modbus Aggressive Poll Wrapper'
+MODULE='modbus-poll'

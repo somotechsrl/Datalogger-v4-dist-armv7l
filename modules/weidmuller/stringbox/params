@@ -1,0 +1,6 @@
+FIRM='Weidmuller'
+MODEL='Stringbox'
+PROTO='Modbus'
+DESCR='Weidmuller Stringboxes'
+REQUIRES='modbus-default'
+MODULE='weidmuller-stringbox'

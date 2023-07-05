@@ -1,0 +1,6 @@
+FIRM='AROS'
+MODEL='Inverters'
+PROTO='Modbus'
+DESCR='AROS Inverters'
+REQUIRES='modbus-default'
+MODULE='aros-default'

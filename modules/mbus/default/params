@@ -1,0 +1,6 @@
+FIRM='Generico'
+MODEL='M-Bus'
+PROTO='M-Bus'
+DESCR='Interfaccia via RS232/TTL '
+
+MODULE='MBus-default'

@@ -1,0 +1,6 @@
+FIRM='QEn'
+MODEL='EMU-3EA'
+PROTO='Modbus'
+DESCR='QEN QE EMU 3EA'
+REQUIRES='modbus-default'
+MODULE='qen-emu-3ea'

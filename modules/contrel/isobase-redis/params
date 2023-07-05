@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='ISOBASE'
+PROTO='Redis'
+DESCR='ISOBASE RTX poller bnas on Redis DB'
+
+MODULE='contrel-isobase-redis'

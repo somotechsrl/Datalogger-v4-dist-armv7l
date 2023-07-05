@@ -1,0 +1,6 @@
+FIRM='Contrel'
+MODEL='EM140PURS'
+PROTO='Modbus'
+DESCR='Single Phase Energy Meter'
+REQUIRES='modbus-default'
+MODULE='contrel-em140purs'

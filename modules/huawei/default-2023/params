@@ -1,0 +1,6 @@
+FIRM='HUAWEI'
+MODEL='Inverters'
+PROTO='Modbus'
+DESCR='HUAWEI Inverters'
+REQUIRES='modbus-default'
+MODULE='huawei-default-2023'

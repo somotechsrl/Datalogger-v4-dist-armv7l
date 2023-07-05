@@ -1,0 +1,5 @@
+FIRM='Friem'
+MODEL='Recon HTTP'
+PROTO='HTTP'
+DESCR='Recon via emulatore WEB'
+MODULE='friem-recon-http'

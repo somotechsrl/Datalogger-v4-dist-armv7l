@@ -1,0 +1,6 @@
+FIRM='Xantrex'
+MODEL='Xantrex'
+PROTO='Modbus'
+DESCR='Xantrex Inverters'
+REQUIRES='modbus-default'
+MODULE='xantrex-default'

@@ -1,0 +1,6 @@
+FIRM='Algo2'
+MODEL='UPM209'
+PROTO='Modbus'
+DESCR='ELECTRICAL MEASUREMENT'
+REQUIRES='modbus-default'
+MODULE='algo2-upm209'

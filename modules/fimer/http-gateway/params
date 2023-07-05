@@ -1,0 +1,5 @@
+FIRM='Fimer'
+MODEL='HTTP-GATEWAY'
+PROTO='HTTP'
+DESCR='Fimer HTTP Gateway - HTML to Plain Text'
+MODULE='fimer-http-gateway'

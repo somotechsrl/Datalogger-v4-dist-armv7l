@@ -1,0 +1,6 @@
+FIRM='Ingeteam'
+MODEL='IngeCon SunString'
+PROTO='Modbus'
+DESCR='Ingeteam Ingecon SunString Control'
+REQUIRES='modbus-default'
+MODULE='ingeteam-sunstring'

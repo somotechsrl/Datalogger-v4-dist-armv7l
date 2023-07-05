@@ -1,0 +1,6 @@
+FIRM='Datalogger'
+MODEL='ttyUSB'
+PROTO='USB/TTY'
+DESCR="USB/TTY Service Scanner (Names by USB port)"
+MODULE='aasync-ttyUSB'
+PRIORITY='000'

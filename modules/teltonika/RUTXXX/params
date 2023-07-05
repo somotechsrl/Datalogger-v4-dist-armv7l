@@ -1,0 +1,6 @@
+FIRM='Teltonika'
+MODEL='RUTXXX'
+PROTO='sshpass'
+DESCR="SIM ID Traffic Stats Monitoring"
+MODULE='a-teltonika-router'
+PRIORITY='000'
