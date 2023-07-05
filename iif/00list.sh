@@ -1,4 +1,6 @@
-head|PRIORITY|MODULE|FIRM|MODEL|DESCR|PROTOCOL|MPATH|REQUIRES|AGGRESSIVE
+#!/bin/bash
+head|PRIORITY|MODULE|FIRM|MODEL|DESCR|PROTOCOL|MPATH|REQUIRES|AGGRESSIVE"
+cat << EOT
 data|999|aasync-cpartnership-ping|QEn|KeepAlive RPC|HTTPS KeepAlive Creative Partnership/QEN||iif/aasync/cpartnership-ping||true
 data|000|aasync-enermanager-getcmd|Enermanager|GET-CMD|COMMANDS via HTTPS from Enermanager||iif/aasync/enermanager-getcmd||true
 data|000|aasync-enermanager-sshvpn|Enermanager|SSH-VPN|SSH Based VPN via PPPD on HTTPS||iif/aasync/enermanager-sshvpn||true
@@ -136,3 +138,4 @@ data|999|zzsync-mqtt|Enermanager|MQTT|Sync via plain MQTT||iif/zzsync/mqtt||true
 data|999|zzsync-mqtts|Enermanager|MQTTS|Sync via secure MQTT||iif/zzsync/mqtts||true
 data|999|zzsync-http-resiot|ResIOT|RestAPI|HTTPS Sync to ResIOT||iif/zzsync/resiot-https||true
 data|999|zzsync-zzalarms-mail-notify|Generico|ZZAlarm|Generatore allarmi e-mail su condizioni||iif/zzsync/zzalarms||true
+EOT 
