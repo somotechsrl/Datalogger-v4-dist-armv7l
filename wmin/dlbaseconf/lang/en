@@ -18,6 +18,7 @@ licensing=License Management
 register=Register License 
 unregister=Unregster License 
 dlupdate=Firmware Update
+DlTrigger=Force Run Schedule
 drupdate=Device Config Update
 drinstall=Install Interfaces
 dractivate=Enable Interfaces
