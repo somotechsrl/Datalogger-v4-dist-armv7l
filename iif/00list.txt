@@ -1,0 +1,138 @@
+head|PRIORITY|MODULE|FIRM|MODEL|DESCR|PROTOCOL|MPATH|REQUIRES|AGGRESSIVE
+data|999|aasync-cpartnership-ping|QEn|KeepAlive RPC|HTTPS KeepAlive Creative Partnership/QEN||iif/aasync/cpartnership-ping||true
+data|000|aasync-enermanager-getcmd|Enermanager|GET-CMD|COMMANDS via HTTPS from Enermanager||iif/aasync/enermanager-getcmd||true
+data|000|aasync-enermanager-sshvpn|Enermanager|SSH-VPN|SSH Based VPN via PPPD on HTTPS||iif/aasync/enermanager-sshvpn||true
+data|000|aasync-modbus-sniffer|Modbus|Sniffer|Sniffer with Circular FIFO for Passive configuration||iif/aasync/mbsniffer||true
+data|000|aasync-modbustcp-gateway|Modbus|Gateway|Gateway Modbus rtu => TCP||iif/aasync/modbustcp-gateway||true
+data|000|aasync-ttyUSB|Datalogger|ttyUSB|USB/TTY Service Scanner (Names by USB port)||iif/aasync/ttyUSB||true
+data|050|abb-pro33|ABB|ABB Pro|ABB Pro Series Inverter||iif/abb/pro33|modbus-default|true
+data|050|abb-pvsxxx|ABB|ABB PVS Sunspec|ABB PVS Series Inverter||iif/abb/pvsxxx|modbus-default|true
+data|050|algo2-upm209|Algo2|UPM209|ELECTRICAL MEASUREMENT||iif/algo2/upm209|modbus-default|true
+data|050|aros-default|AROS|Inverters|AROS Inverters||iif/aros/default|modbus-default|true
+data|050|astrid-array|Astrid|Array Monitor|Astrif Array Monitor Stringbox||iif/astrid/array|modbus-default|true
+data|050|astrid-copernico|Astrid|Copernico|Astrid Copernico Inverters||iif/astrid/copernico|modbus-default|true
+data|050|atersa-datasol|Atersa|Datasol|||iif/atersa/datasol||true
+data|050|pvi-aec-evo|Aurora|PVI-AEC-EVO|Aurora PVI via Web API||iif/aurora/aec-evo||true
+data|050|aurora-compact|Aurora|Compact Driver|Aurora Compact Driver||iif/aurora/compact||true
+data|050|aurora|Aurora|Basic Driver|Aurora Basic Driver||iif/aurora/default||true
+data|050|aurora-inverter|Aurora|Raw Inverter|Aurora Raw Inverter Driver ||iif/aurora/inverter||true
+data|050|aurora-stringbox|Aurora|Raw StringBox|Aurora Raw StringBox Driver ||iif/aurora/stringbox||true
+data|050|brahma-ot2|BRAHMA|OT2|Emulatore Modem GSM + Gestione Cronotermostato||iif/brahma/ot2||true
+data|050|cgate-default|Generico|Cgate|||iif/cgate/default||true
+data|050|contrel-compalarm|Contrel|Compalarm|Compalarm-D2 GPIO Monitor||iif/contrel/compalarm|modbus-default|true
+data|050|contrel-ctt4|Contrel|CTT4|TEMPERATURE MONITOR DEVICE CTT4||iif/contrel/ctt4|modbus-default|true
+data|050|contrel-ctt8|Contrel|CTT8|TEMPERATURE MONITOR DEVICE||iif/contrel/ctt8|modbus-default|true
+data|050|contrel-em140purs|Contrel|EM140PURS|Single Phase Energy Meter||iif/contrel/em140purs|modbus-default|true
+data|050|contrel-ema-90N|Contrel|EMA-90N|ELECTRICAL MEASUREMENT SUPERVISOR - version 90N||iif/contrel/ema-90N|modbus-default|true
+data|050|contrel-ema|Contrel|EMA|ELECTRICAL MULTIFUNCTION ANALYZER RECORDER||iif/contrel/ema|modbus-default|true
+data|050|contrel-emm-4l|Contrel|EMM-4L|ELECTRICAL MULTIFUNCTION METER v 4L||iif/contrel/emm-4l|modbus-default|true
+data|050|contrel-emm-enea|Contrel|EMM-ENEA-XML|EMM - CUSTOM VERSION FOR ENEA PROJECT (XML OUT)||iif/contrel/emm-enea|modbus-default|true
+data|050|contrel-emm|Contrel|EMM|ELECTRICAL MULTIFUNCTION METER||iif/contrel/emm|modbus-default|true
+data|050|contrel-ems-96|Contrel|EMS-96|ELECTRICAL MEASUREMENT SUPERVISOR EMS-96||iif/contrel/ems-96|modbus-default|true
+data|050|contrel-ems-96-pulse|Contrel|EMS-96-PULSE|ELECTRICAL MEASUREMENT SUPERVISOR EMS-96 PULSE ONLY||iif/contrel/ems-96-pulse|modbus-default|true
+data|050|contrel-ems|Contrel|EMS|ELECTRICAL MEASUREMENT SUPERVISOR||iif/contrel/ems|modbus-default|true
+data|050|contrel-ems-time|Contrel|EMS|RTC System Time Source from EMS||iif/contrel/ems-time|modbus-default|true
+data|050|contrel-emu-8it|Contrel|EMU-8it|Temperature Transducer||iif/contrel/emu-2it|modbus-default|true
+data|050|contrel-emu-8di|Contrel|EMU-8di|Transducer||iif/contrel/emu-8di|modbus-default|true
+data|050|contrel-isobase|Contrel|ISOBASE|ISOBASE RTX poller ||iif/contrel/isobase|modbus-default|true
+data|050|contrel-isobase-redis|Contrel|ISOBASE|ISOBASE RTX poller bnas on Redis DB||iif/contrel/isobase-redis||true
+data|050|contrel-mobi|Contrel|GWXX|GSM/GPRS Remote Control||iif/contrel/mobi||true
+data|050|contrel-rec-cvm|Contrel|REC-CVM|ELECTRICAL MULTIFUNCTION METER/CONTROLLER||iif/contrel/rec-cvm|modbus-default|true
+data|050|coster-default|Coster|ALL|Centraline Coster DTCXX CSCXX ecc. ecc.||iif/coster/default||true
+data|050|NogaroleRocca|Higeco|NogaroleRocca|Custom Modbus via Higeco for Nogarole Rocca (Zalando)||iif/custom/NogaroleRocca|modbus-default|true
+data|050|danfoss-default|Danfoss|RKLogger|||iif/danfoss/default||true
+data|050|elsist-slimline|Elsist|SlimLine|Contabilizzatori Energia Elsist||iif/elsist/slimline|modbus-default|true
+data|050|energyteam-gsl|EnergyTeam|GSL|EnergyTeam GSL Solarimeter||iif/energyteam/gsl|modbus-default|true
+data|050|enerray-solar-1000|Enerray|Solar 1000 Datalogger|Solar 1000: Valori Sintetici||iif/enerray/solar-1000||true
+data|050|esolar-http-gateway|eSolar|HTTP-GATEWAY|eSolar HTTP Gateway - HTML to Plain Text||iif/esolar/http-gateway||true
+data|050|fimer-http-gateway|Fimer|HTTP-GATEWAY|Fimer HTTP Gateway - HTML to Plain Text||iif/fimer/http-gateway||true
+data|050|fimer-Rxxxx|Fimer|Modbus-RXXXX|R400,R800,R1200,R2500,R5000 Inverters Centralizzati PV||iif/fimer/RXXXX-modbus|modbus-default|true
+data|050|friem-recon-alt|Friem|Recon ALT|Friem Recon Alternate Modbus/TCP||iif/friem/recon-alt|modbus-default|true
+data|050|friem-recon-http|Friem|Recon HTTP|Recon via emulatore WEB||iif/friem/recon-http||true
+data|050|friem-recon-std|Friem|Recon STD|Friem Recon Modbus via RS232||iif/friem/recon-std|modbus-default|true
+data|050|fronius-default|Fronius|Fronius|Direct access via Fronius Proto||iif/fronius/default||true
+data|050|fronius-dm|Fronius|Datamanager (Modbus)|Datamanager Board via Modbus||iif/fronius/dm|modbus-default|true
+data|050|fronius-web|Fronius|Datamanager (JSON)|Datamanager Board via REST HTTP||iif/fronius/web||true
+data|000|fruit-player|Modbus|player|X Player for Video||iif/fruit/player||true
+data|000|fruit-sync|Fruit|sync|Sync modulef for Video||iif/fruit/sync||true
+data|050|gavazzi-wm3-96|Gavazzi|WM3-96|3P Network Analyzer||iif/gavazzi/wm3-96|modbus-default|true
+data|050|huawei-default-2019|HUAWEI|Inverters|HUAWEI Inverters||iif/huawei/default-2019|modbus-default|true
+data|050|huawei-default-2023|HUAWEI|Inverters|HUAWEI Inverters||iif/huawei/default-2023|modbus-default|true
+data|050|huawei-default|HUAWEI|Inverters|HUAWEI Inverters||iif/huawei/default|modbus-default|true
+data|050|huawei-sunspec|HUAWEI|Inverters|HUAWEI Inverters Sunspec||iif/huawei/sunspec|modbus-default|true
+data|050|icstation-icse012A|ICStation|ICSE012A|Modulo di comando a 4 Relay||iif/icstation/icse012A||true
+data|050|icstation-icse013A|ICStation|ICSE013A|Modulo di comando a 2 Relay||iif/icstation/icse013A||true
+data|050|icstation-icse014A|ICStation|ICSE014A|Modulo di comando a 8 Relay||iif/icstation/icse014A||true
+data|050|icstation-icse0xxx|ICStation|ICSE0xxx|Wrapper Modulo di comand ICStation||iif/icstation/icse0xxx||true
+data|050|ingburo-sirs485|IngBuro|Si-RS485|IngBuro Si RS485 Irradiance Sensor||iif/ingburo/sirs485|modbus-default|true
+data|050|ingecon-sunxxtl|Ingecon|SunXXTL|Ingecon SunXXTL Invereters||iif/ingecon/sunxxtl|modbus-default|true
+data|050|ingeteam-sunpower|Ingeteam|Sunpower|Ingeteam Sunpower Inverters||iif/ingeteam/sunpower|modbus-default|true
+data|050|ingeteam-sunstring|Ingeteam|IngeCon SunString|Ingeteam Ingecon SunString Control||iif/ingeteam/sunstring|modbus-default|true
+data|050|itron-sl7000|Itron|SL7000|ELECTRICAL METER||iif/itron/sl7000||true
+data|050|kako-ppl|KAKO|PPL Datalogger|KAKO PPL Datalogger||iif/kako/ppl||true
+data|050|kernel-st1|Kernel|ST1|Kernel ST1 Stringbox||iif/kernel/st1|modbus-default|true
+data|050|kernel-st21625|Kernel|ST21625|Kernel ST2 1625 Stringbox||iif/kernel/st21625|modbus-default|true
+data|050|MBus-default|Generico|M-Bus|Interfaccia via RS232/TTL ||iif/mbus/default||true
+data|050|modbus-cmd|Modbus|CMD|Modbus Base CMD Wrapper||iif/modbus/cmd||true
+data|050|modbus-custom|Modbus|Custom|Modbus Parametrized Driver via config||iif/modbus/custom||true
+data|050|modbus-default|Modbus|Default|Modbus Base Query Wrapper||iif/modbus/default||true
+data|050|modbus-poll|Modbus|Poll|Modbus Aggressive Poll Wrapper||iif/modbus/poll||true
+data|050|netserial-default|Generico|NetSerial|COnnettore TCP per porta seriale||iif/netserial/default||true
+data|050|omron-default|Omron|Inverter|Omron Inverters||iif/omron/default|modbus-default|true
+data|050|qen-dmg210|QEn|DMG210|QEN QE DMG210||iif/qen/dmg210|modbus-default|true
+data|050|qen-emu-2it|QEn|EMU-2IT|QEN QE EMU 2IT||iif/qen/emu-2it|modbus-default|true
+data|050|qen-emu-3ea|QEn|EMU-3EA|QEN QE EMU 3EA||iif/qen/emu-3ea|modbus-default|true
+data|050|qen-qe|QEn|QE|QEN QE System||iif/qen/qe|modbus-default|true
+data|050|qen-upm209|QEn|UPM209|QEN QE UPM209||iif/qen/upm209|modbus-default|true
+data|050|raspi-backup|Raspberry|Backup|Datalogger Config Backup||iif/raspi/backup||true
+data|050|raspi|Raspberry|Diagnostic|Datalogger Disagnostics||iif/raspi/default||false
+data|050|refusol-default|Refusol|Inverters|Refusol Inverters||iif/refusol/default||true
+data|050|renu-gwy00b|RENU|gwy00b|RENU Gateway Interface||iif/renu/gwy00b|modbus-default|true
+data|050|samil-lan|Samil|Inverters|Samil Inverters via solis python script LAN/mqtt||iif/samil/lan||true
+data|050|schuco-ipe|Schuco|IPEXX|Schuo IPEXX Inverters||iif/schuco/ipe|modbus-default|true
+data|050|seneca-s604|Seneca|S604|ELECTRICAL MEASUREMENT||iif/seneca/s604|modbus-default|true
+data|050|seneca-z4ai|Seneca|Z4AI|Seneca Z4AI Gateway Interface||iif/seneca/z4ai|modbus-default|true
+data|050|setecna-mbotg|Setecna|MBOTG|Setecna Opentherm to Modbus Gateway||iif/setecna/mbotg|modbus-default|true
+data|050|siel-csp-12|Siel|CSP-12|Siel CSP-12 Stringbox||iif/siel/csp-12|modbus-default|true
+data|050|siel-dsp-soleil|Siel|Soleil|Siel Soleil Inverters||iif/siel/dsp-soleil|modbus-default|true
+data|050|siemens-OZW672|Siemens|OZW672|Siemens OZW672 Web Interface||iif/siemens/OZW672||true
+data|050|siemens-s7-sinvert|Siemens|S7 Sinvert|Siemens S7 Sinvert||iif/siemens/s7-sinvert||true
+data|050|siemens-web-sinvert|Siemens|Weblog Sinvert|Siemens Weblog Sinvert||iif/siemens/web-sinvert||true
+data|050|sma-default|SMA|SMA|SMANet SMA Inverters||iif/sma/default||true
+data|050|sma-sunspec|SMA|Sunspec|SMA Series Inverter w Suspec||iif/sma/sunspec|modbus-default|true
+data|050|socomec-countis|Socomec|Countis|Socomec Countis Energy Meter||iif/socomec/countis|modbus-default|true
+data|050|socomec-default|Socomec|Socomec|Socomec Inverters||iif/socomec/default|modbus-default|true
+data|050|solaredge-sunspec|Solardge|Sunspec|Solaredge Suspec Registers||iif/solaredge/sunspec|modbus-default|true
+data|050|solarlog-modbus|Solarlog|Modbus|Solarlog Modbus Registers||iif/solarlog/modbus|modbus-default|true
+data|050|solarmax2-default|Solarmax|Solarmax2|||iif/solarmax2/default||true
+data|050|solarmax-default|Solarmax|Solarmax1|Solarmax Propietary Protocol||iif/solarmax/default||true
+data|050|solis-default|Solis|Default Modbus|Inverters||iif/solis/default|modbus-default|true
+data|050|sunaway-tgxx|Sunaway|TGXX|Sunaway TGXX Inverters||iif/sunaway/tgxx|modbus-default|true
+data|050|sungrow-default|Sungrow|TLK Modbus|TLK Inverters||iif/sungrow/default|modbus-default|true
+data|050|sunguard-sensor|Sunguard|Sensor|Sunguard Sensor Box||iif/sunguard/sensor|modbus-default|true
+data|050|sunguard-stringbox|Sunguard|Stringbox|Sunguard Stringbox||iif/sunguard/stringbox|modbus-default|true
+data|050|sunmeter-default|Sunmeter|Sunmeter|Sunmeter Solarimeter||iif/sunmeter/default|modbus-default|true
+data|050|szyft-sht20|SZYFT|SHT20|RS485 Tempereture/Humidity Sensor||iif/szytf/sht20|modbus-default|true
+data|050|tecnint-ems-sau-mbs|Tecnint|EMS-SAU-MBS|Tecnint EMS Stringbox||iif/tecnint/ems-sau-mbs|modbus-default|true
+data|000|a-teltonika-router|Teltonika|RUTXXX|SIM ID Traffic Stats Monitoring||iif/teltonika/RUTXXX||true
+data|050|tem-sb-16|TEM|SB-16|TEM SB-16 Stringbox||iif/tem/sb-16|modbus-default|true
+data|050|weidmuller-stringbox-16|Weidmuller|Stringbox|Weidmuller Stringbox 16||iif/weidmuller/stringbox-16|modbus-default|true
+data|050|weidmuller-stringbox|Weidmuller|Stringbox|Weidmuller Stringboxes||iif/weidmuller/stringbox|modbus-default|true
+data|050|xantrex-default|Xantrex|Xantrex|Xantrex Inverters||iif/xantrex/default|modbus-default|true
+data|050|zucchetti-zcs-0140|Zucchetti|ZCS 1-40 kW|ZCS Azzurro Inverters 1 to 40kW||iif/zucchetti/zcs-0140|modbus-default|true
+data|050|zucchetti-zcs-5070|Zucchetti|ZCS 50-70 kW|ZCS Azzurro Inverters 150 to 70kW||iif/zucchetti/zcs-5070|modbus-default|true
+data|999|zysync-aggregator-interval|Json|Period Data Aggregator|Aggregate Data Between Poll Intervals||iif/zysync/aggregator-interval||true
+data|999|zysync-aggregator-lastread|Json|Last Data Aggregator|Aggregate Last Data||iif/zysync/aggregator-lastread||true
+data|999|zysync-cpartnership-interval|QEn|Send Cumulate Interval Data Read|Aggregate Custom Creative Partnership/QEN||iif/zysync/cpartnership-interval||true
+data|999|zysync-cpartnership-lastread|QEn|Send Last Data Read|HTTPS Sync Custom Creative Partnership/QEN||iif/zysync/cpartnership-lastread||true
+data|999|zzsync-enermanager-https|Enermanager|HTTPS2MQTT|HTTPS Sync via enermanager.it||iif/zzsync/enermanager-https||true
+data|999|zzsync-enermanager-mqtt|Enermanager|MQTTVPN|MQTT Sync to Somotech HUB||iif/zzsync/enermanager-mqtt||true
+data|999|zzsync-enermanager-rest|Enermanager|REST|MQTT Sync via REST/HTTPS||iif/zzsync/enermanager-rest||true
+data|999|zzsync-sync-ftp|Enermanager|FTP|Sync via FTP||iif/zzsync/ftp||true
+data|999|zzsync-local-api-mqtt|local|api|MQTT local api publish (v4/lastdata)||iif/zzsync/local-api-mqtt||true
+data|999|zzsync-localdb-export|Enermanager|LocalDB Export|Export LocalDB (CSV/XLS)||iif/zzsync/localdb-export||true
+data|999|zzsync-localdb-save|Enermanager|LocalDB Save|Save to local DB||iif/zzsync/localdb-save||true
+data|999|zzsync-mqtt|Enermanager|MQTT|Sync via plain MQTT||iif/zzsync/mqtt||true
+data|999|zzsync-mqtts|Enermanager|MQTTS|Sync via secure MQTT||iif/zzsync/mqtts||true
+data|999|zzsync-http-resiot|ResIOT|RestAPI|HTTPS Sync to ResIOT||iif/zzsync/resiot-https||true
+data|999|zzsync-zzalarms-mail-notify|Generico|ZZAlarm|Generatore allarmi e-mail su condizioni||iif/zzsync/zzalarms||true
