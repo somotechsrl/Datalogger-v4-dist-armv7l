@@ -1,6 +1,6 @@
 FIRM='HUAWEI'
-MODEL='Inverters'
+MODEL='Inverters FW 2019'
 PROTO='Modbus'
-DESCR='HUAWEI Inverters'
+DESCR='HUAWEI Inverters FW 2019'
 REQUIRES='modbus-default'
 MODULE='huawei-default-2019'
