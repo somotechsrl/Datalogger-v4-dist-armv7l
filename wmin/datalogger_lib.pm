@@ -346,10 +346,10 @@ sub dataloggerFileOut {
 	 elsif($filedata =~ /<\?xml/) {
 		$filedata =~ s/</\&lt;/g;
 		$filedata =~ s/>/\&gt;/g;
-		print ui_textarea("contents","<pre>$filedata</pre>",40,132,"soft",1); 
+		print ui_textarea("contents",$filedata,40,132,"soft",1); 
 		}
 	else {
-		print ui_textarea("contents","<pre>$filedata</pre>",40,132,"soft",1); 
+		print ui_textarea("contents",$filedata,40,132,"soft",1); 
 		}
 
 	print &ui_table_end(); 
