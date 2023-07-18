@@ -1,0 +1,6 @@
+FIRM='Zucchetti'
+MODEL='Zucchetti Sunspec'
+PROTO='Modbus'
+DESCR='Zucchetti Sunspec Inverter'
+REQUIRES='modbus-default'
+MODULE='zucchetti-zcs-sunspec'
