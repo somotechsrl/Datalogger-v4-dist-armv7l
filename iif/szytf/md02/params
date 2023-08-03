@@ -1,0 +1,6 @@
+FIRM='SZYFT'
+MODEL='MD02'
+PROTO='Modbus'
+DESCR='RS485 Tempereture/Humidity Sensor'
+REQUIRES="modbus-default"
+MODULE='szyft-md02'
