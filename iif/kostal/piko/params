@@ -1,0 +1,6 @@
+FIRM='Kostal'
+MODEL='Pico'
+PROTO='Modbus'
+DESCR='Kosta Pico Inverters'
+REQUIRES='modbus-default'
+MODULE='kostal-piko'
