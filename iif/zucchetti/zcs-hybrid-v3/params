@@ -1,0 +1,6 @@
+FIRM='Zucchetti'
+MODEL='ZCS Hybrid Inverter V3'
+PROTO='Modbus'
+DESCR='ZCS Hybrid Inverters V3'
+REQUIRES="modbus-default"
+MODULE='zucchetti-zcs-hybrid-v3'

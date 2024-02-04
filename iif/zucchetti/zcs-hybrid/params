@@ -1,6 +1,0 @@
-FIRM='Zucchetti'
-MODEL='ZCS Hybrid Inverter'
-PROTO='Modbus'
-DESCR='ZCS Hybrid Inverters'
-REQUIRES="modbus-default"
-MODULE='zucchetti-zcs-hybrid'

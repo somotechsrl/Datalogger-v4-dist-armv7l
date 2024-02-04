@@ -1,0 +1,6 @@
+FIRM='Sofar'
+MODEL='Solar'
+PROTO='Modbus'
+DESCR='Sofar Solar Inverters'
+REQUIRES='modbus-default'
+MODULE='sofar-default'
