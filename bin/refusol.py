@@ -1,11 +1,11 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- coding: utf8 -*-
 
 # (c) Studiorizzi dot net
 # Module for inverter REFUSOL
 # Handles TCP and Serial connections
 
-import os, sys, logging, struct, time, select,  serial, string,socket
+import os, sys, logging, struct, time, select, string,serial, socket
 from optparse import OptionParser
 from utils import ByteToHex, ByteToInt, ByteToFloat
 from utils import IntTo1Byte, IntTo2Byte, HexToByte, IntToBin
@@ -87,7 +87,7 @@ def OUT(message):
 	"""
 	Print the given messagge on standard output or append to the log file
 	"""
-	print(message)
+	print message
 
 def DBG(message):
 	"""
@@ -216,8 +216,8 @@ class Packet:
 				LOG('ERROR: NO DATA Received')
 				return False
 			
-		except socket.error:
-			#LOG("ERROR: Socket %s" % msg)
+		except socket.error, msg:
+			LOG("ERROR: Socket %s" % msg)
 			return False
 			
 
