@@ -5,7 +5,7 @@
 # Module for inverter REFUSOL
 # Handles TCP and Serial connections
 
-import os, sys, logging, struct, time, select, string,serial, socket
+import os, sys, logging, struct, time, select, string, socket
 from optparse import OptionParser
 from utils import ByteToHex, ByteToInt, ByteToFloat
 from utils import IntTo1Byte, IntTo2Byte, HexToByte, IntToBin
