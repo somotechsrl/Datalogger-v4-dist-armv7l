@@ -5,7 +5,7 @@
 # Module for inverter REFUSOL
 # Handles TCP and Serial connections
 
-import os, sys, logging, struct, time, select, string, socket
+import os, sys, logging, struct, time, select, serial, string, socket
 from optparse import OptionParser
 from utils import ByteToHex, ByteToInt, ByteToFloat
 from utils import IntTo1Byte, IntTo2Byte, HexToByte, IntToBin
@@ -323,17 +323,17 @@ LOG('REFUSOL Driver - V'+AGENT_VERSION)
 
 if opts.serial_device:
 	# open the serial port
-	#try:
-	#	devname=opts.serial_device
-	#	ser = serial.Serial(port=opts.serial_device, baudrate=9600,
-	#		parity=serial.PARITY_EVEN, stopbits=serial.STOPBITS_ONE,
-	#		bytesize=serial.EIGHTBITS, timeout=MAX_RESPONSE_TIME)
-	#	ser.open()
-	#except ValueError as e:
-	#	LOG('ERROR: Can\'t open "%s: %s => %s"' % (opts.serial_device,e.errno,e.strerror))
-	#	sys.exit(1)
-	#else:
-	#	LOG('OK: Port "%s" opened' % (opts.serial_device))
+	try:
+		devname=opts.serial_device
+		ser = serial.Serial(port=opts.serial_device, baudrate=9600,
+			parity=serial.PARITY_EVEN, stopbits=serial.STOPBITS_ONE,
+			bytesize=serial.EIGHTBITS, timeout=MAX_RESPONSE_TIME)
+		ser.open()
+	except ValueError as e:
+		LOG('ERROR: Can\'t open "%s: %s => %s"' % (opts.serial_device,e.errno,e.strerror))
+		sys.exit(1)
+	else:
+		LOG('OK: Port "%s" opened' % (opts.serial_device))
 
 if opts.tcp_address:
 	# open the emulated serial port
